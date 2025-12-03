@@ -2912,6 +2912,29 @@ header.header-sticky {
   display: grid;
   gap: 12px;
 }
+
+.footer-menu-list.class{
+  display: block;
+  margin-left: -10px;
+}
+
+.footer-menu-list.class li{
+  display: inline-block;
+}
+
+.footer-menu-list.class li a{
+  padding: 5px 10px;
+}
+
+.footer-menu-list.Information{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-menu-list.Information li{
+  width: 47.5%;
+}
+
 .footer-menu-list a {
   color: var(--text);
 }
