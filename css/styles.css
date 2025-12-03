@@ -9205,11 +9205,18 @@ input[type=number]::-webkit-outer-spin-button {
   visibility: visible;
 }
 .tf-social-icon .social-x::after {
-  background: var(--x-cl);
+  background: #20a200;
 }
 .tf-social-icon .social-x:hover {
-  color: var(--white);
+  color: #20a200;
 }
+
+.tf-social-icon .social-x .icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .tf-social-icon .social-x:hover::after {
   opacity: 1;
   visibility: visible;
@@ -10155,7 +10162,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .card-product_wrapper {
-  aspect-ratio: 0.75;
+  aspect-ratio: 1/1;
   z-index: 20;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -10164,6 +10171,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 0 15px #ccc;
 }
 .card-product_wrapper.style-line-radius {
   border-radius: 16px;
