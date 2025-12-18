@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
-    <title>一番賞</title>
+    <title>Ochaka - Multipurpose eCommerce HTML Template</title>
     <meta name="author" content="themesflat.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description"
@@ -43,6 +46,52 @@
     <!-- /preload -->
 
     <div id="wrapper">
+        <!-- Top Bar-->
+        <div class="tf-topbar bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="topbar-left">
+                            <h6 class="text-up text-white fw-normal text-line-clamp-1">Up to 50% off Lorem ipsum dolor
+                                sit amet, consectetur
+                                adipiscing elit</h6>
+                            <div class="group-btn">
+                                <a href="shop-default.html" class="tf-btn-line style-white letter-space-0">Men</a>
+                                <a href="shop-default.html" class="tf-btn-line style-white letter-space-0">Women</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-4 d-none d-lg-block">
+                        <ul class="topbar-right topbar-option-list">
+                            <li class="h6">
+                                <a href="faq.html" class="text-white link">Help & FAQs</a>
+                            </li>
+                            <li class="br-line"></li>
+                            <li class="h6">
+                                <a href="faq.html" class="text-white link">Factory</a>
+                            </li>
+                            <li class="br-line d-none d-xl-inline-flex"></li>
+                            <li class="tf-currencies d-none d-xl-block">
+                                <select class="tf-dropdown-select style-default color-white type-currencies">
+                                    <option selected data-thumbnail="images/country/us.png">USD</option>
+                                    <option data-thumbnail="images/country/vie.png">VND</option>
+                                </select>
+                            </li>
+                            <li class="br-line d-none d-xl-inline-flex"></li>
+                            <li class="tf-languages d-none d-xl-block">
+                                <select class="tf-dropdown-select style-default color-white type-languages">
+                                    <option>English</option>
+                                    <option>العربية</option>
+                                    <option>简体中文</option>
+                                    <option>اردو</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Top Bar -->
         <!-- Header -->
         <header class="tf-header style-3">
             <div class="header-top">
@@ -197,15 +246,15 @@
             </div>
         </header>
         <!-- /Header -->
-        <section class="s-page-title parallaxie has-bg" style='background-image: url("images/section/blog.jpg")'>
-            <div class="container position-relative z-5">
+        <section class="s-page-title">
+            <div class="container">
                 <div class="content">
-                    <h1 class="title-page text-white">一番賞 最新消息</h1>
+                    <h1 class="title-page">一番賞列表</h1>
                     <ul class="breadcrumbs-page">
-                        <li><a href="index.html" class="h6 text-white link">首頁</a></li>
-                        <li class="d-flex"><i class="icon icon-caret-right text-white"></i></li>
+                        <li><a href="index.html" class="h6 link">首頁</a></li>
+                        <li class="d-flex"><i class="icon icon-caret-right"></i></li>
                         <li>
-                            <h6 class="current-page fw-normal text-white">最新消息</h6>
+                            <h6 class="current-page fw-normal">小皮球一番賞</h6>
                         </li>
                     </ul>
                 </div>
@@ -213,286 +262,452 @@
         </section>
         <div class="flat-spacing">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-3 d-none d-xl-block">
-                        <div class="blog-sidebar sidebar-content-wrap sticky-top">
-                            <div class="sidebar-item">
-                                <h4 class="sb-title">搜尋消息</h4>
-                                <div class="sb-search">
-                                    <form class="form-search style-2">
-                                        <fieldset>
-                                            <input type="text" placeholder="輸入關鍵字" class="style-stroke" name="text"
-                                                tabindex="0" value="" aria-required="true" required="">
-                                        </fieldset>
-                                        <button type="submit" class="link"><i
-                                                class="icon icon-magnifying-glass"></i></button>
-                                    </form>
+                <div class="tf-shop-control">
+                    <div class="tf-control-filter">
+                        <a href="#filterShop" data-bs-toggle="offcanvas" aria-controls="filterShop"
+                            class="tf-btn-filter">
+                            <span class="icon icon-filter"></span><span class="text">篩選條件</span>
+                        </a>
+                    </div>
+                    <ul class="tf-control-layout">
+                        <li class="tf-view-layout-switch sw-layout-2" data-value-layout="tf-col-2">
+                            <i class="icon-grid-2"></i>
+                        </li>
+                        <li class="tf-view-layout-switch sw-layout-3 d-none d-md-flex" data-value-layout="tf-col-3">
+                            <i class="icon-grid-3"></i>
+                        </li>
+                        <li class="tf-view-layout-switch sw-layout-4 d-none d-xl-flex active"
+                            data-value-layout="tf-col-4">
+                            <i class="icon-grid-4"></i>
+                        </li>
+                        <li class="tf-view-layout-switch sw-layout-5 d-none d-xxl-flex" data-value-layout="tf-col-5">
+                            <i class="icon-grid-5"></i>
+                        </li>
+                        <li class="tf-view-layout-switch sw-layout-6 d-none d-xxl-flex" data-value-layout="tf-col-6">
+                            <i class="icon-grid-6"></i>
+                        </li>
+                        <li class="br-line type-vertical"></li>
+                        <li class="tf-view-layout-switch sw-layout-list list-layout" data-value-layout="list">
+                            <i class="icon-list"></i>
+                        </li>
+                    </ul>
+                    <div class="tf-control-sorting">
+                        <p class="h6 d-none d-lg-block">排序方式:</p>
+                        <div class="tf-dropdown-sort" data-bs-toggle="dropdown">
+                            <div class="btn-select">
+                                <span class="text-sort-value">熱門程度</span>
+                                <span class="icon icon-caret-down"></span>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="select-item active remove-all-filters" data-sort-value="best-selling">
+                                    <span class="text-value-item">熱門程度</span>
+                                </div>
+                                <div class="select-item" data-sort-value="a-z">
+                                    <span class="text-value-item">名稱 A-Z</span>
+                                </div>
+                                <div class="select-item" data-sort-value="price-low-high">
+                                    <span class="text-value-item">價格: 低到高</span>
+                                </div>
+                                <div class="select-item" data-sort-value="price-high-low">
+                                    <span class="text-value-item">價格: 高到低</span>
                                 </div>
                             </div>
-                            <div class="sidebar-item">
-                                <h4 class="sb-title">主題分類</h4>
-                                <ul class="sb-category">
-                                    <li><a href="blog-detail.html" class="h6 link">動漫系列<span>23</span></a></li>
-                                    <li><a href="blog-detail.html" class="h6 link">電玩遊戲<span>34</span></a></li>
-                                    <li><a href="blog-detail.html" class="h6 link">電影特攝<span>44</span></a></li>
-                                    <li><a href="blog-detail.html" class="h6 link">原創設計<span>75</span></a></li>
-                                    <li><a href="blog-detail.html" class="h6 link">模型公仔<span>33</span></a></li>
-                                    <li><a href="blog-detail.html" class="h6 link">周邊小物<span>45</span></a></li>
-                                    <li><a href="blog-detail.html" class="h6 link">最新預告<span>31</span></a></li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper-control-shop gridLayout-wrapper">
+                    <div class="meta-filter-shop">
+                        <div id="product-count-grid" class="count-text"></div>
+                        <div id="product-count-list" class="count-text"></div>
+                        <div id="applied-filters"></div>
+                        <button id="remove-all" class="remove-all-filters" style="display: none;"><i
+                                class="icon icon-close"></i> 清除篩選</button>
+                    </div>
+
+                    <div class="tf-list-layout wrapper-shop" id="listLayout" style="display: none;">
+                        <div class="card-product product-style_list" data-availability="In stock" data-brand="onepiece">
+                            <div class="card-product_wrapper">
+                                <a href="./product.html" class="product-img">
+                                    <img class="lazyload img-product" src="./assets/images/product/1.png"
+                                        data-src="./assets/images/product/1.png" alt="Product">
+                                    <img class="lazyload img-hover" src="./assets/images/product/2.png"
+                                        data-src="./assets/images/product/2.png" alt="Product">
+                                </a>
+                                <ul class="product-badge_list">
+                                    <li class="product-badge_item h6 hot">熱門</li>
                                 </ul>
                             </div>
-                            <div class="sidebar-item">
-                                <h4 class="sb-title">近期熱門</h4>
-                                <ul class="sb-recent">
-                                    <li class="wg-recent hover-img">
-                                        <a href="blog-detail.html" class="image img-style">
-                                            <img src="./assets/images/product/1.png"
-                                                data-src="./assets/images/product/1.png" alt="近期商品 1">
+                            <div class="card-product_info">
+                                <div class="product-info_list">
+                                    <a href="./product.html" class="name-product h3 link">海賊王 - 未來島蛋頭篇</a>
+                                    <div class="price-wrap">
+                                        <span class="price-new h6">NT$280 / 抽</span>
+                                    </div>
+                                    <div class="product-desc_list d-none d-sm-grid">
+                                        <p class="product-desc">
+                                            <span class="headline fw-bold">獎項內容:</span> A賞 魯夫模型, B賞 索隆模型, C賞 喬巴玩偶...
+                                            <br>目前 A 賞尚有存貨，敬請把握！
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product-action_list">
+                                    <span class="h6">選擇 <span class="fw-bold text-black">抽數</span></span>
+                                    <div class="group-btn">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn">
+                                            加入購物車 <i class="icon icon-shopping-cart-simple"></i>
                                         </a>
-                                        <div class="content">
-                                            <a href="blog-detail.html" class="entry_name h6 link">《海賊王》霸氣之戰一番賞即將開抽！</a>
-                                            <span class="entry_date text-small">
-                                                2025年 3月 25日
-                                            </span>
-                                        </div>
-                                    </li>
-                                    <li class="wg-recent hover-img">
-                                        <a href="blog-detail.html" class="image img-style">
-                                            <img src="./assets/images/product/2.png"
-                                                data-src="./assets/images/product/2.png" alt="近期商品 2">
-                                        </a>
-                                        <div class="content">
-                                            <a href="blog-detail.html" class="entry_name h6 link">《鬼滅之刃》炎柱精緻模型發售情報</a>
-                                            <span class="entry_date text-small">
-                                                2025年 3月 25日
-                                            </span>
-                                        </div>
-                                    </li>
-                                    <li class="wg-recent hover-img">
-                                        <a href="blog-detail.html" class="image img-style">
-                                            <img src="./assets/images/product/3.png"
-                                                data-src="./assets/images/product/3.png" alt="近期商品 3">
-                                        </a>
-                                        <div class="content">
-                                            <a href="blog-detail.html" class="entry_name h6 link">TOP 5 必收的動漫角色公仔</a>
-                                            <span class="entry_date text-small">
-                                                2025年 3月 25日
-                                            </span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="sidebar-item">
-                                <h4 class="sb-title">熱門標籤</h4>
-                                <ul class="sb-tag">
-                                    <li><a href="blog-detail.html" class="link">公仔</a></li>
-                                    <li><a href="blog-detail.html" class="link">模型</a></li>
-                                    <li><a href="blog-detail.html" class="link">動漫</a></li>
-                                    <li><a href="blog-detail.html" class="link">限定</a></li>
-                                    <li><a href="blog-detail.html" class="link">航海王</a></li>
-                                </ul>
-                            </div>
-                            <div class="sidebar-item">
-                                <h4 class="sb-title">商品展示</h4>
-                                <ul class="sb-gallery tf-grid-layout tf-col-2 lg-col-3">
-                                    <li class="hover-img"><a href="#" class="img-style"><img
-                                                src="./assets/images/product/4.png"
-                                                data-src="./assets/images/product/4.png" alt="商品圖 4"></a></li>
-                                    <li class="hover-img"><a href="#" class="img-style"><img
-                                                src="./assets/images/product/5.png"
-                                                data-src="./assets/images/product/5.png" alt="商品圖 5"></a></li>
-                                    <li class="hover-img"><a href="#" class="img-style"><img
-                                                src="./assets/images/product/6.png"
-                                                data-src="./assets/images/product/6.png" alt="商品圖 6"></a></li>
-                                    <li class="hover-img"><a href="#" class="img-style"><img
-                                                src="./assets/images/product/7.png"
-                                                data-src="./assets/images/product/7.png" alt="商品圖 7"></a></li>
-                                    <li class="hover-img"><a href="#" class="img-style"><img
-                                                src="./assets/images/product/8.png"
-                                                data-src="./assets/images/product/8.png" alt="商品圖 8"></a></li>
-                                    <li class="hover-img"><a href="#" class="img-style"><img
-                                                src="./assets/images/product/9.png"
-                                                data-src="./assets/images/product/9.png" alt="商品圖 9"></a></li>
-                                </ul>
-                            </div>
-                            <div class="sidebar-item">
-                                <div class="sb-banner hover-img">
-                                    <a href="shop-default.html" class="image img-style">
-                                        <img src="./assets/images/product/10.png"
-                                            data-src="./assets/images/product/10.png" alt="最新抽賞">
-                                    </a>
-                                    <div class="content">
-                                        <h5 class="sub-title text-primary">頭獎機率UP</h5>
-                                        <h2 class="fw-semibold title">
-                                            <a href="#" class="text-white link">
-                                                限定一番賞開跑中！
-                                            </a>
-                                        </h2>
-                                        <a href="shop-default.html" class="tf-btn btn-white animate-btn animate-dark">
-                                            立即查看
-                                            <i class="icon icon-arrow-right"></i>
+                                        <a href="#" class="tf-btn style-line btn-add-wishlist2">
+                                            <span class="text">加入追蹤</span> <i class="icon icon-heart"></i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-12">
-                        <div class="tf-grid-layout sm-col-2 lg-col-3 row-xl-gap-56">
-                            <div class="article-blog style-large hover-img">
-                                <a href="blog-detail.html" class="entry_image img-style position-relative">
-                                    <img src="./assets/images/product/11.png" data-src="./assets/images/product/11.png"
-                                        alt="消息圖 11" class="lazyload">
-                                    <div class="entry_tag">
-                                        <p class="name-tag h6 link">《咒術迴戰》主題</p>
-                                    </div>
+                        <div class="card-product product-style_list" data-availability="Out of Stock"
+                            data-brand="dragonball">
+                            <div class="card-product_wrapper">
+                                <a href="./product.html" class="product-img">
+                                    <img class="lazyload img-product" src="./assets/images/product/3.png"
+                                        data-src="./assets/images/product/3.png" alt="Product">
+                                    <img class="lazyload img-hover" src="./assets/images/product/4.png"
+                                        data-src="./assets/images/product/4.png" alt="Product">
                                 </a>
-                                <div class="blog-content">
-                                    <a href="blog-detail.html" class="entry_name link h4">
-                                        一番賞《咒術迴戰》最新系列「涉谷事變」登場！
-                                    </a>
-                                    <p class="text h6">
-                                        眾所期待的《咒術迴戰》一番賞最新系列即將於本月發售。本次收錄了人氣角色五條悟、宿儺等精彩模型，還有多樣化的周邊獎品等你來收藏。千萬別錯過這次的抽獎機會！
-                                    </p>
-                                    <a href="blog-detail.html" class="tf-btn-line">
-                                        了解詳情
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="article-blog style-small hover-img4">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html" class="entry_image img-style4">
-                                        <img src="./assets/images/product/12.png"
-                                            data-src="./assets/images/product/12.png" alt="消息圖 12" class="lazyload">
-                                    </a>
-                                    <div class="entry_tag">
-                                        <a href="#" class="name-tag h6 link">電影特攝</a>
+                                <ul class="product-badge_list">
+                                    <li class="product-badge_item flash-sale"><i class="icon icon-thunder"></i> 剩下不多
+                                    </li>
+                                </ul>
+                                <div class="product-marquee_sale">
+                                    <div class="marquee-wrapper">
+                                        <div class="initial-child-container">
+                                            <div class="marquee-child-item">
+                                                <span class="icon">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9.67975 15.75C10.318 15.7593..." fill="#FEBD55" />
+                                                        <path d="M6.21059 15.75C6.21059 15.75..." fill="#FC9E20" />
+                                                        <path d="M6.5 15.75C5.90819 15.5026..." fill="#E03E3E" />
+                                                        <path d="M6.49995 14.5C6.45051 14.5..." fill="#FBFBFB" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <p class="text-small">最後賞倒數中!!</p>
+                                            </div>
+                                            <div class="marquee-child-item"><span class="icon"></span></div>
+                                            <div class="marquee-child-item">
+                                                <p class="text-small">最後賞倒數中!!</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="blog-content">
-                                    <a href="blog-detail.html" class="entry_name link h4">
-                                        《哥吉拉大戰金剛》一番賞熱烈發售中！
-                                    </a>
-                                    <p class="entry_date">2025年 3月 25日</p>
-                                </div>
                             </div>
-                            <div class="article-blog style-small hover-img4">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html" class="entry_image img-style4">
-                                        <img src="./assets/images/product/13.png"
-                                            data-src="./assets/images/product/13.png" alt="消息圖 13" class="lazyload">
-                                    </a>
-                                    <div class="entry_tag">
-                                        <a href="#" class="name-tag h6 link">動漫周邊</a>
+                            <div class="card-product_info">
+                                <div class="product-info_list">
+                                    <a href="./product.html" class="name-product h3 link">七龍珠 - 激戰傳說</a>
+                                    <div class="price-wrap">
+                                        <span class="price-new h6">NT$300 / 抽</span>
+                                    </div>
+                                    <div class="product-desc_list d-none d-sm-grid">
+                                        <p class="product-desc">
+                                            <span class="headline fw-bold">配率:</span> 80抽/套。
+                                            目前剩餘 15 抽，最後賞神龍模型未出！
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="blog-content">
-                                    <a href="blog-detail.html" class="entry_name link h4">
-                                        超人氣《排球少年》紀念毛巾套組公開
-                                    </a>
-                                    <p class="entry_date">2025年 3月 25日</p>
-                                </div>
-                            </div>
-                            <div class="article-blog style-small hover-img4">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html" class="entry_image img-style4">
-                                        <img src="./assets/images/product/14.png"
-                                            data-src="./assets/images/product/14.png" alt="消息圖 14" class="lazyload">
-                                    </a>
-                                    <div class="entry_tag">
-                                        <a href="#" class="name-tag h6 link">電玩遊戲</a>
+                                <div class="product-action_list">
+                                    <span class="h6">選擇 <span class="fw-bold text-black">抽數</span></span>
+                                    <div class="group-btn">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn">
+                                            立即開抽 <i class="icon icon-shopping-cart-simple"></i>
+                                        </a>
+                                        <a href="#" class="tf-btn style-line btn-add-wishlist2">
+                                            <span class="text">加入追蹤</span> <i class="icon icon-heart"></i>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="blog-content">
-                                    <a href="blog-detail.html" class="entry_name link h4">
-                                        《魔物獵人》十週年紀念賞品即將上架
-                                    </a>
-                                    <p class="entry_date">2025年 3月 25日</p>
-                                </div>
-                            </div>
-                            <div class="article-blog style-large hover-img">
-                                <a href="blog-detail.html" class="entry_image img-style position-relative">
-                                    <img src="./assets/images/product/15.png" data-src="./assets/images/product/15.png"
-                                        alt="消息圖 15" class="lazyload">
-                                    <div class="entry_tag">
-                                        <p class="name-tag h6 link">《間諜家家酒》系列</p>
-                                    </div>
-                                </a>
-                                <div class="blog-content">
-                                    <a href="blog-detail.html" class="entry_name link h4">
-                                        一番賞《SPY×FAMILY 間諜家家酒》可愛安妮亞等你帶回家！
-                                    </a>
-                                    <p class="text h6">
-                                        這次《間諜家家酒》帶來了多款安妮亞不同造型的Q版公仔與實用小物，從A賞到Last One賞都充滿驚喜。趕快前往指定店家，試試手氣把她帶回家吧！
-                                    </p>
-                                    <a href="#" class="tf-btn-line">
-                                        了解詳情
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="article-blog style-small hover-img4">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html" class="entry_image img-style4">
-                                        <img src="./assets/images/product/16.png"
-                                            data-src="./assets/images/product/16.png" alt="消息圖 16" class="lazyload">
-                                    </a>
-                                    <div class="entry_tag">
-                                        <a href="#" class="name-tag h6 link">原創設計</a>
-                                    </div>
-                                </div>
-                                <div class="blog-content">
-                                    <a href="blog-detail.html" class="entry_name link h4">
-                                        原創機甲少女一番賞，科幻迷不容錯過
-                                    </a>
-                                    <p class="entry_date">2025年 3月 25日</p>
-                                </div>
-                            </div>
-                            <div class="article-blog style-small hover-img4">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html" class="entry_image img-style4">
-                                        <img src="./assets/images/product/17.png"
-                                            data-src="./assets/images/product/17.png" alt="消息圖 17" class="lazyload">
-                                    </a>
-                                    <div class="entry_tag">
-                                        <a href="#" class="name-tag h6 link">經典回顧</a>
-                                    </div>
-                                </div>
-                                <div class="blog-content">
-                                    <a href="blog-detail.html" class="entry_name link h4">
-                                        《美少女戰士》變身器收納盒復刻上市
-                                    </a>
-                                    <p class="entry_date">2025年 3月 25日</p>
-                                </div>
-                            </div>
-                            <div class="article-blog style-small hover-img4">
-                                <div class="blog-image">
-                                    <a href="blog-detail.html" class="entry_image img-style4">
-                                        <img src="./assets/images/product/18.png"
-                                            data-src="./assets/images/product/18.png" alt="消息圖 18" class="lazyload">
-                                    </a>
-                                    <div class="entry_tag">
-                                        <a href="#" class="name-tag h6 link">最新預告</a>
-                                    </div>
-                                </div>
-                                <div class="blog-content">
-                                    <a href="blog-detail.html" class="entry_name link h4">
-                                        預告！四月將推出《我的英雄學院》全新一番賞
-                                    </a>
-                                    <p class="entry_date">2025年 3月 25日</p>
-                                </div>
-                            </div>
-                            <div class="wd-full wg-pagination">
-                                <a href="#" class="pagination-item h6 direct"><i class="icon icon-caret-left"></i></a>
-                                <a href="#" class="pagination-item h6">1</a>
-                                <span class="pagination-item h6 active">2</span>
-                                <a href="#" class="pagination-item h6">3</a>
-                                <a href="#" class="pagination-item h6">4</a>
-                                <a href="#" class="pagination-item h6">5</a>
-                                <a href="#" class="pagination-item h6 direct"><i class="icon icon-caret-right"></i></a>
                             </div>
                         </div>
                     </div>
 
+                    <div class="wrapper-shop tf-grid-layout tf-col-4" id="gridLayout">
+
+                        <div class="card-product has-size grid has-size" data-availability="In stock"
+                            data-brand="fisoew">
+                            <div class="card-product_wrapper">
+                                <a href="./product.html" class="product-img">
+                                    <img class="lazyload img-product" src="./assets/images/product/5.png"
+                                        data-src="./assets/images/product/5.png" alt="Product">
+                                    <img class="lazyload img-hover" src="./assets/images/product/6.png"
+                                        data-src="./assets/images/product/6.png" alt="Product">
+                                </a>
+                                <ul class="product-action_list">
+                                    <li>
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="hover-tooltip tooltip-left box-icon">
+                                            <span class="icon icon-shopping-cart-simple"></span>
+                                            <span class="tooltip">加入購物車</span>
+                                        </a>
+                                    </li>
+                                    <li class="wishlist">
+                                        <a href="javascript:void(0);" class="hover-tooltip tooltip-left box-icon">
+                                            <span class="icon icon-heart"></span>
+                                            <span class="tooltip">加入追蹤</span>
+                                        </a>
+                                    </li>
+                                    <li class="compare">
+                                        <a href="#compare" data-bs-toggle="offcanvas"
+                                            class="hover-tooltip tooltip-left box-icon ">
+                                            <span class="icon icon-compare"></span>
+                                            <span class="tooltip">比較獎項</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="product-badge_list">
+                                    <li class="product-badge_item h6 new">新上架</li>
+                                </ul>
+                                <div class="product-action_bot">
+                                    <a href="#quickView" data-bs-toggle="modal"
+                                        class="tf-btn btn-white animate-btn animate-dark">
+                                        查看配率表 <i class="icon icon-view"></i>
+                                    </a>
+                                </div>
+                                <div class="variant-box bottom-0 start-0 end-0">
+                                    <div class="product-size_list-2">
+                                        <a href="#" class="size-item h6">1抽</a>
+                                        <a href="#" class="size-item h6">5抽</a>
+                                        <a href="#" class="size-item h6">包套</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product_info">
+                                <a href="./product.html" class="name-product h4 link">間諜家家酒 - 悠閒日常</a>
+                                <div class="price-wrap">
+                                    <span class="price-old h6 fw-normal">NT$350</span>
+                                    <span class="price-new h6">NT$300</span>
+                                </div>
+                                <ul class="product-color_list">
+                                    <li class="product-color-item color-swatch hover-tooltip tooltip-bot active">
+                                        <span class="tooltip color-filter">A賞 有</span>
+                                        <span class="swatch-value bg-success"></span>
+                                    </li>
+                                    <li class="product-color-item color-swatch hover-tooltip tooltip-bot">
+                                        <span class="tooltip color-filter">B賞 無</span>
+                                        <span class="swatch-value bg-secondary"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card-product grid" data-availability="In stock" data-brand="zeagoo">
+                            <div class="card-product_wrapper">
+                                <a href="./product.html" class="product-img">
+                                    <img class="lazyload img-product" src="./assets/images/product/7.png"
+                                        data-src="./assets/images/product/7.png" alt="Product">
+                                    <img class="lazyload img-hover" src="./assets/images/product/8.png"
+                                        data-src="./assets/images/product/8.png" alt="Product">
+                                </a>
+                                <ul class="product-action_list">
+                                    <li>
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="hover-tooltip tooltip-left box-icon">
+                                            <span class="icon icon-shopping-cart-simple"></span>
+                                            <span class="tooltip">加入購物車</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="product-action_bot">
+                                    <a href="#quickView" data-bs-toggle="modal"
+                                        class="tf-btn btn-white animate-btn animate-dark">
+                                        查看配率表 <i class="icon icon-view"></i>
+                                    </a>
+                                </div>
+                                <ul class="product-badge_list">
+                                    <li class="product-badge_item flash-sale"><i class="icon icon-thunder"></i> 熱銷中</li>
+                                </ul>
+                                <div class="product-countdown">
+                                    <div class="js-countdown cd-has-zero" data-timer="85472"
+                                        data-labels="天 : ,時 : ,分 : ,秒"></div>
+                                </div>
+                            </div>
+                            <div class="card-product_info">
+                                <a href="./product.html" class="name-product h4 link">寶可夢 - 歡樂野餐時光</a>
+                                <div class="price-wrap">
+                                    <span class="price-new h6">NT$260</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-product grid has-size" data-availability="Out of stock" data-brand="shewin">
+                            <div class="card-product_wrapper">
+                                <a href="./product.html" class="product-img">
+                                    <img class="lazyload img-product" src="./assets/images/product/9.png"
+                                        data-src="./assets/images/product/9.png" alt="Product">
+                                    <img class="lazyload img-hover" src="./assets/images/product/10.png"
+                                        data-src="./assets/images/product/10.png" alt="Product">
+                                </a>
+                                <div class="variant-box bottom-0 start-0 end-0">
+                                    <div class="product-size_list-2">
+                                        <a href="#" class="size-item h6">補貨中</a>
+                                    </div>
+                                </div>
+                                <ul class="product-badge_list">
+                                    <li class="product-badge_item h6 trend">完售</li>
+                                </ul>
+                                <div class="product-marquee_sale">
+                                    <div class="marquee-wrapper">
+                                        <div class="initial-child-container">
+                                            <div class="marquee-child-item">
+                                                <span class="icon">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="..." fill="#FEBD55" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <p class="text-small">感謝支持 全數完售!</p>
+                                            </div>
+                                            <div class="marquee-child-item"><span class="icon"></span></div>
+                                            <div class="marquee-child-item">
+                                                <p class="text-small">感謝支持 全數完售!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product_info">
+                                <a href="./product.html" class="name-product h4 link">鬼滅之刃 - 柱訓練篇</a>
+                                <div class="price-wrap">
+                                    <span class="price-new h6">NT$290</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-product grid" data-availability="In stock" data-brand="automet">
+                            <div class="card-product_wrapper">
+                                <a href="./product.html" class="product-img">
+                                    <img class="lazyload img-product" src="./assets/images/product/11.png"
+                                        data-src="./assets/images/product/11.png" alt="Product">
+                                    <img class="lazyload img-hover" src="./assets/images/product/12.png"
+                                        data-src="./assets/images/product/12.png" alt="Product">
+                                </a>
+                                <div class="product-action_bot">
+                                    <a href="#quickView" data-bs-toggle="modal"
+                                        class="tf-btn btn-white animate-btn animate-dark">
+                                        查看配率表 <i class="icon icon-view"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-product_info">
+                                <a href="./product.html" class="name-product h4 link">我的英雄學院 - 意志的傳承</a>
+                                <div class="price-wrap">
+                                    <span class="price-new h6">NT$280</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-product grid has-size" data-availability="In stock" data-brand="dokotoo">
+                            <div class="card-product_wrapper">
+                                <a href="./product.html" class="product-img">
+                                    <img class="lazyload img-product" src="./assets/images/product/13.png"
+                                        data-src="./assets/images/product/13.png" alt="Product">
+                                    <img class="lazyload img-hover" src="./assets/images/product/14.png"
+                                        data-src="./assets/images/product/14.png" alt="Product">
+                                </a>
+                                <div class="variant-box bottom-0 start-0 end-0">
+                                    <div class="product-size_list-2">
+                                        <span class="size-item h6">1抽</span>
+                                        <span class="size-item h6">5抽</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product_info">
+                                <a href="./product.html" class="name-product h4 link">咒術迴戰 - 澀谷事變</a>
+                                <div class="price-wrap">
+                                    <span class="price-new h6">NT$320</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-product grid" data-availability="In stock" data-brand="blooming-jelly">
+                            <div class="card-product_wrapper">
+                                <a href="./product.html" class="product-img">
+                                    <img class="lazyload img-product" src="./assets/images/product/15.png"
+                                        data-src="./assets/images/product/15.png" alt="Product">
+                                    <img class="lazyload img-hover" src="./assets/images/product/16.png"
+                                        data-src="./assets/images/product/16.png" alt="Product">
+                                </a>
+                                <ul class="product-badge_list">
+                                    <li class="product-badge_item h6 sale">特價中</li>
+                                </ul>
+                            </div>
+                            <div class="card-product_info">
+                                <a href="./product.html" class="name-product h4 link">初音未來 - 賽車女郎Ver.</a>
+                                <div class="price-wrap">
+                                    <span class="price-old h6 fw-normal">NT$350</span>
+                                    <span class="price-new h6">NT$250</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-product grid has-size" data-availability="In stock" data-brand="trendy-queen">
+                            <div class="card-product_wrapper">
+                                <a href="./product.html" class="product-img">
+                                    <img class="lazyload img-product" src="./assets/images/product/17.png"
+                                        data-src="./assets/images/product/17.png" alt="Product">
+                                    <img class="lazyload img-hover" src="./assets/images/product/18.png"
+                                        data-src="./assets/images/product/18.png" alt="Product">
+                                </a>
+                                <div class="variant-box bottom-0 start-0 end-0">
+                                    <div class="product-size_list-2">
+                                        <span class="size-item h6">1抽</span>
+                                        <span class="size-item h6">包套</span>
+                                    </div>
+                                </div>
+                                <ul class="product-badge_list">
+                                    <li class="product-badge_item h6 new">新到貨</li>
+                                </ul>
+                                <div class="product-marquee_sale">
+                                    <div class="marquee-wrapper">
+                                        <div class="initial-child-container">
+                                            <div class="marquee-child-item">
+                                                <span class="icon">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="..." fill="#FEBD55" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <div class="marquee-child-item">
+                                                <p class="text-small">新一番賞 熱烈發售中</p>
+                                            </div>
+                                            <div class="marquee-child-item"><span class="icon"></span></div>
+                                            <div class="marquee-child-item">
+                                                <p class="text-small">新一番賞 熱烈發售中</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product_info">
+                                <a href="./product.html" class="name-product h4 link">Hololive - 廚房大作戰</a>
+                                <div class="price-wrap">
+                                    <span class="price-new h6">NT$380</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wd-full wg-pagination m-0 justify-content-center">
+                            <a href="#" class="pagination-item h6 direct"><i class="icon icon-caret-left"></i></a>
+                            <a href="#" class="pagination-item h6">1</a>
+                            <span class="pagination-item h6 active">2</span>
+                            <a href="#" class="pagination-item h6">3</a>
+                            <a href="#" class="pagination-item h6">4</a>
+                            <a href="#" class="pagination-item h6">5</a>
+                            <a href="#" class="pagination-item h6 direct"><i class="icon icon-caret-right"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -559,7 +774,7 @@
                         </div>
                         <div class="col-xl-5 col-sm-6 mb_30 mb-xl-0">
                             <div class="">
-                                <p class="footer-heading">分類</p>
+                                <p class="footer-heading">歐氣啟動總部</p>
                                 <div class="tf-collapse-content">
                                     <ul class="footer-menu-list class">
                                         <li><a href="javascript:void(0)" class="link h6">航海王</a></li>
@@ -584,7 +799,7 @@
                         </div>
                         <div class="col-xl-4 col-sm-6 mb_30 mb-sm-0">
                             <div class="">
-                                <p class="footer-heading">Information</p>
+                                <p class="footer-heading">快速連結</p>
                                 <div class="tf-collapse-content">
                                     <ul class="footer-menu-list Information">
                                         <li><a href="javascript:void(0)" class="link h6">抽一番賞</a></li>
@@ -613,6 +828,10 @@
                             <li>
                                 <a href="faq.html" class="h6 link text-main">Factory</a>
                             </li>
+                            <li class="br-line type-vertical"></li>
+                            <li>
+                                <a href="faq.html" class="h6 link text-main">即時榜單</a>
+                            </li>
                         </ul>
                         <div class="list-hor flex-wrap">
                             <span class="h6">Payment:</span>
@@ -623,23 +842,6 @@
                                 <li><img src="images/payment/discover-2.svg" alt="Payment"></li>
                                 <li><img src="images/payment/paypal-2.svg" alt="Payment"></li>
                             </ul>
-                        </div>
-                        <div class="list-hor">
-                            <div class="tf-currencies">
-                                <select class="tf-dropdown-select style-default color-white-2 type-currencies">
-                                    <option selected data-thumbnail="images/country/us.png">USD</option>
-                                    <option data-thumbnail="images/country/vie.png">VND</option>
-                                </select>
-                            </div>
-                            <span class="br-line type-vertical"></span>
-                            <div class="tf-languages">
-                                <select class="tf-dropdown-select style-default color-white-2 type-languages">
-                                    <option>English</option>
-                                    <option>العربية</option>
-                                    <option>简体中文</option>
-                                    <option>اردو</option>
-                                </select>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -731,6 +933,218 @@
         </div>
     </div>
     <!-- /Mobile Menu -->
+    <!-- Filter Shop -->
+    <div class="offcanvas offcanvas-start canvas-filter" id="filterShop">
+        <div class="canvas-wrapper">
+            <div class="canvas-header">
+                <span class="title h3 fw-medium">Filter</span>
+                <span class="icon-close link icon-close-popup fs-24" data-bs-dismiss="offcanvas"></span>
+            </div>
+            <div class="canvas-body">
+                <div class="widget-facet">
+                    <div class="facet-title" data-bs-target="#category" role="button" data-bs-toggle="collapse"
+                        aria-expanded="true" aria-controls="category">
+                        <span class="h4 fw-semibold">Category</span>
+                        <span class="icon icon-caret-down fs-20"></span>
+                    </div>
+                    <div id="category" class="collapse show">
+                        <ul class="collapse-body filter-group-check group-category">
+                            <li class="list-item">
+                                <a href="shop-default.html" class="link h6">T-shirts<span class="count">23</span></a>
+                            </li>
+                            <li class="list-item">
+                                <a href="shop-default.html" class="link h6">Footwear<span class="count">44</span></a>
+                            </li>
+                            <li class="list-item">
+                                <a href="shop-default.html" class="link h6">Shirts<span class="count">75</span></a>
+                            </li>
+                            <li class="list-item">
+                                <a href="shop-default.html" class="link h6">Dresses<span class="count">33</span></a>
+                            </li>
+                            <li class="list-item">
+                                <a href="shop-default.html" class="link h6">Underwear<span class="count">45</span></a>
+                            </li>
+                            <li class="list-item">
+                                <a href="shop-default.html" class="link h6">Accessories<span class="count">32</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="widget-facet">
+                    <div class="facet-title" data-bs-target="#availability" role="button" data-bs-toggle="collapse"
+                        aria-expanded="true" aria-controls="availability">
+                        <span class="h4 fw-semibold">Availability</span>
+                        <span class="icon icon-caret-down fs-20"></span>
+                    </div>
+                    <div id="availability" class="collapse show">
+                        <ul class="collapse-body filter-group-check current-scrollbar">
+                            <li class="list-item">
+                                <input type="radio" name="availability" class="tf-check" id="inStock">
+                                <label for="inStock" class="label">
+                                    <span>In Stock</span><span class="count">23</span>
+                                </label>
+                            </li>
+                            <li class="list-item disabled">
+                                <input type="radio" name="availability" class="tf-check" id="outStock">
+                                <label for="outStock" class="label">
+                                    <span>Out of Stock</span><span class="count">34</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="widget-facet">
+                    <div class="facet-title" data-bs-target="#price" role="button" data-bs-toggle="collapse"
+                        aria-expanded="true" aria-controls="price">
+                        <span class="h4 fw-semibold">Price</span>
+                        <span class="icon icon-caret-down fs-20"></span>
+                    </div>
+                    <div id="price" class="collapse show">
+                        <div class="collapse-body widget-price filter-price">
+                            <div class="price-val-range" id="price-value-range" data-min="0" data-max="500"></div>
+                            <div class="box-value-price">
+                                <span class="h6 text-main">Price:</span>
+                                <div class="price-box">
+                                    <div class="price-val" id="price-min-value" data-currency="$"></div>
+                                    <span>-</span>
+                                    <div class="price-val" id="price-max-value" data-currency="$"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-facet">
+                    <div class="facet-title" data-bs-target="#brand" role="button" data-bs-toggle="collapse"
+                        aria-expanded="true" aria-controls="brand">
+                        <span class="h4 fw-semibold">Brand</span>
+                        <span class="icon icon-caret-down fs-20"></span>
+                    </div>
+                    <div id="brand" class="collapse show">
+                        <ul class="collapse-body filter-group-check current-scrollbar">
+                            <li class="list-item">
+                                <input type="checkbox" name="brand" class="tf-check" id="automet">
+                                <label for="automet" class="label">AUTOMET</label>
+                            </li>
+                            <li class="list-item">
+                                <input type="checkbox" name="brand" class="tf-check" id="trendy-queen">
+                                <label for="trendy-queen" class="label">Trendy Queen</label>
+                            </li>
+                            <li class="list-item">
+                                <input type="checkbox" name="brand" class="tf-check" id="wiholl">
+                                <label for="wiholl" class="label">WIHOLL</label>
+                            </li>
+                            <li class="list-item">
+                                <input type="checkbox" name="brand" class="tf-check" id="real-essentials">
+                                <label for="real-essentials" class="label">Real Essentials</label>
+                            </li>
+                            <li class="list-item">
+                                <input type="checkbox" name="brand" class="tf-check" id="dokotoo">
+                                <label for="dokotoo" class="label">Dokotoo</label>
+                            </li>
+                            <li class="list-item">
+                                <input type="checkbox" name="brand" class="tf-check" id="hanes">
+                                <label for="hanes" class="label">Hanes</label>
+                            </li>
+                            <li class="list-item">
+                                <input type="checkbox" name="brand" class="tf-check" id="zeagoo">
+                                <label for="zeagoo" class="label">Zeagoo</label>
+                            </li>
+                            <li class="list-item">
+                                <input type="checkbox" name="brand" class="tf-check" id="shewin">
+                                <label for="shewin" class="label">SHEWIN</label>
+                            </li>
+                            <li class="list-item">
+                                <input type="checkbox" name="brand" class="tf-check" id="blooming-jelly">
+                                <label for="blooming-jelly" class="label">Blooming Jelly</label>
+                            </li>
+                            <li class="list-item">
+                                <input type="checkbox" name="brand" class="tf-check" id="fisoew">
+                                <label for="fisoew" class="label">Fisoew</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="widget-facet">
+                    <div class="facet-title" data-bs-target="#size" role="button" data-bs-toggle="collapse"
+                        aria-expanded="true" aria-controls="size">
+                        <span class="h4 fw-semibold">Size</span>
+                        <span class="icon icon-caret-down fs-20"></span>
+                    </div>
+                    <div id="size" class="collapse show">
+                        <div class="collapse-body filter-size-box flat-check-list">
+                            <div class="check-item size-item size-check"><span class="size h6">XS</span></div>
+                            <div class="check-item size-item size-check"><span class="size h6">S</span></div>
+                            <div class="check-item size-item size-check"><span class="size h6">L</span></div>
+                            <div class="check-item size-item size-check"><span class="size h6">M</span></div>
+                            <div class="check-item size-item size-check"><span class="size h6">XL</span></div>
+                            <div class="check-item size-item size-check"><span class="size h6">2XL</span></div>
+                            <div class="check-item size-item size-check over-size"><span class="size h6">Over
+                                    size</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-facet">
+                    <div class="facet-title" data-bs-target="#color" role="button" data-bs-toggle="collapse"
+                        aria-expanded="true" aria-controls="size">
+                        <span class="h4 fw-semibold">Color</span>
+                        <span class="icon icon-caret-down fs-20"></span>
+                    </div>
+                    <div id="color" class="collapse show">
+                        <div class="collapse-body filter-color-box flat-check-list">
+                            <div class="check-item color-item color-check">
+                                <span class="color bg-light-purple"></span>
+                                <span class="color-text">Purple</span>
+                            </div>
+                            <div class="check-item color-item color-check">
+                                <span class="color bg-dark-charcoal"></span>
+                                <span class="color-text">Dark</span>
+                            </div>
+                            <div class="check-item color-item color-check line">
+                                <span class="color bg-dark-jade"></span>
+                                <span class="color-text">Green</span>
+                            </div>
+                            <div class="check-item color-item color-check">
+                                <span class="color bg-light-beige"></span>
+                                <span class="color-text">Beige</span>
+                            </div>
+                            <div class="check-item color-item color-check">
+                                <span class="color bg-sage-green"></span>
+                                <span class="color-text">Sage Green</span>
+                            </div>
+                            <div class="check-item color-item color-check">
+                                <span class="color bg-tomato"></span>
+                                <span class="color-text">Light Orange</span>
+                            </div>
+                            <div class="check-item color-item color-check">
+                                <span class="color bg-honey-orange"></span>
+                                <span class="color-text">Orange</span>
+                            </div>
+                            <div class="check-item color-item color-check">
+                                <span class="color bg-dark-olive"></span>
+                                <span class="color-text">Dark Olive</span>
+                            </div>
+                            <div class="check-item color-item color-check">
+                                <span class="color bg-hot-pink"></span>
+                                <span class="color-text">Pink</span>
+                            </div>
+                            <div class="check-item color-item color-check">
+                                <span class="color bg-muted-violet"></span>
+                                <span class="color-text">Dark Violet</span>
+                            </div>
+                            <div class="check-item color-item color-check">
+                                <span class="color bg-dusty-olive"></span>
+                                <span class="color-text">Dusty Olive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-bottom">
+                <button id="reset-filter" class="tf-btn btn-reset">Reset Filters</button>
+            </div>
+        </div>
+    </div>
+    <!-- /Filter Shop -->
     <!-- Toolbar -->
     <div class="tf-toolbar-bottom">
         <div class="toolbar-item">
@@ -777,24 +1191,6 @@
         </div>
     </div>
     <!-- /Toolbar -->
-    <!-- Button Sidebar Blog -->
-    <div class="btn-sidebar-mb d-xl-none">
-        <button data-bs-toggle="offcanvas" data-bs-target="#mbSidebar">
-            <i class="icon icon-sidebar"></i>
-        </button>
-    </div>
-    <!-- /Button Sidebar Blog -->
-    <!-- Sidebar Blog-->
-    <div class="offcanvas offcanvas-start canvas-sidebar" id="mbSidebar">
-        <div class="canvas-wrapper">
-            <div class="canvas-header">
-                <span class="title h4 fw-bold">Sidebar</span>
-                <span class="icon-close link icon-close-popup" data-bs-dismiss="offcanvas"></span>
-            </div>
-            <div class="canvas-body sidebar-mobile-append blog-sidebar"></div>
-        </div>
-    </div>
-    <!-- /Sidebar Blog -->
 
     <!-- Size Guide -->
     <div class="modal modalCentered fade modal-size-guide" id="size-guide">
@@ -945,7 +1341,7 @@
                         <div class="tf-compare-offcanvas list-empty">
                             <p class="box-text_empty h6 text-main">Your Compare is curently empty</p>
                             <div class="tf-compare-item file-delete">
-                                <a href="product-detail.html">
+                                <a href="./product.html">
                                     <div class="icon remove">
                                         <i class="icon-close"></i>
                                     </div>
@@ -954,7 +1350,7 @@
                                 </a>
                             </div>
                             <div class="tf-compare-item file-delete">
-                                <a href="product-detail.html">
+                                <a href="./product.html">
                                     <div class="icon remove">
                                         <i class="icon-close"></i>
                                     </div>
@@ -963,7 +1359,7 @@
                                 </a>
                             </div>
                             <div class="tf-compare-item file-delete">
-                                <a href="product-detail.html">
+                                <a href="./product.html">
                                     <div class="icon remove">
                                         <i class="icon-close"></i>
                                     </div>
@@ -1032,7 +1428,7 @@
                 <div class="tf-product-info-wrap">
                     <div class="tf-product-info-inner tf-product-info-list">
                         <div class="tf-product-info-heading">
-                            <a href="product-detail.html" class="link product-info-name fw-medium h1">
+                            <a href="./product.html" class="link product-info-name fw-medium h1">
                                 Casual Round Neck T-Shirt
                             </a>
                             <div class="product-info-meta">
@@ -1216,7 +1612,7 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="product-detail.html" class="tf-btn-line text-normal letter-space-0 fw-normal">
+                        <a href="./product.html" class="tf-btn-line text-normal letter-space-0 fw-normal">
                             <span class="h5">View full details</span>
                             <i class="icon icon-arrow-top-right fs-24"></i>
                         </a>
@@ -1300,8 +1696,8 @@
                                 <div class="content">
                                     <div class="text-small text-main-2 sub">T-shirt</div>
                                     <h6 class="title">
-                                        <a href="product-detail.html" class="link">Queen fashion long sleeve shirt,
-                                            basic t-shirt</a>
+                                        <a href="./product.html" class="link">Queen fashion long sleeve shirt, basic
+                                            t-shirt</a>
                                     </h6>
                                     <div class="price-wrap">
                                         <span class="price-old h6 fw-normal">$99,99</span>
@@ -1317,7 +1713,7 @@
                                 <div class="content">
                                     <div class="text-small text-main-2 sub">Hoodie</div>
                                     <h6 class="title">
-                                        <a href="product-detail.html" class="link">Champion Reverse Weave Pullover</a>
+                                        <a href="./product.html" class="link">Champion Reverse Weave Pullover</a>
                                     </h6>
                                     <div class="price-wrap">
                                         <span class="price-old h6 fw-normal">$149.99</span>
@@ -1335,7 +1731,7 @@
                                 <div class="content">
                                     <div class="text-small text-main-2 sub">Shorts</div>
                                     <h6 class="title">
-                                        <a href="product-detail.html" class="link">Columbia PFG Fishing Shirt</a>
+                                        <a href="./product.html" class="link">Columbia PFG Fishing Shirt</a>
                                     </h6>
                                     <div class="price-wrap">
                                         <span class="price-old h6 fw-normal">$109.99</span>
@@ -1351,7 +1747,7 @@
                                 <div class="content">
                                     <div class="text-small text-main-2 sub">Sweatshirt</div>
                                     <h6 class="title">
-                                        <a href="product-detail.html" class="link">Puma Essentials Graphic Tee</a>
+                                        <a href="./product.html" class="link">Puma Essentials Graphic Tee</a>
                                     </h6>
                                     <div class="price-wrap">
                                         <span class="price-old h6 fw-normal">$69.99</span>
@@ -1379,8 +1775,7 @@
                         </div>
                         <div class="content">
                             <h6 class="name">
-                                <a class="link text-line-clamp-1" href="product-detail.html">Nike Sportswear Tee
-                                    Shirts</a>
+                                <a class="link text-line-clamp-1" href="./product.html">Nike Sportswear Tee Shirts</a>
                             </h6>
                             <div class="cart-item-bot">
                                 <div class="price-wrap price">
@@ -1397,8 +1792,7 @@
                         </div>
                         <div class="content">
                             <h6 class="name">
-                                <a class="link text-line-clamp-1" href="product-detail.html">Puma Essentials Graphic
-                                    Tee</a>
+                                <a class="link text-line-clamp-1" href="./product.html">Puma Essentials Graphic Tee</a>
                             </h6>
                             <div class="cart-item-bot">
                                 <div class="price-wrap price">
@@ -1415,7 +1809,7 @@
                         </div>
                         <div class="content">
                             <h6 class="name">
-                                <a class="link text-line-clamp-1" href="product-detail.html">Reebok Classic Crew
+                                <a class="link text-line-clamp-1" href="./product.html">Reebok Classic Crew
                                     Sweatshirt</a>
                             </h6>
                             <div class="cart-item-bot">
@@ -1433,8 +1827,7 @@
                         </div>
                         <div class="content">
                             <h6 class="name">
-                                <a class="link text-line-clamp-1" href="product-detail.html">Columbia PFG Fishing
-                                    Shirt</a>
+                                <a class="link text-line-clamp-1" href="./product.html">Columbia PFG Fishing Shirt</a>
                             </h6>
                             <div class="cart-item-bot">
                                 <div class="price-wrap price">
@@ -1484,8 +1877,8 @@
                                     <div class="tf-mini-cart-info">
                                         <div class="text-small text-main-2 sub">T-shirt</div>
                                         <h6 class="title">
-                                            <a href="product-detail.html" class="link text-line-clamp-1">Queen fashion
-                                                long sleeve shirt, basic
+                                            <a href="./product.html" class="link text-line-clamp-1">Queen fashion long
+                                                sleeve shirt, basic
                                                 t-shirt</a>
                                         </h6>
                                         <div class="size">
@@ -1510,8 +1903,8 @@
                                     <div class="tf-mini-cart-info">
                                         <div class="text-small text-main-2 sub">T-shirt</div>
                                         <h6 class="title">
-                                            <a href="product-detail.html" class="link text-line-clamp-1">Champion
-                                                Reverse Weave Pullover</a>
+                                            <a href="./product.html" class="link text-line-clamp-1">Champion Reverse
+                                                Weave Pullover</a>
                                         </h6>
                                         <div class="size">
                                             <div class="text-small text-main-2 sub">Size: L</div>
@@ -1535,8 +1928,8 @@
                                     <div class="tf-mini-cart-info">
                                         <div class="text-small text-main-2 sub">Sweatshirt</div>
                                         <h6 class="title">
-                                            <a href="product-detail.html" class="link text-line-clamp-1">ASICS Core
-                                                Running Tights</a>
+                                            <a href="./product.html" class="link text-line-clamp-1">ASICS Core Running
+                                                Tights</a>
                                         </h6>
                                         <div class="size">
                                             <div class="text-small text-main-2 sub">Size: XS</div>
@@ -1560,7 +1953,7 @@
                                     <div class="tf-mini-cart-info">
                                         <div class="text-small text-main-2 sub">Shorts</div>
                                         <h6 class="title">
-                                            <a href="product-detail.html" class="link text-line-clamp-1">New Balance
+                                            <a href="./product.html" class="link text-line-clamp-1">New Balance
                                                 Athletics Shorts</a>
                                         </h6>
                                         <div class="size">
@@ -1896,10 +2289,18 @@
     <!-- Javascript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/carousel.js"></script>
     <script src="js/bootstrap-select.min.js"></script>
     <script src="js/lazysize.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/infinityslide.js"></script>
+
+
     <script src="js/parallaxie.js"></script>
+    <script src="js/count-down.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/shop.js"></script>
     <script src="js/main.js"></script>
 
     <script src="js/sibforms.js" defer></script>

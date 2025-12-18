@@ -21128,4 +21128,14 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+.menu-item{
+  position: relative;
+}
+/* @media (max-width: 1199px) {
+.collapse:not(.show) {
+    display: block !important;
+}
+.sub-nav-menu .sub-nav-link{
+  display: none !important;
+}
+} */
