@@ -24371,6 +24371,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   opacity: 0.6;
 }
 
+#ranking .item{
+
+}
+
 @media (min-width: 767px) {
   #raffle ul {
     grid-template-columns: repeat(10, 1fr);

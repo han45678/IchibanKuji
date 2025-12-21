@@ -19,6 +19,8 @@
     <!-- css -->
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/drift-basic.min.css">
+    <link rel="stylesheet" href="css/photoswipe.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -32,7 +34,7 @@
 <body>
 
     <!-- Scroll Top -->
-    <button id="goTop">
+    <button id="goTop" class="pos1">
         <span class="border-progress"></span>
         <span class="icon icon-caret-up"></span>
     </button>
@@ -91,7 +93,6 @@
                 </div>
             </div>
         </div>
-        <!-- /Top Bar -->
         <!-- Header -->
         <header class="tf-header style-3">
             <div class="header-top">
@@ -249,451 +250,27 @@
         <section class="s-page-title">
             <div class="container">
                 <div class="content">
-                    <h1 class="title-page">一番賞列表</h1>
+                    <h1 class="title-page">即時榜單</h1>
                     <ul class="breadcrumbs-page">
                         <li><a href="index.html" class="h6 link">首頁</a></li>
                         <li class="d-flex"><i class="icon icon-caret-right"></i></li>
                         <li>
-                            <h6 class="current-page fw-normal">小皮球一番賞</h6>
+                            <h6 class="current-page fw-normal">即時榜單</h6>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
-        <div class="flat-spacing">
+        <section class="flat-spacing">
             <div class="container">
-                <div class="tf-shop-control">
-                    <div class="tf-control-filter">
-                        <a href="#filterShop" data-bs-toggle="offcanvas" aria-controls="filterShop"
-                            class="tf-btn-filter">
-                            <span class="icon icon-filter"></span><span class="text">篩選條件</span>
-                        </a>
-                    </div>
-                    <ul class="tf-control-layout">
-
-                        <li class="tf-view-layout-switch sw-layout-3 d-none d-md-flex" data-value-layout="tf-col-3">
-                            <i class="icon-grid-3"></i>
-                        </li>
-                        <li class="tf-view-layout-switch sw-layout-4 d-none d-xl-flex active"
-                            data-value-layout="tf-col-4">
-                            <i class="icon-grid-4"></i>
-                        </li>
-                        <li class="tf-view-layout-switch sw-layout-5 d-none d-xxl-flex" data-value-layout="tf-col-5">
-                            <i class="icon-grid-5"></i>
-                        </li>
-
-                        <li class="br-line type-vertical"></li>
-                        <li class="tf-view-layout-switch sw-layout-list list-layout" data-value-layout="list">
-                            <i class="icon-list"></i>
-                        </li>
-                    </ul>
-                    <div class="tf-control-sorting">
-                        <p class="h6 d-none d-lg-block">排序方式:</p>
-                        <div class="tf-dropdown-sort" data-bs-toggle="dropdown">
-                            <div class="btn-select">
-                                <span class="text-sort-value">熱門程度</span>
-                                <span class="icon icon-caret-down"></span>
-                            </div>
-                            <div class="dropdown-menu">
-                                <div class="select-item active remove-all-filters" data-sort-value="best-selling">
-                                    <span class="text-value-item">熱門程度</span>
-                                </div>
-                                <div class="select-item" data-sort-value="price-low-high">
-                                    <span class="text-value-item">價格: 低到高</span>
-                                </div>
-                                <div class="select-item" data-sort-value="price-high-low">
-                                    <span class="text-value-item">價格: 高到低</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="wrapper-control-shop gridLayout-wrapper">
-                    <div class="meta-filter-shop">
-                        <div id="product-count-grid" class="count-text"></div>
-                        <div id="product-count-list" class="count-text"></div>
-                        <div id="applied-filters"></div>
-                        <button id="remove-all" class="remove-all-filters" style="display: none;"><i
-                                class="icon icon-close"></i> 清除篩選</button>
-                    </div>
-
-                    <div class="tf-list-layout wrapper-shop" id="listLayout" style="display: none;">
-                        <div class="card-product product-style_list" data-availability="In stock" data-brand="onepiece">
-                            <div class="card-product_wrapper">
-                                <a href="./product.html" class="product-img">
-                                    <img class="lazyload img-product" src="./assets/images/product/1.png"
-                                        data-src="./assets/images/product/1.png" alt="Product">
-                                    <img class="lazyload img-hover" src="./assets/images/product/2.png"
-                                        data-src="./assets/images/product/2.png" alt="Product">
-                                </a>
-                                <ul class="product-badge_list">
-                                    <li class="product-badge_item h6 hot">熱門</li>
-                                </ul>
-                            </div>
-                            <div class="card-product_info">
-                                <div class="product-info_list">
-                                    <a href="./product.html" class="name-product h3 link">海賊王 - 未來島蛋頭篇</a>
-                                    <div class="price-wrap">
-                                        <span class="price-new h6">NT$280 / 抽</span>
-                                    </div>
-                                    <div class="product-desc_list d-none d-sm-grid">
-                                        <p class="product-desc">
-                                            <span class="headline fw-bold">獎項內容:</span> A賞 魯夫模型, B賞 索隆模型, C賞 喬巴玩偶...
-                                            <br>目前 A 賞尚有存貨，敬請把握！
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="product-action_list">
-                                    <span class="h6">選擇 <span class="fw-bold text-black">抽數</span></span>
-                                    <div class="group-btn">
-                                        <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn">
-                                            加入購物車 <i class="icon icon-shopping-cart-simple"></i>
-                                        </a>
-                                        <a href="#" class="tf-btn style-line btn-add-wishlist2">
-                                            <span class="text">加入追蹤</span> <i class="icon icon-heart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-product product-style_list" data-availability="Out of Stock"
-                            data-brand="dragonball">
-                            <div class="card-product_wrapper">
-                                <a href="./product.html" class="product-img">
-                                    <img class="lazyload img-product" src="./assets/images/product/3.png"
-                                        data-src="./assets/images/product/3.png" alt="Product">
-                                    <img class="lazyload img-hover" src="./assets/images/product/4.png"
-                                        data-src="./assets/images/product/4.png" alt="Product">
-                                </a>
-                                <ul class="product-badge_list">
-                                    <li class="product-badge_item flash-sale"><i class="icon icon-thunder"></i> 剩下不多
-                                    </li>
-                                </ul>
-                                <div class="product-marquee_sale">
-                                    <div class="marquee-wrapper">
-                                        <div class="initial-child-container">
-                                            <div class="marquee-child-item">
-                                                <span class="icon">
-                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.67975 15.75C10.318 15.7593..." fill="#FEBD55" />
-                                                        <path d="M6.21059 15.75C6.21059 15.75..." fill="#FC9E20" />
-                                                        <path d="M6.5 15.75C5.90819 15.5026..." fill="#E03E3E" />
-                                                        <path d="M6.49995 14.5C6.45051 14.5..." fill="#FBFBFB" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="text-small">最後賞倒數中!!</p>
-                                            </div>
-                                            <div class="marquee-child-item"><span class="icon"></span></div>
-                                            <div class="marquee-child-item">
-                                                <p class="text-small">最後賞倒數中!!</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-product_info">
-                                <div class="product-info_list">
-                                    <a href="./product.html" class="name-product h3 link">七龍珠 - 激戰傳說</a>
-                                    <div class="price-wrap">
-                                        <span class="price-new h6">NT$300 / 抽</span>
-                                    </div>
-                                    <div class="product-desc_list d-none d-sm-grid">
-                                        <p class="product-desc">
-                                            <span class="headline fw-bold">配率:</span> 80抽/套。
-                                            目前剩餘 15 抽，最後賞神龍模型未出！
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="product-action_list">
-                                    <span class="h6">選擇 <span class="fw-bold text-black">抽數</span></span>
-                                    <div class="group-btn">
-                                        <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn">
-                                            立即開抽 <i class="icon icon-shopping-cart-simple"></i>
-                                        </a>
-                                        <a href="#" class="tf-btn style-line btn-add-wishlist2">
-                                            <span class="text">加入追蹤</span> <i class="icon icon-heart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="wrapper-shop tf-grid-layout tf-col-4" id="gridLayout">
-
-                        <div class="card-product has-size grid has-size" data-availability="In stock"
-                            data-brand="fisoew">
-                            <div class="card-product_wrapper">
-                                <a href="./product.html" class="product-img raffle">
-                                    <img class="lazyload img-product" src="./assets/images/product/5.png"
-                                        data-src="./assets/images/product/5.png" alt="Product">
-                                    <img class="lazyload img-hover" src="./assets/images/product/6.png"
-                                        data-src="./assets/images/product/6.png" alt="Product">
-                                </a>
-                                <ul class="product-action_list">
-                                    <li>
-                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
-                                            class="hover-tooltip tooltip-left box-icon">
-                                            <span class="icon icon-shopping-cart-simple"></span>
-                                            <span class="tooltip">加入購物車</span>
-                                        </a>
-                                    </li>
-                                    <li class="wishlist">
-                                        <a href="javascript:void(0);" class="hover-tooltip tooltip-left box-icon">
-                                            <span class="icon icon-heart"></span>
-                                            <span class="tooltip">加入追蹤</span>
-                                        </a>
-                                    </li>
-                                    <li class="compare">
-                                        <a href="#compare" data-bs-toggle="offcanvas"
-                                            class="hover-tooltip tooltip-left box-icon ">
-                                            <span class="icon icon-compare"></span>
-                                            <span class="tooltip">比較獎項</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="product-badge_list">
-                                    <li class="product-badge_item h6 new">新上架</li>
-                                </ul>
-                                <div class="product-action_bot">
-                                    <a href="#quickView" data-bs-toggle="modal"
-                                        class="tf-btn btn-white animate-btn animate-dark">
-                                        查看配率表 <i class="icon icon-view"></i>
-                                    </a>
-                                </div>
-                                <div class="variant-box bottom-0 start-0 end-0">
-                                    <div class="product-size_list-2">
-                                        <a href="#" class="size-item h6">1抽</a>
-                                        <a href="#" class="size-item h6">5抽</a>
-                                        <a href="#" class="size-item h6">包套</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-product_info">
-                                <a href="./product.html" class="name-product h4 link">間諜家家酒 - 悠閒日常</a>
-                                <!-- <div class="price-wrap">
-                                    <span class="price-old h6 fw-normal">NT$350</span>
-                                    <span class="price-new h6">NT$300</span>
-                                </div> -->
-                            </div>
-                        </div>
-
-                        <div class="card-product grid" data-availability="In stock" data-brand="zeagoo">
-                            <div class="card-product_wrapper">
-                                <a href="./product.html" class="product-img">
-                                    <img class="lazyload img-product" src="./assets/images/product/7.png"
-                                        data-src="./assets/images/product/7.png" alt="Product">
-                                    <img class="lazyload img-hover" src="./assets/images/product/8.png"
-                                        data-src="./assets/images/product/8.png" alt="Product">
-                                </a>
-                                <ul class="product-action_list">
-                                    <li>
-                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
-                                            class="hover-tooltip tooltip-left box-icon">
-                                            <span class="icon icon-shopping-cart-simple"></span>
-                                            <span class="tooltip">加入購物車</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="product-action_bot">
-                                    <a href="#quickView" data-bs-toggle="modal"
-                                        class="tf-btn btn-white animate-btn animate-dark">
-                                        查看配率表 <i class="icon icon-view"></i>
-                                    </a>
-                                </div>
-                                <ul class="product-badge_list">
-                                    <li class="product-badge_item flash-sale"><i class="icon icon-thunder"></i> 熱銷中</li>
-                                </ul>
-                                <div class="product-countdown">
-                                    <div class="js-countdown cd-has-zero" data-timer="85472"
-                                        data-labels="天 : ,時 : ,分 : ,秒"></div>
-                                </div>
-                            </div>
-                            <div class="card-product_info">
-                                <a href="./product.html" class="name-product h4 link">寶可夢 - 歡樂野餐時光</a>
-                                <div class="price-wrap">
-                                    <span class="price-new h6">NT$260</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-product grid has-size" data-availability="Out of stock" data-brand="shewin">
-                            <div class="card-product_wrapper">
-                                <a href="./product.html" class="product-img">
-                                    <img class="lazyload img-product" src="./assets/images/product/9.png"
-                                        data-src="./assets/images/product/9.png" alt="Product">
-                                    <img class="lazyload img-hover" src="./assets/images/product/10.png"
-                                        data-src="./assets/images/product/10.png" alt="Product">
-                                </a>
-                                <div class="variant-box bottom-0 start-0 end-0">
-                                    <div class="product-size_list-2">
-                                        <a href="#" class="size-item h6">補貨中</a>
-                                    </div>
-                                </div>
-                                <ul class="product-badge_list">
-                                    <li class="product-badge_item h6 trend">完售</li>
-                                </ul>
-                                <div class="product-marquee_sale">
-                                    <div class="marquee-wrapper">
-                                        <div class="initial-child-container">
-                                            <div class="marquee-child-item">
-                                                <span class="icon">
-                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="..." fill="#FEBD55" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="text-small">感謝支持 全數完售!</p>
-                                            </div>
-                                            <div class="marquee-child-item"><span class="icon"></span></div>
-                                            <div class="marquee-child-item">
-                                                <p class="text-small">感謝支持 全數完售!</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-product_info">
-                                <a href="./product.html" class="name-product h4 link">鬼滅之刃 - 柱訓練篇</a>
-                                <div class="price-wrap">
-                                    <span class="price-new h6">NT$290</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-product grid" data-availability="In stock" data-brand="automet">
-                            <div class="card-product_wrapper">
-                                <a href="./product.html" class="product-img">
-                                    <img class="lazyload img-product" src="./assets/images/product/11.png"
-                                        data-src="./assets/images/product/11.png" alt="Product">
-                                    <img class="lazyload img-hover" src="./assets/images/product/12.png"
-                                        data-src="./assets/images/product/12.png" alt="Product">
-                                </a>
-                                <div class="product-action_bot">
-                                    <a href="#quickView" data-bs-toggle="modal"
-                                        class="tf-btn btn-white animate-btn animate-dark">
-                                        查看配率表 <i class="icon icon-view"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card-product_info">
-                                <a href="./product.html" class="name-product h4 link">我的英雄學院 - 意志的傳承</a>
-                                <div class="price-wrap">
-                                    <span class="price-new h6">NT$280</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-product grid has-size" data-availability="In stock" data-brand="dokotoo">
-                            <div class="card-product_wrapper">
-                                <a href="./product.html" class="product-img">
-                                    <img class="lazyload img-product" src="./assets/images/product/13.png"
-                                        data-src="./assets/images/product/13.png" alt="Product">
-                                    <img class="lazyload img-hover" src="./assets/images/product/14.png"
-                                        data-src="./assets/images/product/14.png" alt="Product">
-                                </a>
-                                <div class="variant-box bottom-0 start-0 end-0">
-                                    <div class="product-size_list-2">
-                                        <span class="size-item h6">1抽</span>
-                                        <span class="size-item h6">5抽</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-product_info">
-                                <a href="./product.html" class="name-product h4 link">咒術迴戰 - 澀谷事變</a>
-                                <div class="price-wrap">
-                                    <span class="price-new h6">NT$320</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-product grid" data-availability="In stock" data-brand="blooming-jelly">
-                            <div class="card-product_wrapper">
-                                <a href="./product.html" class="product-img">
-                                    <img class="lazyload img-product" src="./assets/images/product/15.png"
-                                        data-src="./assets/images/product/15.png" alt="Product">
-                                    <img class="lazyload img-hover" src="./assets/images/product/16.png"
-                                        data-src="./assets/images/product/16.png" alt="Product">
-                                </a>
-                                <ul class="product-badge_list">
-                                    <li class="product-badge_item h6 sale">特價中</li>
-                                </ul>
-                            </div>
-                            <div class="card-product_info">
-                                <a href="./product.html" class="name-product h4 link">初音未來 - 賽車女郎Ver.</a>
-                                <div class="price-wrap">
-                                    <span class="price-old h6 fw-normal">NT$350</span>
-                                    <span class="price-new h6">NT$250</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-product grid has-size" data-availability="In stock" data-brand="trendy-queen">
-                            <div class="card-product_wrapper">
-                                <a href="./product.html" class="product-img">
-                                    <img class="lazyload img-product" src="./assets/images/product/17.png"
-                                        data-src="./assets/images/product/17.png" alt="Product">
-                                    <img class="lazyload img-hover" src="./assets/images/product/18.png"
-                                        data-src="./assets/images/product/18.png" alt="Product">
-                                </a>
-                                <div class="variant-box bottom-0 start-0 end-0">
-                                    <div class="product-size_list-2">
-                                        <span class="size-item h6">1抽</span>
-                                        <span class="size-item h6">包套</span>
-                                    </div>
-                                </div>
-                                <ul class="product-badge_list">
-                                    <li class="product-badge_item h6 new">新到貨</li>
-                                </ul>
-                                <div class="product-marquee_sale">
-                                    <div class="marquee-wrapper">
-                                        <div class="initial-child-container">
-                                            <div class="marquee-child-item">
-                                                <span class="icon">
-                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="..." fill="#FEBD55" />
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div class="marquee-child-item">
-                                                <p class="text-small">新一番賞 熱烈發售中</p>
-                                            </div>
-                                            <div class="marquee-child-item"><span class="icon"></span></div>
-                                            <div class="marquee-child-item">
-                                                <p class="text-small">新一番賞 熱烈發售中</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-product_info">
-                                <a href="./product.html" class="name-product h4 link">Hololive - 廚房大作戰</a>
-                                <div class="price-wrap">
-                                    <span class="price-new h6">NT$380</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="wd-full wg-pagination m-0 justify-content-center">
-                            <a href="#" class="pagination-item h6 direct"><i class="icon icon-caret-left"></i></a>
-                            <a href="#" class="pagination-item h6">1</a>
-                            <span class="pagination-item h6 active">2</span>
-                            <a href="#" class="pagination-item h6">3</a>
-                            <a href="#" class="pagination-item h6">4</a>
-                            <a href="#" class="pagination-item h6">5</a>
-                            <a href="#" class="pagination-item h6 direct"><i class="icon icon-caret-right"></i></a>
-                        </div>
+                <div class="row">
+                    <div class="col-12">
+                        
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        
         <!-- Footer -->
         <footer class="tf-footer style-color-white bg-black">
             <div class="footer-body">
@@ -916,218 +493,6 @@
         </div>
     </div>
     <!-- /Mobile Menu -->
-    <!-- Filter Shop -->
-    <div class="offcanvas offcanvas-start canvas-filter" id="filterShop">
-        <div class="canvas-wrapper">
-            <div class="canvas-header">
-                <span class="title h3 fw-medium">Filter</span>
-                <span class="icon-close link icon-close-popup fs-24" data-bs-dismiss="offcanvas"></span>
-            </div>
-            <div class="canvas-body">
-                <div class="widget-facet">
-                    <div class="facet-title" data-bs-target="#category" role="button" data-bs-toggle="collapse"
-                        aria-expanded="true" aria-controls="category">
-                        <span class="h4 fw-semibold">Category</span>
-                        <span class="icon icon-caret-down fs-20"></span>
-                    </div>
-                    <div id="category" class="collapse show">
-                        <ul class="collapse-body filter-group-check group-category">
-                            <li class="list-item">
-                                <a href="shop-default.html" class="link h6">T-shirts<span class="count">23</span></a>
-                            </li>
-                            <li class="list-item">
-                                <a href="shop-default.html" class="link h6">Footwear<span class="count">44</span></a>
-                            </li>
-                            <li class="list-item">
-                                <a href="shop-default.html" class="link h6">Shirts<span class="count">75</span></a>
-                            </li>
-                            <li class="list-item">
-                                <a href="shop-default.html" class="link h6">Dresses<span class="count">33</span></a>
-                            </li>
-                            <li class="list-item">
-                                <a href="shop-default.html" class="link h6">Underwear<span class="count">45</span></a>
-                            </li>
-                            <li class="list-item">
-                                <a href="shop-default.html" class="link h6">Accessories<span class="count">32</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="widget-facet">
-                    <div class="facet-title" data-bs-target="#availability" role="button" data-bs-toggle="collapse"
-                        aria-expanded="true" aria-controls="availability">
-                        <span class="h4 fw-semibold">Availability</span>
-                        <span class="icon icon-caret-down fs-20"></span>
-                    </div>
-                    <div id="availability" class="collapse show">
-                        <ul class="collapse-body filter-group-check current-scrollbar">
-                            <li class="list-item">
-                                <input type="radio" name="availability" class="tf-check" id="inStock">
-                                <label for="inStock" class="label">
-                                    <span>In Stock</span><span class="count">23</span>
-                                </label>
-                            </li>
-                            <li class="list-item disabled">
-                                <input type="radio" name="availability" class="tf-check" id="outStock">
-                                <label for="outStock" class="label">
-                                    <span>Out of Stock</span><span class="count">34</span>
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="widget-facet">
-                    <div class="facet-title" data-bs-target="#price" role="button" data-bs-toggle="collapse"
-                        aria-expanded="true" aria-controls="price">
-                        <span class="h4 fw-semibold">Price</span>
-                        <span class="icon icon-caret-down fs-20"></span>
-                    </div>
-                    <div id="price" class="collapse show">
-                        <div class="collapse-body widget-price filter-price">
-                            <div class="price-val-range" id="price-value-range" data-min="0" data-max="500"></div>
-                            <div class="box-value-price">
-                                <span class="h6 text-main">Price:</span>
-                                <div class="price-box">
-                                    <div class="price-val" id="price-min-value" data-currency="$"></div>
-                                    <span>-</span>
-                                    <div class="price-val" id="price-max-value" data-currency="$"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="widget-facet">
-                    <div class="facet-title" data-bs-target="#brand" role="button" data-bs-toggle="collapse"
-                        aria-expanded="true" aria-controls="brand">
-                        <span class="h4 fw-semibold">Brand</span>
-                        <span class="icon icon-caret-down fs-20"></span>
-                    </div>
-                    <div id="brand" class="collapse show">
-                        <ul class="collapse-body filter-group-check current-scrollbar">
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="automet">
-                                <label for="automet" class="label">AUTOMET</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="trendy-queen">
-                                <label for="trendy-queen" class="label">Trendy Queen</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="wiholl">
-                                <label for="wiholl" class="label">WIHOLL</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="real-essentials">
-                                <label for="real-essentials" class="label">Real Essentials</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="dokotoo">
-                                <label for="dokotoo" class="label">Dokotoo</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="hanes">
-                                <label for="hanes" class="label">Hanes</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="zeagoo">
-                                <label for="zeagoo" class="label">Zeagoo</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="shewin">
-                                <label for="shewin" class="label">SHEWIN</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="blooming-jelly">
-                                <label for="blooming-jelly" class="label">Blooming Jelly</label>
-                            </li>
-                            <li class="list-item">
-                                <input type="checkbox" name="brand" class="tf-check" id="fisoew">
-                                <label for="fisoew" class="label">Fisoew</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="widget-facet">
-                    <div class="facet-title" data-bs-target="#size" role="button" data-bs-toggle="collapse"
-                        aria-expanded="true" aria-controls="size">
-                        <span class="h4 fw-semibold">Size</span>
-                        <span class="icon icon-caret-down fs-20"></span>
-                    </div>
-                    <div id="size" class="collapse show">
-                        <div class="collapse-body filter-size-box flat-check-list">
-                            <div class="check-item size-item size-check"><span class="size h6">XS</span></div>
-                            <div class="check-item size-item size-check"><span class="size h6">S</span></div>
-                            <div class="check-item size-item size-check"><span class="size h6">L</span></div>
-                            <div class="check-item size-item size-check"><span class="size h6">M</span></div>
-                            <div class="check-item size-item size-check"><span class="size h6">XL</span></div>
-                            <div class="check-item size-item size-check"><span class="size h6">2XL</span></div>
-                            <div class="check-item size-item size-check over-size"><span class="size h6">Over
-                                    size</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="widget-facet">
-                    <div class="facet-title" data-bs-target="#color" role="button" data-bs-toggle="collapse"
-                        aria-expanded="true" aria-controls="size">
-                        <span class="h4 fw-semibold">Color</span>
-                        <span class="icon icon-caret-down fs-20"></span>
-                    </div>
-                    <div id="color" class="collapse show">
-                        <div class="collapse-body filter-color-box flat-check-list">
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-light-purple"></span>
-                                <span class="color-text">Purple</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-dark-charcoal"></span>
-                                <span class="color-text">Dark</span>
-                            </div>
-                            <div class="check-item color-item color-check line">
-                                <span class="color bg-dark-jade"></span>
-                                <span class="color-text">Green</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-light-beige"></span>
-                                <span class="color-text">Beige</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-sage-green"></span>
-                                <span class="color-text">Sage Green</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-tomato"></span>
-                                <span class="color-text">Light Orange</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-honey-orange"></span>
-                                <span class="color-text">Orange</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-dark-olive"></span>
-                                <span class="color-text">Dark Olive</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-hot-pink"></span>
-                                <span class="color-text">Pink</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-muted-violet"></span>
-                                <span class="color-text">Dark Violet</span>
-                            </div>
-                            <div class="check-item color-item color-check">
-                                <span class="color bg-dusty-olive"></span>
-                                <span class="color-text">Dusty Olive</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="canvas-bottom">
-                <button id="reset-filter" class="tf-btn btn-reset">Reset Filters</button>
-            </div>
-        </div>
-    </div>
-    <!-- /Filter Shop -->
     <!-- Toolbar -->
     <div class="tf-toolbar-bottom">
         <div class="toolbar-item">
@@ -1324,40 +689,38 @@
                         <div class="tf-compare-offcanvas list-empty">
                             <p class="box-text_empty h6 text-main">Your Compare is curently empty</p>
                             <div class="tf-compare-item file-delete">
-                                <a href="./product.html">
+                                <a href="product.html">
                                     <div class="icon remove">
                                         <i class="icon-close"></i>
                                     </div>
-                                    <img class="radius-3 lazyload" data-src="images/products/product-1.jpg"
-                                        src="images/products/product-1.jpg" alt="">
+                                    <img class="radius-3 lazyload" data-src="images/products/product-1.jpg" src="images/products/product-1.jpg"
+                                        alt="">
                                 </a>
                             </div>
                             <div class="tf-compare-item file-delete">
-                                <a href="./product.html">
+                                <a href="product.html">
                                     <div class="icon remove">
                                         <i class="icon-close"></i>
                                     </div>
-                                    <img class="radius-3 lazyload" data-src="images/products/product-5.jpg"
-                                        src="images/products/product-5.jpg" alt="">
+                                    <img class="radius-3 lazyload" data-src="images/products/product-5.jpg" src="images/products/product-5.jpg"
+                                        alt="">
                                 </a>
                             </div>
                             <div class="tf-compare-item file-delete">
-                                <a href="./product.html">
+                                <a href="product.html">
                                     <div class="icon remove">
                                         <i class="icon-close"></i>
                                     </div>
-                                    <img class="radius-3 lazyload" data-src="images/products/product-7.jpg"
-                                        src="images/products/product-7.jpg" alt="">
+                                    <img class="radius-3 lazyload" data-src="images/products/product-7.jpg" src="images/products/product-7.jpg"
+                                        alt="">
                                 </a>
                             </div>
                         </div>
                         <div class="tf-compare-buttons">
-                            <a href="compare.html"
-                                class="tf-btn animate-btn d-inline-flex bg-dark-2 justify-content-center">
+                            <a href="compare.html" class="tf-btn animate-btn d-inline-flex bg-dark-2 justify-content-center">
                                 Compare
                             </a>
-                            <div
-                                class="tf-btn btn-white animate-btn animate-dark line clear-list-empty tf-compare-button-clear-all">
+                            <div class="tf-btn btn-white animate-btn animate-dark line clear-list-empty tf-compare-button-clear-all">
                                 Clear All
                             </div>
                         </div>
@@ -1377,32 +740,27 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" data-size="XS" data-color="beige">
                                 <div class="item">
-                                    <img class="lazyload" data-src="images/products/product-9.jpg"
-                                        src="images/products/product-9.jpg" alt="">
+                                    <img class="lazyload" data-src="images/products/product-9.jpg" src="images/products/product-9.jpg" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide" data-size="L" data-color="pink">
                                 <div class="item">
-                                    <img class="lazyload" data-src="images/products/product-39.jpg"
-                                        src="images/products/product-39.jpg" alt="">
+                                    <img class="lazyload" data-src="images/products/product-39.jpg" src="images/products/product-39.jpg" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide" data-size="M" data-color="green">
                                 <div class="item">
-                                    <img class="lazyload" data-src="images/products/product-1.jpg"
-                                        src="images/products/product-1.jpg" alt="">
+                                    <img class="lazyload" data-src="images/products/product-1.jpg" src="images/products/product-1.jpg" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide" data-size="S" data-color="blue">
                                 <div class="item">
-                                    <img class="lazyload" data-src="images/products/product-4.jpg"
-                                        src="images/products/product-4.jpg" alt="">
+                                    <img class="lazyload" data-src="images/products/product-4.jpg" src="images/products/product-4.jpg" alt="">
                                 </div>
                             </div>
                             <div class="swiper-slide" data-size="L" data-color="black">
                                 <div class="item">
-                                    <img class="lazyload" data-src="images/products/product-47.jpg"
-                                        src="images/products/product-47.jpg" alt="">
+                                    <img class="lazyload" data-src="images/products/product-47.jpg" src="images/products/product-47.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -1411,38 +769,33 @@
                 <div class="tf-product-info-wrap">
                     <div class="tf-product-info-inner tf-product-info-list">
                         <div class="tf-product-info-heading">
-                            <a href="./product.html" class="link product-info-name fw-medium h1">
+                            <a href="product.html" class="link product-info-name fw-medium h1">
                                 Casual Round Neck T-Shirt
                             </a>
                             <div class="product-info-meta">
                                 <div class="rating">
                                     <div class="d-flex gap-4">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M14 5.4091L8.913 5.07466L6.99721 0.261719L5.08143 5.07466L0 5.4091L3.89741 8.7184L2.61849 13.7384L6.99721 10.9707L11.376 13.7384L10.097 8.7184L14 5.4091Z"
                                                 fill="#EF9122" />
                                         </svg>
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M14 5.4091L8.913 5.07466L6.99721 0.261719L5.08143 5.07466L0 5.4091L3.89741 8.7184L2.61849 13.7384L6.99721 10.9707L11.376 13.7384L10.097 8.7184L14 5.4091Z"
                                                 fill="#EF9122" />
                                         </svg>
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M14 5.4091L8.913 5.07466L6.99721 0.261719L5.08143 5.07466L0 5.4091L3.89741 8.7184L2.61849 13.7384L6.99721 10.9707L11.376 13.7384L10.097 8.7184L14 5.4091Z"
                                                 fill="#EF9122" />
                                         </svg>
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M14 5.4091L8.913 5.07466L6.99721 0.261719L5.08143 5.07466L0 5.4091L3.89741 8.7184L2.61849 13.7384L6.99721 10.9707L11.376 13.7384L10.097 8.7184L14 5.4091Z"
                                                 fill="#EF9122" />
                                         </svg>
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M14 5.4091L8.913 5.07466L6.99721 0.261719L5.08143 5.07466L0 5.4091L3.89741 8.7184L2.61849 13.7384L6.99721 10.9707L11.376 13.7384L10.097 8.7184L14 5.4091Z"
                                                 fill="#EF9122" />
@@ -1467,8 +820,7 @@
                                 </div>
                             </div>
                             <p class="product-infor-sub text-main h6">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo dolor,
-                                consectetur vel metus vitae,
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse justo dolor, consectetur vel metus vitae,
                                 tincidunt finibus dui fusce tellus enim.
                             </p>
                         </div>
@@ -1536,25 +888,21 @@
                                 <p class="h6 d-none d-sm-block">
                                     15 products available
                                 </p>
-                                <button type="button"
-                                    class="d-sm-none hover-tooltip box-icon btn-add-wishlist flex-sm-shrink-0">
+                                <button type="button" class="d-sm-none hover-tooltip box-icon btn-add-wishlist flex-sm-shrink-0">
                                     <span class="icon icon-heart"></span>
                                     <span class="tooltip">Add to Wishlist</span>
                                 </button>
-                                <a href="#compare" data-bs-toggle="offcanvas"
-                                    class="d-sm-none hover-tooltip tooltip-top box-icon flex-sm-shrink-0">
+                                <a href="#compare" data-bs-toggle="offcanvas" class="d-sm-none hover-tooltip tooltip-top box-icon flex-sm-shrink-0">
                                     <span class="icon icon-compare"></span>
                                     <span class="tooltip">Compare</span>
                                 </a>
                             </div>
                             <div class="group-btn flex-sm-nowrap">
-                                <a href="#shoppingCart" data-bs-toggle="offcanvas"
-                                    class="tf-btn animate-btn btn-add-to-cart">
+                                <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn btn-add-to-cart">
                                     ADD TO CART
                                     <i class="icon icon-shopping-cart-simple"></i>
                                 </a>
-                                <button type="button"
-                                    class="d-none d-sm-flex hover-tooltip box-icon btn-add-wishlist flex-sm-shrink-0">
+                                <button type="button" class="d-none d-sm-flex hover-tooltip box-icon btn-add-wishlist flex-sm-shrink-0">
                                     <span class="icon icon-heart"></span>
                                     <span class="tooltip">Add to Wishlist</span>
                                 </button>
@@ -1568,8 +916,7 @@
                                 <a href="checkout.html" class="tf-btn btn-yellow w-100 animate-btn animate-dark">
                                     Pay with
                                     <span class="icon">
-                                        <svg width="68" height="18" viewBox="0 0 68 18" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="68" height="18" viewBox="0 0 68 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M45.7745 0H40.609C40.3052 0 40.0013 0.30254 39.8494 0.605081L37.7224 13.9169C37.7224 14.2194 37.8743 14.3707 38.1782 14.3707H40.9129C41.2167 14.3707 41.3687 14.2194 41.3687 13.9169L41.9764 10.1351C41.9764 9.83258 42.2802 9.53004 42.736 9.53004H44.4072C47.9015 9.53004 49.8766 7.86606 50.3323 4.53811C50.6362 3.17668 50.3323 1.96652 49.7246 1.21017C48.8131 0.453813 47.4457 0 45.7745 0ZM46.3822 4.99193C46.0784 6.80717 44.711 6.80717 43.3437 6.80717H42.4321L43.0399 3.32795C43.0399 3.17668 43.1918 3.02541 43.4956 3.02541H43.7995C44.7111 3.02541 45.6226 3.02541 46.0784 3.63049C46.3822 3.78176 46.3822 4.23558 46.3822 4.99193Z"
                                                 fill="#139AD6" />
@@ -1595,7 +942,7 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="./product.html" class="tf-btn-line text-normal letter-space-0 fw-normal">
+                        <a href="product.html" class="tf-btn-line text-normal letter-space-0 fw-normal">
                             <span class="h5">View full details</span>
                             <i class="icon icon-arrow-top-right fs-24"></i>
                         </a>
@@ -1613,23 +960,19 @@
                 <div>
                     <form class="form-search style-2">
                         <fieldset>
-                            <input type="text" placeholder="Search item" class="style-stroke" name="text" tabindex="0"
-                                value="" aria-required="true" required="">
+                            <input type="text" placeholder="Search item" class="style-stroke" name="text" tabindex="0" value="" aria-required="true"
+                                required="">
                         </fieldset>
                         <button type="submit" class="link"><i class="icon icon-magnifying-glass"></i></button>
                     </form>
                     <ul class="quick-link-list">
                         <li><a href="shop-default-list.html" class="link-item text-main h6 link">Graphic tees</a></li>
                         <li><a href="shop-default-list.html" class="link-item text-main h6 link">Plain t-shirts</a></li>
-                        <li><a href="shop-default-list.html" class="link-item text-main h6 link">Vintage t-shirts</a>
-                        </li>
+                        <li><a href="shop-default-list.html" class="link-item text-main h6 link">Vintage t-shirts</a></li>
                         <li><a href="shop-default-list.html" class="link-item text-main h6 link">Band tees</a></li>
-                        <li><a href="shop-default-list.html" class="link-item text-main h6 link">Custom t-shirts</a>
-                        </li>
-                        <li><a href="shop-default-list.html" class="link-item text-main h6 link">Oversized t-shirts</a>
-                        </li>
-                        <li><a href="shop-default-list.html" class="link-item text-main h6 link">Crew neck t-shirts</a>
-                        </li>
+                        <li><a href="shop-default-list.html" class="link-item text-main h6 link">Custom t-shirts</a></li>
+                        <li><a href="shop-default-list.html" class="link-item text-main h6 link">Oversized t-shirts</a></li>
+                        <li><a href="shop-default-list.html" class="link-item text-main h6 link">Crew neck t-shirts</a></li>
                     </ul>
                 </div>
                 <div class="view-history-wrap">
@@ -1673,14 +1016,12 @@
                         <div class="trend-product-list">
                             <div class="trend-product-item">
                                 <div class="image">
-                                    <img class="lazyload" src="images/products/product-1.jpg"
-                                        data-src="images/products/product-1.jpg" alt="Product">
+                                    <img class="lazyload" src="images/products/product-1.jpg" data-src="images/products/product-1.jpg" alt="Product">
                                 </div>
                                 <div class="content">
                                     <div class="text-small text-main-2 sub">T-shirt</div>
                                     <h6 class="title">
-                                        <a href="./product.html" class="link">Queen fashion long sleeve shirt, basic
-                                            t-shirt</a>
+                                        <a href="product.html" class="link">Queen fashion long sleeve shirt, basic t-shirt</a>
                                     </h6>
                                     <div class="price-wrap">
                                         <span class="price-old h6 fw-normal">$99,99</span>
@@ -1690,13 +1031,12 @@
                             </div>
                             <div class="trend-product-item">
                                 <div class="image">
-                                    <img class="lazyload" src="images/products/product-7.jpg"
-                                        data-src="images/products/product-7.jpg" alt="Product">
+                                    <img class="lazyload" src="images/products/product-7.jpg" data-src="images/products/product-7.jpg" alt="Product">
                                 </div>
                                 <div class="content">
                                     <div class="text-small text-main-2 sub">Hoodie</div>
                                     <h6 class="title">
-                                        <a href="./product.html" class="link">Champion Reverse Weave Pullover</a>
+                                        <a href="product.html" class="link">Champion Reverse Weave Pullover</a>
                                     </h6>
                                     <div class="price-wrap">
                                         <span class="price-old h6 fw-normal">$149.99</span>
@@ -1708,13 +1048,12 @@
                         <div class="trend-product-list">
                             <div class="trend-product-item">
                                 <div class="image">
-                                    <img class="lazyload" src="images/products/product-5.jpg"
-                                        data-src="images/products/product-5.jpg" alt="Product">
+                                    <img class="lazyload" src="images/products/product-5.jpg" data-src="images/products/product-5.jpg" alt="Product">
                                 </div>
                                 <div class="content">
                                     <div class="text-small text-main-2 sub">Shorts</div>
                                     <h6 class="title">
-                                        <a href="./product.html" class="link">Columbia PFG Fishing Shirt</a>
+                                        <a href="product.html" class="link">Columbia PFG Fishing Shirt</a>
                                     </h6>
                                     <div class="price-wrap">
                                         <span class="price-old h6 fw-normal">$109.99</span>
@@ -1724,13 +1063,12 @@
                             </div>
                             <div class="trend-product-item">
                                 <div class="image">
-                                    <img class="lazyload" src="images/products/product-9.jpg"
-                                        data-src="images/products/product-9.jpg" alt="Product">
+                                    <img class="lazyload" src="images/products/product-9.jpg" data-src="images/products/product-9.jpg" alt="Product">
                                 </div>
                                 <div class="content">
                                     <div class="text-small text-main-2 sub">Sweatshirt</div>
                                     <h6 class="title">
-                                        <a href="./product.html" class="link">Puma Essentials Graphic Tee</a>
+                                        <a href="product.html" class="link">Puma Essentials Graphic Tee</a>
                                     </h6>
                                     <div class="price-wrap">
                                         <span class="price-old h6 fw-normal">$69.99</span>
@@ -1753,12 +1091,11 @@
                 <div class="list-cart">
                     <div class="list-cart-item">
                         <div class="image">
-                            <img class="lazyload" data-src="images/products/product-11.jpg"
-                                src="images/products/product-11.jpg" alt="">
+                            <img class="lazyload" data-src="images/products/product-11.jpg" src="images/products/product-11.jpg" alt="">
                         </div>
                         <div class="content">
                             <h6 class="name">
-                                <a class="link text-line-clamp-1" href="./product.html">Nike Sportswear Tee Shirts</a>
+                                <a class="link text-line-clamp-1" href="product.html">Nike Sportswear Tee Shirts</a>
                             </h6>
                             <div class="cart-item-bot">
                                 <div class="price-wrap price">
@@ -1770,12 +1107,11 @@
                     </div>
                     <div class="list-cart-item">
                         <div class="image">
-                            <img class="lazyload" data-src="images/products/product-13.jpg"
-                                src="images/products/product-13.jpg" alt="">
+                            <img class="lazyload" data-src="images/products/product-13.jpg" src="images/products/product-13.jpg" alt="">
                         </div>
                         <div class="content">
                             <h6 class="name">
-                                <a class="link text-line-clamp-1" href="./product.html">Puma Essentials Graphic Tee</a>
+                                <a class="link text-line-clamp-1" href="product.html">Puma Essentials Graphic Tee</a>
                             </h6>
                             <div class="cart-item-bot">
                                 <div class="price-wrap price">
@@ -1787,13 +1123,11 @@
                     </div>
                     <div class="list-cart-item">
                         <div class="image">
-                            <img class="lazyload" data-src="images/products/product-15.jpg"
-                                src="images/products/product-15.jpg" alt="">
+                            <img class="lazyload" data-src="images/products/product-15.jpg" src="images/products/product-15.jpg" alt="">
                         </div>
                         <div class="content">
                             <h6 class="name">
-                                <a class="link text-line-clamp-1" href="./product.html">Reebok Classic Crew
-                                    Sweatshirt</a>
+                                <a class="link text-line-clamp-1" href="product.html">Reebok Classic Crew Sweatshirt</a>
                             </h6>
                             <div class="cart-item-bot">
                                 <div class="price-wrap price">
@@ -1805,12 +1139,11 @@
                     </div>
                     <div class="list-cart-item">
                         <div class="image">
-                            <img class="lazyload" data-src="images/products/product-17.jpg"
-                                src="images/products/product-17.jpg" alt="">
+                            <img class="lazyload" data-src="images/products/product-17.jpg" src="images/products/product-17.jpg" alt="">
                         </div>
                         <div class="content">
                             <h6 class="name">
-                                <a class="link text-line-clamp-1" href="./product.html">Columbia PFG Fishing Shirt</a>
+                                <a class="link text-line-clamp-1" href="product.html">Columbia PFG Fishing Shirt</a>
                             </h6>
                             <div class="cart-item-bot">
                                 <div class="price-wrap price">
@@ -1854,14 +1187,13 @@
                                 </div>
                                 <div class="tf-mini-cart-item file-delete">
                                     <div class="tf-mini-cart-image">
-                                        <img class="lazyload" data-src="images/products/product-1.jpg"
-                                            src="images/products/product-1.jpg" alt="img-product">
+                                        <img class="lazyload" data-src="images/products/product-1.jpg" src="images/products/product-1.jpg"
+                                            alt="img-product">
                                     </div>
                                     <div class="tf-mini-cart-info">
                                         <div class="text-small text-main-2 sub">T-shirt</div>
                                         <h6 class="title">
-                                            <a href="./product.html" class="link text-line-clamp-1">Queen fashion long
-                                                sleeve shirt, basic
+                                            <a href="product.html" class="link text-line-clamp-1">Queen fashion long sleeve shirt, basic
                                                 t-shirt</a>
                                         </h6>
                                         <div class="size">
@@ -1880,14 +1212,13 @@
                                 </div>
                                 <div class="tf-mini-cart-item file-delete">
                                     <div class="tf-mini-cart-image">
-                                        <img class="lazyload" data-src="images/products/product-2.jpg"
-                                            src="images/products/product-2.jpg" alt="img-product">
+                                        <img class="lazyload" data-src="images/products/product-2.jpg" src="images/products/product-2.jpg"
+                                            alt="img-product">
                                     </div>
                                     <div class="tf-mini-cart-info">
                                         <div class="text-small text-main-2 sub">T-shirt</div>
                                         <h6 class="title">
-                                            <a href="./product.html" class="link text-line-clamp-1">Champion Reverse
-                                                Weave Pullover</a>
+                                            <a href="product.html" class="link text-line-clamp-1">Champion Reverse Weave Pullover</a>
                                         </h6>
                                         <div class="size">
                                             <div class="text-small text-main-2 sub">Size: L</div>
@@ -1905,14 +1236,13 @@
                                 </div>
                                 <div class="tf-mini-cart-item file-delete">
                                     <div class="tf-mini-cart-image">
-                                        <img class="lazyload" data-src="images/products/product-3.jpg"
-                                            src="images/products/product-3.jpg" alt="img-product">
+                                        <img class="lazyload" data-src="images/products/product-3.jpg" src="images/products/product-3.jpg"
+                                            alt="img-product">
                                     </div>
                                     <div class="tf-mini-cart-info">
                                         <div class="text-small text-main-2 sub">Sweatshirt</div>
                                         <h6 class="title">
-                                            <a href="./product.html" class="link text-line-clamp-1">ASICS Core Running
-                                                Tights</a>
+                                            <a href="product.html" class="link text-line-clamp-1">ASICS Core Running Tights</a>
                                         </h6>
                                         <div class="size">
                                             <div class="text-small text-main-2 sub">Size: XS</div>
@@ -1930,14 +1260,13 @@
                                 </div>
                                 <div class="tf-mini-cart-item file-delete">
                                     <div class="tf-mini-cart-image">
-                                        <img class="lazyload" data-src="images/products/product-4.jpg"
-                                            src="images/products/product-4.jpg" alt="img-product">
+                                        <img class="lazyload" data-src="images/products/product-4.jpg" src="images/products/product-4.jpg"
+                                            alt="img-product">
                                     </div>
                                     <div class="tf-mini-cart-info">
                                         <div class="text-small text-main-2 sub">Shorts</div>
                                         <h6 class="title">
-                                            <a href="./product.html" class="link text-line-clamp-1">New Balance
-                                                Athletics Shorts</a>
+                                            <a href="product.html" class="link text-line-clamp-1">New Balance Athletics Shorts</a>
                                         </h6>
                                         <div class="size">
                                             <div class="text-small text-main-2 sub">Size: XS</div>
@@ -1979,15 +1308,12 @@
                             <div class="tf-progress-bar tf-progress-ship">
                                 <div class="value" style="width: 0%;" data-progress="25"></div>
                             </div>
-                            <div class="desc text-main">Add <span class="text-primary fw-bold">$15.40</span> to cart and
-                                get free shipping!</div>
+                            <div class="desc text-main">Add <span class="text-primary fw-bold">$15.40</span> to cart and get free shipping!</div>
                         </div>
                         <div class="tf-mini-cart-bottom-wrap">
                             <div class="tf-mini-cart-view-checkout">
-                                <a href="view-cart.html" class="tf-btn btn-white animate-btn animate-dark line">View
-                                    cart</a>
-                                <a href="checkout.html"
-                                    class="tf-btn animate-btn d-inline-flex bg-dark-2 w-100 justify-content-center"><span>Check
+                                <a href="view-cart.html" class="tf-btn btn-white animate-btn animate-dark line">View cart</a>
+                                <a href="checkout.html" class="tf-btn animate-btn d-inline-flex bg-dark-2 w-100 justify-content-center"><span>Check
                                         out</span></a>
                             </div>
                             <div class="free-shipping">
@@ -2005,10 +1331,8 @@
                             </label>
                             <textarea name="note" id="Cart-note" placeholder="Note about your order"></textarea>
                             <div class="tf-cart-tool-btns">
-                                <button class="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100"
-                                    type="submit">Save</button>
-                                <div class="tf-btn btn-white animate-btn animate-dark line tf-mini-cart-tool-close">
-                                    Cancel</div>
+                                <button class="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100" type="submit">Save</button>
+                                <div class="tf-btn btn-white animate-btn animate-dark line tf-mini-cart-tool-close">Cancel</div>
                             </div>
                         </form>
                     </div>
@@ -2021,15 +1345,13 @@
                             </div>
                             <div class="field">
                                 <div class="tf-select">
-                                    <select class="w-100" id="shipping-country-form" name="address[country]"
-                                        data-default="">
+                                    <select class="w-100" id="shipping-country-form" name="address[country]" data-default="">
                                         <option value="Australia"
                                             data-provinces='[["Australian Capital Territory","Australian Capital Territory"],["New South Wales","New South Wales"],["Northern Territory","Northern Territory"],["Queensland","Queensland"],["South Australia","South Australia"],["Tasmania","Tasmania"],["Victoria","Victoria"],["Western Australia","Western Australia"]]'>
                                             Australia</option>
                                         <option value="Austria" data-provinces='[]'>Austria</option>
                                         <option value="Belgium" data-provinces='[]'>Belgium</option>
-                                        <option value="Canada"
-                                            data-provinces='[["Ontario","Ontario"],["Quebec","Quebec"]]'>Canada
+                                        <option value="Canada" data-provinces='[["Ontario","Ontario"],["Quebec","Quebec"]]'>Canada
                                         </option>
                                         <option value="Czech Republic" data-provinces='[]'>Czechia</option>
                                         <option value="Denmark" data-provinces='[]'>Denmark</option>
@@ -2056,13 +1378,11 @@
                             </div>
                             <div class="field">
                                 <div class="tf-select">
-                                    <select id="shipping-province-form" name="address[province]"
-                                        data-default=""></select>
+                                    <select id="shipping-province-form" name="address[province]" data-default=""></select>
                                 </div>
                             </div>
                             <div class="field">
-                                <input type="text" placeholder="Postal code" data-opend-focus id="zipcode"
-                                    name="address[zip]" value="">
+                                <input type="text" placeholder="Postal code" data-opend-focus id="zipcode" name="address[zip]" value="">
                             </div>
                             <div id="zipcode-message" class="error" style="display: none;">
                                 We found one shipping rate available for undefined.
@@ -2072,10 +1392,8 @@
                                 <p class="standard">Standard at <span>$0.00</span> USD</p>
                             </div>
                             <div class="tf-cart-tool-btns">
-                                <button class="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100"
-                                    type="submit">Save</button>
-                                <div class="tf-btn btn-white animate-btn animate-dark line tf-mini-cart-tool-close">
-                                    Cancel</div>
+                                <button class="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100" type="submit">Save</button>
+                                <div class="tf-btn btn-white animate-btn animate-dark line tf-mini-cart-tool-close">Cancel</div>
                             </div>
                         </form>
                     </div>
@@ -2091,11 +1409,9 @@
                                 <h3>Only <span class="text-primary">$2</span> for a gift box</h3>
                             </div>
                             <div class="tf-cart-tool-btns">
-                                <button class="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100"
-                                    type="submit">Add a
+                                <button class="subscribe-button tf-btn animate-btn d-inline-flex bg-dark-2 w-100" type="submit">Add a
                                     gift</button>
-                                <div class="tf-btn btn-white animate-btn animate-dark line tf-mini-cart-tool-close">
-                                    Cancel</div>
+                                <div class="tf-btn btn-white animate-btn animate-dark line tf-mini-cart-tool-close">Cancel</div>
                             </div>
                         </form>
                     </div>
@@ -2104,6 +1420,294 @@
         </div>
     </div>
     <!-- /Shopping Cart -->
+
+    <!-- Compare Color -->
+    <div class="modal modalCentered fade modal-compare_color" id="compareColor">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-heading">
+                    <h2 class="fw-normal">Compare color</h2>
+                    <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
+                </div>
+                <div class="compare-color_list list-empty tf-grid-layout tf-col-4 gap-0">
+                    <p class="box-text_empty h6 text-main">Your compare is curently empty</p>
+                    <div class="compare-color_item file-delete">
+                        <div class="compare_image">
+                            <img class="lazyload" src="images/products/product-4.jpg" data-src="images/products/product-4.jpg" alt="Image">
+                            <span class="remove">
+                                <i class="icon icon-trash"></i>
+                            </span>
+                        </div>
+                        <div class="compare_colour">
+                            <span class="color bg-teal-blue"></span>
+                            <span class="fw-medium text-black">Teal Blue</span>
+                        </div>
+                        <div class="compare_bot">
+                            <div class="tf-select style-border">
+                                <select class="h6">
+                                    <option>XS - $49,99 </option>
+                                    <option selected="selected">S - $69,99 </option>
+                                    <option>M - $79,99 </option>
+                                    <option>XL - $89,99 </option>
+                                </select>
+                            </div>
+                            <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn rounded-0 w-100">
+                                ADD TO CART
+                                <i class="icon icon-shopping-cart-simple"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="compare-color_item file-delete">
+                        <div class="compare_image">
+                            <img class="lazyload" src="images/products/product-21.jpg" data-src="images/products/product-21.jpg" alt="Image">
+                            <span class="remove">
+                                <i class="icon icon-trash"></i>
+                            </span>
+                        </div>
+                        <div class="compare_colour">
+                            <span class="color bg-black"></span>
+                            <span class="fw-medium text-black">Black</span>
+                        </div>
+                        <div class="compare_bot">
+                            <div class="tf-select style-border">
+                                <select class="h6">
+                                    <option>XS - $79,99 </option>
+                                    <option>S - $89,99 </option>
+                                    <option selected="selected">M - $99,99 </option>
+                                    <option>XL - $109,99 </option>
+                                    <option>2XL - $109,99 </option>
+                                </select>
+                            </div>
+                            <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn rounded-0 w-100">
+                                ADD TO CART
+                                <i class="icon icon-shopping-cart-simple"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="compare-color_item file-delete">
+                        <div class="compare_image">
+                            <img class="lazyload" src="images/products/product-30.jpg" data-src="images/products/product-30.jpg" alt="Image">
+                            <span class="remove">
+                                <i class="icon icon-trash"></i>
+                            </span>
+                        </div>
+                        <div class="compare_colour">
+                            <span class="color bg-medium-gray"></span>
+                            <span class="fw-medium text-black">Medium grey</span>
+                        </div>
+                        <div class="compare_bot">
+                            <div class="tf-select style-border">
+                                <select class="h6">
+                                    <option>S - $119,99 </option>
+                                    <option selected="selected">M - $129,99 </option>
+                                </select>
+                            </div>
+                            <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn rounded-0 w-100">
+                                ADD TO CART
+                                <i class="icon icon-shopping-cart-simple"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="compare-color_item file-delete">
+                        <div class="compare_image">
+                            <img class="lazyload" src="images/products/product-26.jpg" data-src="images/products/product-26.jpg" alt="Image">
+                            <span class="remove">
+                                <i class="icon icon-trash"></i>
+                            </span>
+                        </div>
+                        <div class="compare_colour">
+                            <span class="color bg-dusty-olive"></span>
+                            <span class="fw-medium text-black">Grey</span>
+                        </div>
+                        <div class="compare_bot">
+                            <div class="tf-select style-border">
+                                <select class="h6">
+                                    <option>XS - $79,99 </option>
+                                    <option>S - $89,99 </option>
+                                    <option selected="selected">M - $99,99 </option>
+                                </select>
+                            </div>
+                            <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn rounded-0 w-100">
+                                ADD TO CART
+                                <i class="icon icon-shopping-cart-simple"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="compare-color_item file-delete">
+                        <div class="compare_image">
+                            <img class="lazyload" src="images/products/product-4.jpg" data-src="images/products/product-4.jpg" alt="Image">
+                            <span class="remove">
+                                <i class="icon icon-trash"></i>
+                            </span>
+                        </div>
+                        <div class="compare_colour">
+                            <span class="color bg-teal-blue"></span>
+                            <span class="fw-medium text-black">Teal Blue</span>
+                        </div>
+                        <div class="compare_bot">
+                            <div class="tf-select style-border">
+                                <select class="h6">
+                                    <option>XS - $49,99 </option>
+                                    <option selected="selected">S - $69,99 </option>
+                                    <option>M - $79,99 </option>
+                                    <option>XL - $89,99 </option>
+                                </select>
+                            </div>
+                            <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn rounded-0 w-100">
+                                ADD TO CART
+                                <i class="icon icon-shopping-cart-simple"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Compare Color -->
+    <!-- Ask -->
+    <div class="modal modalCentered fade modal-ask_question" id="askQuestion">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-heading">
+                    <h2 class="fw-normal">Ask A Question</h2>
+                    <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
+                </div>
+                <form class="form-ask">
+                    <div class="form_content">
+                        <input type="text" placeholder="Name *" required>
+                        <input type="text" placeholder="Email *" required>
+                        <input type="text" placeholder="Phone number">
+                        <textarea placeholder="Message" style="height: 180px;"></textarea>
+                    </div>
+                    <button type="submit" class="tf-btn animate-btn w-100">
+                        Subscribe
+                    </button>
+                </form>
+                <ul class="tf-social-icon justify-content-center">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" class="social-facebook">
+                            <span class="icon"><i class="icon-fb"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" class="social-instagram">
+                            <span class="icon"><i class="icon-instagram-logo"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/" target="_blank" class="social-x">
+                            <span class="icon"><i class="icon-x"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/" target="_blank" class="social-tiktok">
+                            <span class="icon"><i class="icon-tiktok"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /Ask -->
+    <!-- Ship And Delivery -->
+    <div class="modal modalCentered fade modal-ship_delivery" id="shipAndDelivery">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-heading">
+                    <h2 class="fw-normal">Shipping & Delivery</h2>
+                    <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
+                </div>
+                <div class="legal-list">
+                    <div class="legal-item">
+                        <h5 class="legal_title">Returns & Refunds:</h5>
+                        <p class="legal_label h6">
+                            Enjoy free standard shipping on all orders over 50! For orders under $50, a flat rate of
+                            $5 applies. We want you to love your purchase! If you're not completely satisfied, you can return unworn and
+                            unwashed items within 30 days for a full refund or exchange. Please see our full policy for details.
+                        </p>
+                    </div>
+                    <div class="legal-item">
+                        <h5 class="legal_title">Shipping:</h5>
+                        <p class="legal_label h6">
+                            Enjoy swift and reliable delivery! We offer free standard shipping on all orders over $50 within Vietnam. For orders
+                            under $50, a flat shipping fee of $5 will apply. Express shipping options are also available at checkout. Please allow
+                            1-3 business days for order processing and 2-5 business days for delivery, depending on your location.
+                        </p>
+                    </div>
+                    <div class="legal-item">
+                        <h5 class="legal_title">Help</h5>
+                        <p class="legal_label h6">
+                            If you have any questions regarding our services, please contact us using the information below.
+                        </p>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="icon icon-map-pin"></i>
+                                <span class="br-line"></span>
+                                <a href="https://www.google.com/maps?q=8500+Lorem+Street+Chicago,+IL+55030+Dolor+sit+amet" target="_blank"
+                                    class="h6 link text-main">
+                                    8500 Lorem Street Chicago, IL 55030 Dolor sit amet
+                                </a>
+                            </li>
+                            <li>
+                                <i class="icon icon-phone"></i>
+                                <span class="br-line"></span>
+                                <a href="tel:+88001234567" class="h6 link text-main">+8(800) 123 4567</a>
+                            </li>
+                            <li>
+                                <i class="icon icon-envelope-simple"></i>
+                                <span class="br-line"></span>
+                                <a href="mailto:themesflat@support.com" class="h6 link text-main">themesflat@support.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Ship And Delivery -->
+    <!-- Share -->
+    <div class="modal modalCentered fade modal-share" id="shareWith">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-heading">
+                    <h2 class="fw-normal">Share</h2>
+                    <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
+                </div>
+                <ul class="tf-social-icon">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" class="social-facebook">
+                            <span class="icon"><i class="icon-fb"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" class="social-instagram">
+                            <span class="icon"><i class="icon-instagram-logo"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/" target="_blank" class="social-x">
+                            <span class="icon"><i class="icon-x"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/" target="_blank" class="social-tiktok">
+                            <span class="icon"><i class="icon-tiktok"></i></span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="wrap-code style-1">
+                    <p class="coppyText h6" id="coppyText">http://themesflat.com</p>
+                    <div class="btn-coppy-text tf-btn">Copy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Share -->
 
     <!-- Demo -->
     <div class="modal fade modalDemo" id="modalDemo">
@@ -2116,66 +1720,54 @@
                 <div class="mega-menu">
                     <div class="row-demo">
                         <div class="demo-item">
-                            <a href="index.html" class="demo-img"><img src="images/demo/home-fashion-1.jpg"
-                                    alt="Demo"></a>
+                            <a href="index.html" class="demo-img"><img src="images/demo/home-fashion-1.jpg" alt="Demo"></a>
                             <a href="index.html" class="demo-name">Home Fashion 1</a>
                         </div>
                         <div class="demo-item">
-                            <a href="home-fashion-2.html" class="demo-img"><img src="images/demo/home-fashion-2.jpg"
-                                    alt="Demo"></a>
+                            <a href="home-fashion-2.html" class="demo-img"><img src="images/demo/home-fashion-2.jpg" alt="Demo"></a>
                             <a href="home-fashion-2.html" class="demo-name">Home Fashion 2</a>
                         </div>
                         <div class="demo-item">
-                            <a href="home-fashion-3.html" class="demo-img"><img src="images/demo/home-fashion-3.jpg"
-                                    alt="Demo"></a>
+                            <a href="home-fashion-3.html" class="demo-img"><img src="images/demo/home-fashion-3.jpg" alt="Demo"></a>
                             <a href="home-fashion-3.html" class="demo-name">Home Fashion 3</a>
                         </div>
                         <div class="demo-item">
-                            <a href="home-fashion-4.html" class="demo-img"><img src="images/demo/home-fashion-4.jpg"
-                                    alt="Demo"></a>
+                            <a href="home-fashion-4.html" class="demo-img"><img src="images/demo/home-fashion-4.jpg" alt="Demo"></a>
                             <a href="home-fashion-4.html" class="demo-name">Home Fashion 4</a>
                         </div>
                         <div class="demo-item">
-                            <a href="home-cosmetic.html" class="demo-img"><img src="images/demo/home-cosmetic.jpg"
-                                    alt="Demo"></a>
+                            <a href="home-cosmetic.html" class="demo-img"><img src="images/demo/home-cosmetic.jpg" alt="Demo"></a>
                             <a href="home-cosmetic.html" class="demo-name">Home Cosmetic</a>
                         </div>
                         <div class="demo-item">
-                            <a href="home-skin-care.html" class="demo-img"><img src="images/demo/home-skin-care.jpg"
-                                    alt="Demo"></a>
+                            <a href="home-skin-care.html" class="demo-img"><img src="images/demo/home-skin-care.jpg" alt="Demo"></a>
                             <a href="home-skin-care.html" class="demo-name">Home Skincare</a>
                         </div>
                         <div class="demo-item">
-                            <a href="home-decor.html" class="demo-img"><img src="images/demo/home-decor.jpg"
-                                    alt="Demo"></a>
+                            <a href="home-decor.html" class="demo-img"><img src="images/demo/home-decor.jpg" alt="Demo"></a>
                             <a href="home-decor.html" class="demo-name">Home Decor</a>
                         </div>
                         <div class="demo-item">
-                            <a href="home-jewelry.html" class="demo-img"><img src="images/demo/home-jewelry.jpg"
-                                    alt="Demo"></a>
+                            <a href="home-jewelry.html" class="demo-img"><img src="images/demo/home-jewelry.jpg" alt="Demo"></a>
                             <a href="home-jewelry.html" class="demo-name">Home Jewelry</a>
                         </div>
                         <div class="demo-item">
-                            <a href="home-electronic-market.html" class="demo-img"><img
-                                    src="images/demo/home-electronic-market.jpg" alt="Demo"></a>
+                            <a href="home-electronic-market.html" class="demo-img"><img src="images/demo/home-electronic-market.jpg" alt="Demo"></a>
                             <a href="home-electronic-market.html" class="demo-name">Home
                                 Electric Market</a>
                         </div>
                         <div class="demo-item">
-                            <a href="home-pet-store.html" class="demo-img"><img src="images/demo/home-pet-store.jpg"
-                                    alt="Demo"></a>
+                            <a href="home-pet-store.html" class="demo-img"><img src="images/demo/home-pet-store.jpg" alt="Demo"></a>
                             <a href="home-pet-store.html" class="demo-name">Home Pet Store</a>
                         </div>
                         <div class="demo-item">
-                            <a href="home-sneaker.html" class="demo-img"><img src="images/demo/home-sneaker.jpg"
-                                    alt="Demo"></a>
+                            <a href="home-sneaker.html" class="demo-img"><img src="images/demo/home-sneaker.jpg" alt="Demo"></a>
                             <a href="home-sneaker.html" class="demo-name">Home Sneaker</a>
                         </div>
                         <!-- New -->
                         <div class="demo-item">
                             <a href="home-book.html" class="demo-img">
-                                <img class="lazyload" src="images/demo/home-book.jpg"
-                                    data-src="images/demo/home-book.jpg" alt="Demo">
+                                <img class="lazyload" src="images/demo/home-book.jpg" data-src="images/demo/home-book.jpg" alt="Demo">
                                 <div class="demo-label">
                                     <span>New</span>
                                 </div>
@@ -2184,8 +1776,7 @@
                         </div>
                         <div class="demo-item">
                             <a href="home-organic.html" class="demo-img">
-                                <img class="lazyload" src="images/demo/home-organic.jpg"
-                                    data-src="images/demo/home-organic.jpg" alt="Demo">
+                                <img class="lazyload" src="images/demo/home-organic.jpg" data-src="images/demo/home-organic.jpg" alt="Demo">
                                 <div class="demo-label">
                                     <span>New</span>
                                 </div>
@@ -2194,8 +1785,7 @@
                         </div>
                         <div class="demo-item">
                             <a href="home-medical.html" class="demo-img">
-                                <img class="lazyload" src="images/demo/home-medical.jpg"
-                                    data-src="images/demo/home-medical.jpg" alt="Demo">
+                                <img class="lazyload" src="images/demo/home-medical.jpg" data-src="images/demo/home-medical.jpg" alt="Demo">
                                 <div class="demo-label">
                                     <span>New</span>
                                 </div>
@@ -2204,8 +1794,7 @@
                         </div>
                         <div class="demo-item">
                             <a href="home-gym.html" class="demo-img">
-                                <img class="lazyload" src="images/demo/home-gym.jpg" data-src="images/demo/home-gym.jpg"
-                                    alt="Demo">
+                                <img class="lazyload" src="images/demo/home-gym.jpg" data-src="images/demo/home-gym.jpg" alt="Demo">
                                 <div class="demo-label">
                                     <span>New</span>
                                 </div>
@@ -2214,8 +1803,7 @@
                         </div>
                         <div class="demo-item">
                             <a href="home-art.html" class="demo-img">
-                                <img class="lazyload" src="images/demo/home-art.jpg" data-src="images/demo/home-art.jpg"
-                                    alt="Demo">
+                                <img class="lazyload" src="images/demo/home-art.jpg" data-src="images/demo/home-art.jpg" alt="Demo">
                                 <div class="demo-label">
                                     <span>New</span>
                                 </div>
@@ -2224,8 +1812,7 @@
                         </div>
                         <div class="demo-item">
                             <a href="home-accessories.html" class="demo-img">
-                                <img class="lazyload" src="images/demo/home-accessories.jpg"
-                                    data-src="images/demo/home-accessories.jpg" alt="Demo">
+                                <img class="lazyload" src="images/demo/home-accessories.jpg" data-src="images/demo/home-accessories.jpg" alt="Demo">
                                 <div class="demo-label">
                                     <span>New</span>
                                 </div>
@@ -2234,8 +1821,7 @@
                         </div>
                         <div class="demo-item">
                             <a href="home-car-auto.html" class="demo-img">
-                                <img class="lazyload" src="images/demo/home-car-auto.jpg"
-                                    data-src="images/demo/home-car-auto.jpg" alt="Demo">
+                                <img class="lazyload" src="images/demo/home-car-auto.jpg" data-src="images/demo/home-car-auto.jpg" alt="Demo">
                                 <div class="demo-label">
                                     <span>New</span>
                                 </div>
@@ -2244,8 +1830,7 @@
                         </div>
                         <div class="demo-item">
                             <a href="home-travel.html" class="demo-img">
-                                <img class="lazyload" src="images/demo/home-travel.jpg"
-                                    data-src="images/demo/home-travel.jpg" alt="Demo">
+                                <img class="lazyload" src="images/demo/home-travel.jpg" data-src="images/demo/home-travel.jpg" alt="Demo">
                                 <div class="demo-label">
                                     <span>New</span>
                                 </div>
@@ -2254,8 +1839,7 @@
                         </div>
                         <div class="demo-item">
                             <a href="home-watch.html" class="demo-img">
-                                <img class="lazyload" src="images/demo/home-watch.jpg"
-                                    data-src="images/demo/home-watch.jpg" alt="Demo">
+                                <img class="lazyload" src="images/demo/home-watch.jpg" data-src="images/demo/home-watch.jpg" alt="Demo">
                                 <div class="demo-label">
                                     <span>New</span>
                                 </div>
@@ -2277,13 +1861,9 @@
     <script src="js/bootstrap-select.min.js"></script>
     <script src="js/lazysize.min.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="js/infinityslide.js"></script>
-
-
     <script src="js/parallaxie.js"></script>
     <script src="js/count-down.js"></script>
-    <script src="js/nouislider.min.js"></script>
-    <script src="js/shop.js"></script>
+    <script src="js/drift.min.js"></script>
     <script src="js/main.js"></script>
 
     <script src="js/sibforms.js" defer></script>
@@ -2305,6 +1885,9 @@
 
         var AUTOHIDE = Boolean(0);
     </script>
+    <script src="js/photoswipe-lightbox.umd.min.js"></script>
+    <script src="js/photoswipe.umd.min.js"></script>
+    <script src="js/zoom.js"></script>
 </body>
 
 </html>
