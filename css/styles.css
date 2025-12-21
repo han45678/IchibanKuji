@@ -11180,6 +11180,23 @@ input[type=number]::-webkit-outer-spin-button {
   z-index: 3;
 }
 
+.product-img.raffle::before {
+  content: '抽一番賞';
+  position: absolute;
+  z-index: 3;
+  right: -40px;
+  top: 15px;
+  transform: rotate(45deg);
+  background-color: red;
+  height: 35px;
+  line-height: 35px;
+  width: 140px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+}
+
 @media (min-width: 576px) {
   .card-product.style-3 .variant-box {
     bottom: 58px;
@@ -12280,8 +12297,10 @@ input[type=number]::-webkit-outer-spin-button {
   }
 
   .product-size_list-2 .size-item {
-    width: 48px;
+    width: 85px;
     height: 48px;
+    margin-bottom: 16px;
+    border-radius: 10px;
   }
 }
 
@@ -19389,8 +19408,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 .s-page-title.style-2 .content {
-  padding-top: 16px;
-  padding-bottom: 49px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   text-align: left;
   border-top: 1px solid var(--line-8);
 }
@@ -24315,6 +24334,53 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 }
 
+#raffle {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#raffle ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+
+#raffle ul li {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#raffle ul li.active {
+  background-color: #C8102E;
+}
+
+#raffle ul li.disabled {
+  background-color: #ccc;
+  color: #666;
+  text-decoration: line-through;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (min-width: 767px) {
+  #raffle ul {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  #raffle ul li {
+    font-size: 24;
+  }
+}
+
 @media (min-width: 1200px) {
 
   .sub-menu {
@@ -24326,9 +24392,13 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     padding-top: 30px;
     padding-bottom: 30px;
     gap: 15px;
+    max-width: 1199px;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 
-  .sub-menu_link{
+  .sub-menu_link {
     justify-content: center;
   }
 }
