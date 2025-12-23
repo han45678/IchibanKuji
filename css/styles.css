@@ -24472,9 +24472,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 #ranking .list .item .name {
   font-weight: 600;
+  font-size: 24px;
   color: #000;
   display: flex;
   align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 /* 加個小圖示或裝飾讓名字更明顯 */
 #ranking .list .item .name::before {
@@ -24528,7 +24531,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   /* 1. 獎牌改為左上角標籤 */
   #ranking .list .item .medal {
     position: absolute;
-    top: 10px;
+    top: -2px;
     left: 10px;
     z-index: 2;
     width: 40px;
@@ -24553,6 +24556,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   #ranking .list .item .product_name {
     white-space: normal; /* 手機版允許換行 */
     font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   #ranking .list .item .info-row {
@@ -24566,6 +24571,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
+    margin-bottom: 15px;
   }
 }
 
