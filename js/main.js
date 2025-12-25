@@ -505,13 +505,11 @@
       );
       var compareAtPrice = basePrice * (1 + personSale / 100);
 
-      productItem
-        .find('.compare-at-price')
-        .text(
-          `$${compareAtPrice.toLocaleString('en-US', {
-            minimumFractionDigits: 2
-          })}`
-        );
+      productItem.find('.compare-at-price').text(
+        `$${compareAtPrice.toLocaleString('en-US', {
+          minimumFractionDigits: 2
+        })}`
+      );
       productItem.find('.color-btn, .size-btn').on('click', function () {
         quantityInput.val(1);
       });
@@ -543,13 +541,11 @@
         var quantity = parseInt(scope.find('.quantity-product').val(), 10);
         var totalPrice = currentPrice * quantity;
 
-        scope
-          .find('.price-add')
-          .text(
-            `$${totalPrice.toLocaleString('en-US', {
-              minimumFractionDigits: 2
-            })}`
-          );
+        scope.find('.price-add').text(
+          `$${totalPrice.toLocaleString('en-US', {
+            minimumFractionDigits: 2
+          })}`
+        );
       }
     });
   };
@@ -1571,27 +1567,47 @@
 
   /* Raffle Picker
         -------------------------------------------------------------------------*/
-var rafflePicker = function () {
+  var rafflePicker = function () {
     if ($('#raffle ul li').length > 0) {
-        $('#raffle ul li').on('click', function () {
-            if (!$(this).hasClass('disabled')) {
-                $(this).toggleClass('active');
+      $('#raffle ul li').on('click', function () {
+        if (!$(this).hasClass('disabled')) {
+          $(this).toggleClass('active');
 
-                var raffle_number = [];
-                $('#raffle ul li.active').each(function () {
-                    var raffleText = $(this).text().trim();
-                    var raffleNumber = parseInt(raffleText, 10);
-                    raffle_number.push(raffleNumber);
-                });
+          var raffle_number = [];
+          $('#raffle ul li.active').each(function () {
+            var raffleText = $(this).text().trim();
+            var raffleNumber = parseInt(raffleText, 10);
+            raffle_number.push(raffleNumber);
+          });
 
-                console.log(raffle_number);
-            }
-        });
+          console.log(raffle_number);
+        }
+      });
     }
-};
+  };
+
+  var product_type_m = function () {
+    if ($('.product_type_m li.drop-down').length > 0) {
+      // 監聽 li.drop-down 裡面的 a 標籤
+      $('.product_type_m li.drop-down a').on('click', function (e) {
+        var $parentLi = $(this).closest('li.drop-down');
+
+        // 如果想要「點別的會關掉舊的，點自己會切換開關」
+        if (!$parentLi.hasClass('active')) {
+          // 如果自己沒開，先把別人關掉 (選用)
+          $parentLi.siblings().removeClass('active');
+        }
+
+        // 切換自己的狀態
+        $parentLi.toggleClass('active');
+      });
+    }
+  };
+
 
   // Dom Ready
   $(function () {
+    product_type_m();
     headerSticky();
     headerFixed();
     dropdownSelect();
