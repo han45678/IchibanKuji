@@ -1,45 +1,3 @@
-/**
- * Select Image
- * Button Quantity
- * Delete File
- * Go Top
- * Variant Picker
- * Change Value
- * Sidebar Mobile
- * Check Active
- * Stagger Wrap
- * Modal Second
- * Header Sticky
- * Auto Popup
- * Total Price Variant
- * Scroll Grid Product
- * Handle Progress
- * Handle Footer
- * Infinite Slide
- * Add Wishlist
- * Handle Sidebar Filter
- * Estimate Shipping
- * Coupon Copy
- * Animation Custom
- * Parallaxie
- * Update Compare Empty
- * Delete Wishlist
- * Click Active
- * Handle Mobile Menu
- * Color Swatch Product
- * Tabs
- * Text Rotate
- * Custom Dropdown
- * Range Size
- * Bottom Sticky
- * Write Review
- * Video
- * Show Password
- * Change Image Dashboard
- * Open Mmenu
- * Preloader
- */
-
 (function ($) {
   'use strict';
 
@@ -1655,6 +1613,7 @@
   });
 })(jQuery);
 
+/* ----- 非jq區域 ----- */
 
 // 定義一個通用函數來載入 HTML
 async function loadComponent(element, filePath) {
