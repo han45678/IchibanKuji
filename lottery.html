@@ -51,7 +51,6 @@
         <!-- Header -->
         <main-header></main-header>
         <!-- Header -->
-        
         <ul class="product_type_m">
             <li>
                 <a href="">商城推薦</a>
@@ -346,8 +345,8 @@
                                         <div dir="ltr" class="swiper tf-product-media-main" id="gallery-swiper-started">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide" data-size="A" data-color="1">
-                                                    <a href="./assets/images/product/1.png" target="_blank" class="item"
-                                                        data-pswp-width="860px" data-pswp-height="1146px">
+                                                    <a href="./assets/images/product/1.png" target="_blank"
+                                                        class="item">
                                                         <img class="tf-image-zoom lazyload"
                                                             data-zoom="./assets/images/product/1.png"
                                                             data-src="./assets/images/product/1.png"
@@ -355,8 +354,8 @@
                                                     </a>
                                                 </div>
                                                 <div class="swiper-slide" data-size="B" data-color="1">
-                                                    <a href="./assets/images/product/2.png" target="_blank" class="item"
-                                                        data-pswp-width="860px" data-pswp-height="1146px">
+                                                    <a href="./assets/images/product/2.png" target="_blank"
+                                                        class="item">
                                                         <img class="tf-image-zoom lazyload"
                                                             data-zoom="./assets/images/product/2.png"
                                                             data-src="./assets/images/product/2.png"
@@ -364,8 +363,8 @@
                                                     </a>
                                                 </div>
                                                 <div class="swiper-slide" data-size="C" data-color="5">
-                                                    <a href="./assets/images/product/3.png" target="_blank" class="item"
-                                                        data-pswp-width="860px" data-pswp-height="1146px">
+                                                    <a href="./assets/images/product/3.png" target="_blank"
+                                                        class="item">
                                                         <img class="tf-image-zoom lazyload"
                                                             data-zoom="./assets/images/product/3.png"
                                                             data-src="./assets/images/product/3.png"
@@ -373,8 +372,8 @@
                                                     </a>
                                                 </div>
                                                 <div class="swiper-slide" data-size="LAST" data-color="10">
-                                                    <a href="./assets/images/product/4.png" target="_blank" class="item"
-                                                        data-pswp-width="860px" data-pswp-height="1146px">
+                                                    <a href="./assets/images/product/4.png" target="_blank"
+                                                        class="item">
                                                         <img class="tf-image-zoom lazyload"
                                                             data-zoom="./assets/images/product/4.png"
                                                             data-src="./assets/images/product/4.png"
@@ -463,6 +462,9 @@
                                                 電腦隨機排
                                                 ○ 30 秒，每單最多保留 300 秒，可累積秒數，上限900秒。</span>
                                         </div>
+                                        <div class="queue">
+                                            當前抽取到處：<span>300</span>秒　等待抽獎人數：<span>1</span>人
+                                        </div>
                                     </div>
                                     <div class="tf-product-heading">
                                         <div class="product-info-price price-wrap">
@@ -484,7 +486,7 @@
 
                                     <div class="tf-product-total-quantity">
                                         <!-- ▼此須抽一番賞才有 直購隱藏▼ -->
-                                        <div id="raffle">
+                                        <div id="raffle" class="mb-5">
                                             <ul>
                                                 <li>001</li>
                                                 <li>002</li>
@@ -588,7 +590,8 @@
                                                 <li class="disabled">100</li>
                                             </ul>
                                         </div>
-                                        <a href="checkout.html" class="tf-btn btn-primary w-100">立即開抽</a>
+                                        <a href="checkout.html" class="tf-btn btn-primary">立即開抽</a>
+                                        <a href="checkout.html" class="tf-btn btn-black">剩餘全包</a>
                                         <!-- ▲此須抽一番賞才有 直購隱藏▲ -->
                                     </div>
 
@@ -645,31 +648,85 @@
         <section class="flat-spacing-3 pt-0">
             <div class="container">
                 <h2 class="sect-title fw-normal">小皮球顧客中獎實拍</h2>
-                <div class="grid-photo tf-grid-layout tf-col-2 xl-col-4">
-                    <div class="wg-real-image">
-                        <div class="image">
-                            <img class="lazyload" src="./assets/images/product/5.png"
-                                data-src="./assets/images/product/5.png" alt="Photo">
+                <div class="swiper myProductSwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="wg-real-image">
+                                <div class="image">
+                                    <img class="lazyload" src="./assets/images/product/5.png"
+                                        data-src="./assets/images/product/5.png" alt="Photo">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="wg-real-image">
-                        <div class="image">
-                            <img class="lazyload" src="./assets/images/product/6.png"
-                                data-src="./assets/images/product/6.png" alt="Photo">
+
+                        <div class="swiper-slide">
+                            <div class="wg-real-image">
+                                <div class="image">
+                                    <img class="lazyload" src="./assets/images/product/6.png"
+                                        data-src="./assets/images/product/6.png" alt="Photo">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="wg-real-image">
-                        <div class="image">
-                            <img class="lazyload" src="./assets/images/product/2.png"
-                                data-src="./assets/images/product/2.png" alt="Photo">
+
+                        <div class="swiper-slide">
+                            <div class="wg-real-image">
+                                <div class="image">
+                                    <img class="lazyload" src="./assets/images/product/2.png"
+                                        data-src="./assets/images/product/2.png" alt="Photo">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="wg-real-image">
-                        <div class="image">
-                            <img class="lazyload" src="./assets/images/product/3.png"
-                                data-src="./assets/images/product/3.png" alt="Photo">
+
+                        <div class="swiper-slide">
+                            <div class="wg-real-image">
+                                <div class="image">
+                                    <img class="lazyload" src="./assets/images/product/3.png"
+                                        data-src="./assets/images/product/3.png" alt="Photo">
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="swiper-slide">
+                            <div class="wg-real-image">
+                                <div class="image">
+                                    <img class="lazyload" src="./assets/images/product/5.png"
+                                        data-src="./assets/images/product/5.png" alt="Photo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="wg-real-image">
+                                <div class="image">
+                                    <img class="lazyload" src="./assets/images/product/6.png"
+                                        data-src="./assets/images/product/6.png" alt="Photo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="wg-real-image">
+                                <div class="image">
+                                    <img class="lazyload" src="./assets/images/product/2.png"
+                                        data-src="./assets/images/product/2.png" alt="Photo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="wg-real-image">
+                                <div class="image">
+                                    <img class="lazyload" src="./assets/images/product/3.png"
+                                        data-src="./assets/images/product/3.png" alt="Photo">
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </section>
@@ -915,7 +972,8 @@
                     <p class="box-text_empty h6 text-main">Your compare is curently empty</p>
                     <div class="compare-color_item file-delete">
                         <div class="compare_image">
-                            <img class="lazyload" src="images/products/product-4.jpg" data-src="images/products/product-4.jpg" alt="Image">
+                            <img class="lazyload" src="images/products/product-4.jpg"
+                                data-src="images/products/product-4.jpg" alt="Image">
                             <span class="remove">
                                 <i class="icon icon-trash"></i>
                             </span>
@@ -933,7 +991,8 @@
                                     <option>XL - $89,99 </option>
                                 </select>
                             </div>
-                            <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn rounded-0 w-100">
+                            <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                class="tf-btn animate-btn rounded-0 w-100">
                                 ADD TO CART
                                 <i class="icon icon-shopping-cart-simple"></i>
                             </a>
@@ -942,7 +1001,8 @@
                     </div>
                     <div class="compare-color_item file-delete">
                         <div class="compare_image">
-                            <img class="lazyload" src="images/products/product-21.jpg" data-src="images/products/product-21.jpg" alt="Image">
+                            <img class="lazyload" src="images/products/product-21.jpg"
+                                data-src="images/products/product-21.jpg" alt="Image">
                             <span class="remove">
                                 <i class="icon icon-trash"></i>
                             </span>
@@ -961,7 +1021,8 @@
                                     <option>2XL - $109,99 </option>
                                 </select>
                             </div>
-                            <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn rounded-0 w-100">
+                            <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                class="tf-btn animate-btn rounded-0 w-100">
                                 ADD TO CART
                                 <i class="icon icon-shopping-cart-simple"></i>
                             </a>
@@ -970,7 +1031,8 @@
                     </div>
                     <div class="compare-color_item file-delete">
                         <div class="compare_image">
-                            <img class="lazyload" src="images/products/product-30.jpg" data-src="images/products/product-30.jpg" alt="Image">
+                            <img class="lazyload" src="images/products/product-30.jpg"
+                                data-src="images/products/product-30.jpg" alt="Image">
                             <span class="remove">
                                 <i class="icon icon-trash"></i>
                             </span>
@@ -986,7 +1048,8 @@
                                     <option selected="selected">M - $129,99 </option>
                                 </select>
                             </div>
-                            <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn rounded-0 w-100">
+                            <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                class="tf-btn animate-btn rounded-0 w-100">
                                 ADD TO CART
                                 <i class="icon icon-shopping-cart-simple"></i>
                             </a>
@@ -995,7 +1058,8 @@
                     </div>
                     <div class="compare-color_item file-delete">
                         <div class="compare_image">
-                            <img class="lazyload" src="images/products/product-26.jpg" data-src="images/products/product-26.jpg" alt="Image">
+                            <img class="lazyload" src="images/products/product-26.jpg"
+                                data-src="images/products/product-26.jpg" alt="Image">
                             <span class="remove">
                                 <i class="icon icon-trash"></i>
                             </span>
@@ -1012,7 +1076,8 @@
                                     <option selected="selected">M - $99,99 </option>
                                 </select>
                             </div>
-                            <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn rounded-0 w-100">
+                            <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                class="tf-btn animate-btn rounded-0 w-100">
                                 ADD TO CART
                                 <i class="icon icon-shopping-cart-simple"></i>
                             </a>
@@ -1021,7 +1086,8 @@
                     </div>
                     <div class="compare-color_item file-delete">
                         <div class="compare_image">
-                            <img class="lazyload" src="images/products/product-4.jpg" data-src="images/products/product-4.jpg" alt="Image">
+                            <img class="lazyload" src="images/products/product-4.jpg"
+                                data-src="images/products/product-4.jpg" alt="Image">
                             <span class="remove">
                                 <i class="icon icon-trash"></i>
                             </span>
@@ -1039,7 +1105,8 @@
                                     <option>XL - $89,99 </option>
                                 </select>
                             </div>
-                            <a href="#shoppingCart" data-bs-toggle="offcanvas" class="tf-btn animate-btn rounded-0 w-100">
+                            <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                class="tf-btn animate-btn rounded-0 w-100">
                                 ADD TO CART
                                 <i class="icon icon-shopping-cart-simple"></i>
                             </a>
@@ -1065,29 +1132,35 @@
                         <h5 class="legal_title">Returns & Refunds:</h5>
                         <p class="legal_label h6">
                             Enjoy free standard shipping on all orders over 50! For orders under $50, a flat rate of
-                            $5 applies. We want you to love your purchase! If you're not completely satisfied, you can return unworn and
-                            unwashed items within 30 days for a full refund or exchange. Please see our full policy for details.
+                            $5 applies. We want you to love your purchase! If you're not completely satisfied, you can
+                            return unworn and
+                            unwashed items within 30 days for a full refund or exchange. Please see our full policy for
+                            details.
                         </p>
                     </div>
                     <div class="legal-item">
                         <h5 class="legal_title">Shipping:</h5>
                         <p class="legal_label h6">
-                            Enjoy swift and reliable delivery! We offer free standard shipping on all orders over $50 within Vietnam. For orders
-                            under $50, a flat shipping fee of $5 will apply. Express shipping options are also available at checkout. Please allow
-                            1-3 business days for order processing and 2-5 business days for delivery, depending on your location.
+                            Enjoy swift and reliable delivery! We offer free standard shipping on all orders over $50
+                            within Vietnam. For orders
+                            under $50, a flat shipping fee of $5 will apply. Express shipping options are also available
+                            at checkout. Please allow
+                            1-3 business days for order processing and 2-5 business days for delivery, depending on your
+                            location.
                         </p>
                     </div>
                     <div class="legal-item">
                         <h5 class="legal_title">Help</h5>
                         <p class="legal_label h6">
-                            If you have any questions regarding our services, please contact us using the information below.
+                            If you have any questions regarding our services, please contact us using the information
+                            below.
                         </p>
                         <ul class="contact-list">
                             <li>
                                 <i class="icon icon-map-pin"></i>
                                 <span class="br-line"></span>
-                                <a href="https://www.google.com/maps?q=8500+Lorem+Street+Chicago,+IL+55030+Dolor+sit+amet" target="_blank"
-                                    class="h6 link text-main">
+                                <a href="https://www.google.com/maps?q=8500+Lorem+Street+Chicago,+IL+55030+Dolor+sit+amet"
+                                    target="_blank" class="h6 link text-main">
                                     8500 Lorem Street Chicago, IL 55030 Dolor sit amet
                                 </a>
                             </li>
@@ -1099,7 +1172,8 @@
                             <li>
                                 <i class="icon icon-envelope-simple"></i>
                                 <span class="br-line"></span>
-                                <a href="mailto:themesflat@support.com" class="h6 link text-main">themesflat@support.com</a>
+                                <a href="mailto:themesflat@support.com"
+                                    class="h6 link text-main">themesflat@support.com</a>
                             </li>
                         </ul>
                     </div>
@@ -1109,7 +1183,7 @@
     </div>
     <!-- 寄送規則 -->
 
-    
+
 
     <!-- Javascript -->
     <script src="js/bootstrap.min.js"></script>
@@ -1146,7 +1220,6 @@
     <script src="js/photoswipe.umd.min.js"></script>
     <script src="js/Drift.min.js"></script>
     <script src="js/zoom.js"></script>
-    
 </body>
 
 </html>

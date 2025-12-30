@@ -1639,3 +1639,45 @@ class MainShoppingCart extends HTMLElement {
 customElements.define('main-header', MainHeader);
 customElements.define('main-footer', MainFooter);
 customElements.define('main-shopping-cart', MainShoppingCart);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  var swiper = new Swiper(".myProductSwiper", {
+    slidesPerView: 2, // 手機版顯示 2 張
+    spaceBetween: 20, 
+    navigation: {
+      nextEl: ".swiper-button-next", // 指定下一張按鈕
+      prevEl: ".swiper-button-prev", // 指定上一張按鈕
+    },
+    // 移除了 pagination 設定
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 6,
+        spaceBetween: 30,
+      },
+    },
+  });
+
+    // 選取所有要放大的圖片連結
+    const lightboxLinks = document.querySelectorAll('.tf-product-media-main a.item');
+
+    lightboxLinks.forEach(link => {
+        const img = link.querySelector('img');
+        
+        // 建立一個新圖片物件來讀取原始尺寸
+        const tempImg = new Image();
+        tempImg.src = img.getAttribute('src') || img.src;
+        
+        tempImg.onload = function() {
+            // 當圖片讀取完畢，把真實的寬高寫入 data 屬性
+            link.setAttribute('data-pswp-width', tempImg.naturalWidth);
+            link.setAttribute('data-pswp-height', tempImg.naturalHeight);
+            link.setAttribute('href', tempImg.src); // 確保連結也是對的
+        };
+    });
+});

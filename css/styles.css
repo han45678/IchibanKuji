@@ -233,7 +233,7 @@ html {
 }
 
 body {
-  font-family: "Noto Sans TC","Roboto", sans-serif !important;
+  font-family: "Noto Sans TC", "Roboto", sans-serif !important;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -447,7 +447,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Serif TC","Roboto", serif !important;
+  font-family: "Noto Serif TC", "Roboto", serif !important;
   text-rendering: optimizeLegibility;
   font-weight: 500;
   margin-bottom: 0;
@@ -461,7 +461,7 @@ h6 {
 .h4,
 .h5,
 .h6 {
-  font-family: "Noto Serif TC","Roboto", serif !important;
+  font-family: "Noto Serif TC", "Roboto", serif !important;
   text-rendering: optimizeLegibility;
   font-weight: 400;
   margin-bottom: 0;
@@ -546,7 +546,7 @@ h6,
 }
 
 .font-main {
-  font-family: "Noto Sans TC","Roboto", sans-serif !important;
+  font-family: "Noto Sans TC", "Roboto", sans-serif !important;
 }
 
 .font-2 {
@@ -4679,6 +4679,14 @@ header.header-sticky {
   background-color: var(--black);
 }
 
+.tf-btn.btn-black {
+  background-color: #000;
+}
+
+.tf-btn.btn-black:hover {
+  background-color: var(--primary);
+}
+
 .tf-btn.btn-secondary {
   border: 1px solid var(--secondary);
   background-color: var(--secondary);
@@ -6389,7 +6397,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .sib-form {
   padding: 0;
-  font-family: "Noto Sans TC","Roboto", sans-serif !important;
+  font-family: "Noto Sans TC", "Roboto", sans-serif !important;
 }
 
 #sib-container {
@@ -10761,7 +10769,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 400;
   border-radius: 8px;
   text-align: center;
-  font-family: "Noto Sans TC","Roboto", sans-serif !important;
+  font-family: "Noto Sans TC", "Roboto", sans-serif !important;
   display: none;
 }
 
@@ -24739,24 +24747,30 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   margin-bottom: 15px;
 }
 
-.product_type_m li.drop-down .drop-down-content .drop-down-content-top a{
-      background: #ffeebc;
+.product_type_m li.drop-down .drop-down-content .drop-down-content-top a {
+  background: #ffeebc;
 }
-.product_type_m li.drop-down .drop-down-content .drop-down-content-top a:hover{
-      background: #ffa800;
+
+.product_type_m li.drop-down .drop-down-content .drop-down-content-top a:hover {
+  background: #ffa800;
 }
-.product_type_m li.drop-down .drop-down-content .drop-down-content-mid a{
-      background: #fde3d5;
+
+.product_type_m li.drop-down .drop-down-content .drop-down-content-mid a {
+  background: #fde3d5;
 }
-.product_type_m li.drop-down .drop-down-content .drop-down-content-mid a:hover{
-      background: #ff7a19;
+
+.product_type_m li.drop-down .drop-down-content .drop-down-content-mid a:hover {
+  background: #ff7a19;
 }
-.product_type_m li.drop-down .drop-down-content .drop-down-content-bottom a{
-      background: #fbe0e9;
+
+.product_type_m li.drop-down .drop-down-content .drop-down-content-bottom a {
+  background: #fbe0e9;
 }
-.product_type_m li.drop-down .drop-down-content .drop-down-content-bottom a:hover{
-      background: #ff588f;
+
+.product_type_m li.drop-down .drop-down-content .drop-down-content-bottom a:hover {
+  background: #ff588f;
 }
+
 @media (max-width: 768px) {
   .product_type_m {
     display: flex;
@@ -24831,4 +24845,19 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   .sub-menu_link {
     justify-content: center;
   }
+}
+
+.queue {
+  background-color: #f9edd5;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.myProductSwiper .swiper-button-next,
+.myProductSwiper .swiper-button-prev {
+  color: #fff;
 }
