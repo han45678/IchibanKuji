@@ -1656,38 +1656,27 @@
 })(jQuery);
 
 
-
-// main-header
-class MainHeader extends HTMLElement {
-    async connectedCallback() {
-        try {
-            // 1. 抓取外部的 header.html
-            const response = await fetch('./components/header.html');
-            const html = await response.text();
-            
-            // 2. 將內容渲染到自定義標籤內
-            this.innerHTML = html;
-        } catch (err) {
-            console.error('無法載入 header:', err);
-        }
+// 定義一個通用函數來載入 HTML
+async function loadComponent(element, filePath) {
+    try {
+        const response = await fetch(filePath);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        element.innerHTML = await response.text();
+    } catch (err) {
+        console.error(`無法載入組件 ${filePath}:`, err);
     }
 }
 
-// main-footer
+class MainHeader extends HTMLElement {
+    connectedCallback() { loadComponent(this, './components/header.html'); }
+}
 class MainFooter extends HTMLElement {
-    async connectedCallback() {
-        try {
-            // 1. 抓取外部的 footer.html
-            const response = await fetch('./components/footer.html');
-            const html = await response.text();
-            
-            // 2. 將內容渲染到自定義標籤內
-            this.innerHTML = html;
-        } catch (err) {
-            console.error('無法載入 footer:', err);
-        }
-    }
+    connectedCallback() { loadComponent(this, './components/footer.html'); }
+}
+class MainShoppingCart extends HTMLElement {
+    connectedCallback() { loadComponent(this, './components/shopping-cart.html'); }
 }
 
 customElements.define('main-header', MainHeader);
 customElements.define('main-footer', MainFooter);
+customElements.define('main-shopping-cart', MainShoppingCart);
