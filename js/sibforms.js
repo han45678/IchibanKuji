@@ -1166,17 +1166,17 @@
             //     }
             // }
             // )),
-            window.invisibleCaptchaCallback = () => {
-                const e = document.querySelector("#sib-form-container")
-                  , t = e.querySelector(".sib-loader") || e.querySelector(".loader")
-                  , n = e.querySelector('button[type="submit"]');
-                t ? (t.style.display = "inline-block",
-                n.style.display = "none") : (n.querySelector("svg").removeClass("sib-hide-loader-icon"),
-                n.setAttribute("disabled", !0),
-                n.classList.add("sib-form-block__button-disabled")),
-                k(b)
-            }
-            ,
+            // window.invisibleCaptchaCallback = () => {
+            //     const e = document.querySelector("#sib-form-container")
+            //       , t = e.querySelector(".sib-loader") || e.querySelector(".loader")
+            //       , n = e.querySelector('button[type="submit"]');
+            //     t ? (t.style.display = "inline-block",
+            //     n.style.display = "none") : (n.querySelector("svg").removeClass("sib-hide-loader-icon"),
+            //     n.setAttribute("disabled", !0),
+            //     n.classList.add("sib-form-block__button-disabled")),
+            //     k(b)
+            // }
+            // ,
             SVGElement.prototype.hasClass = function(e) {
                 return new RegExp("(\\s|^)" + e + "(\\s|$)").test(this.getAttribute("class"))
             }
