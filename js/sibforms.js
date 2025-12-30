@@ -1118,54 +1118,54 @@
                 r.open("POST", `${e.getAttribute("action")}?isAjax=1`),
                 r.send(a)
             }
-            const b = document.querySelector("#sib-form");
-            b.setAttribute("novalidate", "true");
-            const w = document.querySelector("form#sib-form input[name='email_address_check'].input--hidden");
-            w && w.setAttribute("aria-hidden", "true"),
-            b.addEventListener("submit", (e => {
-                e.preventDefault();
-                let t = !0;
-                if ([...Array.from(b.getElementsByClassName("sib-optin")), ...Array.from(b.getElementsByClassName("sib-multiselect")), ...Array.from(b.getElementsByClassName("sib-checkbox-group")), ...Array.from(b.getElementsByClassName("sib-radiobutton-group"))].forEach((e => {
-                    const n = e.querySelector(".form__entry")
-                      , r = p(e, n, e.errorMessage);
-                    t = t && r
-                }
-                )),
-                t = Array.from(b.getElementsByClassName("sib-select")).reduce(g, t),
-                t = Array.from(b.getElementsByClassName("sib-input")).reduce(Y, t),
-                t = Array.from(b.getElementsByClassName("sib-captcha")).reduce(L, t),
-                t = Array.from(b.getElementsByClassName("sib-sms-select")).reduce(M, t),
-                t) {
-                    const e = b.querySelector(".sib-loader") || b.querySelector(".loader")
-                      , t = b.querySelector('button[type="submit"]');
-                    e ? (e.style.display = "inline-block",
-                    t.style.display = "none") : (t.querySelector("svg").removeClass("sib-hide-loader-icon"),
-                    t.setAttribute("disabled", !0),
-                    t.classList.add("sib-form-block__button-disabled"));
-                    const n = b.querySelector(".g-recaptcha")
-                      , r = !!n && "invisible" === n.dataset.size
-                      , a = b.getElementsByClassName("g-recaptcha-v3")
-                      , s = a && a.length > 0;
-                    window.grecaptcha && r ? (window.grecaptcha.reset(),
-                    window.grecaptcha.execute()) : window.grecaptcha && s ? grecaptcha.ready((function() {
-                        grecaptcha.execute(a[0].dataset.sitekey, {
-                            action: "submit"
-                        }).then((function(e) {
-                            if (!("g-recaptcha-response"in b)) {
-                                let e = document.createElement("input");
-                                e.setAttribute("type", "hidden"),
-                                e.setAttribute("name", "g-recaptcha-response"),
-                                b.appendChild(e)
-                            }
-                            b["g-recaptcha-response"].value = e,
-                            k(b)
-                        }
-                        ))
-                    }
-                    )) : k(b)
-                }
-            }
-            )),
+            // const b = document.querySelector("#sib-form");
+            // b.setAttribute("novalidate", "true");
+            // const w = document.querySelector("form#sib-form input[name='email_address_check'].input--hidden");
+            // w && w.setAttribute("aria-hidden", "true"),
+            // b.addEventListener("submit", (e => {
+            //     e.preventDefault();
+            //     let t = !0;
+            //     if ([...Array.from(b.getElementsByClassName("sib-optin")), ...Array.from(b.getElementsByClassName("sib-multiselect")), ...Array.from(b.getElementsByClassName("sib-checkbox-group")), ...Array.from(b.getElementsByClassName("sib-radiobutton-group"))].forEach((e => {
+            //         const n = e.querySelector(".form__entry")
+            //           , r = p(e, n, e.errorMessage);
+            //         t = t && r
+            //     }
+            //     )),
+            //     t = Array.from(b.getElementsByClassName("sib-select")).reduce(g, t),
+            //     t = Array.from(b.getElementsByClassName("sib-input")).reduce(Y, t),
+            //     t = Array.from(b.getElementsByClassName("sib-captcha")).reduce(L, t),
+            //     t = Array.from(b.getElementsByClassName("sib-sms-select")).reduce(M, t),
+            //     t) {
+            //         const e = b.querySelector(".sib-loader") || b.querySelector(".loader")
+            //           , t = b.querySelector('button[type="submit"]');
+            //         e ? (e.style.display = "inline-block",
+            //         t.style.display = "none") : (t.querySelector("svg").removeClass("sib-hide-loader-icon"),
+            //         t.setAttribute("disabled", !0),
+            //         t.classList.add("sib-form-block__button-disabled"));
+            //         const n = b.querySelector(".g-recaptcha")
+            //           , r = !!n && "invisible" === n.dataset.size
+            //           , a = b.getElementsByClassName("g-recaptcha-v3")
+            //           , s = a && a.length > 0;
+            //         window.grecaptcha && r ? (window.grecaptcha.reset(),
+            //         window.grecaptcha.execute()) : window.grecaptcha && s ? grecaptcha.ready((function() {
+            //             grecaptcha.execute(a[0].dataset.sitekey, {
+            //                 action: "submit"
+            //             }).then((function(e) {
+            //                 if (!("g-recaptcha-response"in b)) {
+            //                     let e = document.createElement("input");
+            //                     e.setAttribute("type", "hidden"),
+            //                     e.setAttribute("name", "g-recaptcha-response"),
+            //                     b.appendChild(e)
+            //                 }
+            //                 b["g-recaptcha-response"].value = e,
+            //                 k(b)
+            //             }
+            //             ))
+            //         }
+            //         )) : k(b)
+            //     }
+            // }
+            // )),
             window.invisibleCaptchaCallback = () => {
                 const e = document.querySelector("#sib-form-container")
                   , t = e.querySelector(".sib-loader") || e.querySelector(".loader")
