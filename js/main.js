@@ -1654,3 +1654,40 @@
     rafflePicker();
   });
 })(jQuery);
+
+
+
+// main-header
+class MainHeader extends HTMLElement {
+    async connectedCallback() {
+        try {
+            // 1. 抓取外部的 header.html
+            const response = await fetch('./components/header.html');
+            const html = await response.text();
+            
+            // 2. 將內容渲染到自定義標籤內
+            this.innerHTML = html;
+        } catch (err) {
+            console.error('無法載入 header:', err);
+        }
+    }
+}
+
+// main-footer
+class MainFooter extends HTMLElement {
+    async connectedCallback() {
+        try {
+            // 1. 抓取外部的 footer.html
+            const response = await fetch('./components/footer.html');
+            const html = await response.text();
+            
+            // 2. 將內容渲染到自定義標籤內
+            this.innerHTML = html;
+        } catch (err) {
+            console.error('無法載入 footer:', err);
+        }
+    }
+}
+
+customElements.define('main-header', MainHeader);
+customElements.define('main-footer', MainFooter);
