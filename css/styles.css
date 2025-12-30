@@ -1,5 +1,6 @@
 /*--------- Abstracts variable ---------- */
 @import url(./bootstrap-select.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --white: #ffffff;
@@ -233,7 +234,7 @@ html {
 }
 
 body {
-  font-family: "Afacad", sans-serif;
+  font-family: "Noto Sans TC","Roboto", sans-serif !important;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -447,7 +448,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Afacad", sans-serif;
+  font-family: "Noto Serif TC","Roboto", serif !important;
   text-rendering: optimizeLegibility;
   font-weight: 500;
   margin-bottom: 0;
@@ -461,7 +462,7 @@ h6 {
 .h4,
 .h5,
 .h6 {
-  font-family: "Afacad", sans-serif;
+  font-family: "Noto Serif TC","Roboto", serif !important;
   text-rendering: optimizeLegibility;
   font-weight: 400;
   margin-bottom: 0;
@@ -546,7 +547,7 @@ h6,
 }
 
 .font-main {
-  font-family: "Afacad", sans-serif;
+  font-family: "Noto Sans TC","Roboto", sans-serif !important;
 }
 
 .font-2 {
@@ -939,7 +940,6 @@ a {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
-  font-family: "Afacad", sans-serif;
   color: var(--black);
 }
 
@@ -6390,7 +6390,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .sib-form {
   padding: 0;
-  font-family: "Afacad", sans-serif;
+  font-family: "Noto Sans TC","Roboto", sans-serif !important;
 }
 
 #sib-container {
@@ -10762,7 +10762,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 400;
   border-radius: 8px;
   text-align: center;
-  font-family: "Afacad", sans-serif;
+  font-family: "Noto Sans TC","Roboto", sans-serif !important;
   display: none;
 }
 
@@ -24833,12 +24833,3 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     justify-content: center;
   }
 }
-
-/* @media (max-width: 1199px) {
-.collapse:not(.show) {
-    display: block !important;
-}
-.sub-nav-menu .sub-nav-link{
-  display: none !important;
-}
-} */
