@@ -26,6 +26,9 @@
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="images/logo/favicon.svg">
     <link rel="apple-touch-icon-precomposed" href="images/logo/favicon.svg">
+
+    <!-- 預載影片 -->
+    <link rel="preload" href="./assets/video/video.webm" as="video" type="video/webm">
 </head>
 
 <body>
@@ -110,6 +113,7 @@
                                                 <div class="tf-select">
                                                     <select id="tw-city" name="address[city]" required>
                                                         <option value="" disabled selected>請選擇縣市</option>
+                                                        <option value="0">台中</option>
                                                     </select>
                                                 </div>
                                             </fieldset>
@@ -117,6 +121,7 @@
                                                 <div class="tf-select">
                                                     <select id="tw-district" name="address[district]" required>
                                                         <option value="" disabled selected>請選擇區域</option>
+                                                        <option value="0">大雅</option>
                                                     </select>
                                                 </div>
                                             </fieldset>
@@ -127,8 +132,7 @@
                                                 <input type="number" name="number_card" placeholder="郵遞區號" required>
                                             </fieldset>
                                             <fieldset>
-                                                <input type="text" name="street_infor"
-                                                    placeholder="詳細地址" required>
+                                                <input type="text" name="street_infor" placeholder="詳細地址" required>
                                             </fieldset>
                                         </div>
 
@@ -140,27 +144,11 @@
                                     <div class="payment-method-box" id="payment-method-box">
 
                                         <div class="payment_accordion">
-                                            <label for="direct" class="payment_check checkbox-wrap"
-                                                data-bs-toggle="collapse" data-bs-target="#direct-bank-content"
-                                                aria-controls="direct-bank-content">
-                                                <input type="radio" name="payment-method"
-                                                    class="tf-check-rounded style-2" id="direct" checked>
-                                                <span class="pay-title">直接銀行轉帳</span>
-                                            </label>
-                                            <div id="direct-bank-content" class="collapse show"
-                                                data-bs-parent="#payment-method-box">
-                                                <div class="payment_body form_content">
-                                                    <p class="mb-0">請將款項匯入以下帳戶...</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="payment_accordion">
                                             <label for="credit-card" class="payment_check checkbox-wrap"
                                                 data-bs-toggle="collapse" data-bs-target="#credit-card-payment"
                                                 aria-controls="credit-card-payment">
                                                 <input type="radio" name="payment-method"
-                                                    class="tf-check-rounded style-2" id="credit-card">
+                                                    class="tf-check-rounded style-2" id="credit-card" checked>
                                                 <span class="pay-title">信用卡</span>
                                             </label>
                                             <div id="credit-card-payment" class="collapse"
@@ -241,11 +229,19 @@
                                 </div>
                                 <div class="box-ip-shipping">
                                     <h2 class="title type-semibold">運送方式</h2>
+                                    <label for="freeship" class="check-ship mb-12" data-bs-target="#line-pay-payment">
+                                        <input type="radio" id="freeship" class="tf-check-rounded style-2 line-black"
+                                            name="checkshipping" checked>
+                                        <span class="text h6">
+                                            <span class="">7-11超商取貨(3~7天)</span>
+                                            <span class="price">$60</span>
+                                        </span>
+                                    </label>
                                     <label for="freeship" class="check-ship mb-12">
                                         <input type="radio" id="freeship" class="tf-check-rounded style-2 line-black"
                                             name="checkshipping" checked>
                                         <span class="text h6">
-                                            <span class="">超商取貨(3~7天)</span>
+                                            <span class="">全家超商取貨(3~7天)</span>
                                             <span class="price">$60</span>
                                         </span>
                                     </label>
@@ -258,8 +254,15 @@
                                         </span>
                                     </label>
                                 </div>
+                                <div>
+                                    <label>
+                                        <input type="checkbox" name="animation" id="animation">
+                                        跳過抽獎動畫
+                                    </label>
+                                </div>
                                 <div class="button_submit">
-                                    <button type="submit" class="tf-btn animate-btn w-100">
+                                    <!-- type="submit" -->
+                                    <button onclick="checkout_an(true)" class="tf-btn animate-btn w-100">
                                         進行付款
                                     </button>
                                 </div>
@@ -360,6 +363,9 @@
     <main-shopping-cart></main-shopping-cart>
     <!-- 購物車 -->
 
+    <div id="animation_video">
+        <video src="./assets/video/video.webm" />
+    </div>
 
     <!-- Javascript -->
     <script src="js/bootstrap.min.js"></script>
@@ -388,6 +394,52 @@
         };
 
         var AUTOHIDE = Boolean(0);
+    </script>
+    <script>
+        function checkout_an(lottery) {
+            const skipCheckbox = document.querySelector('#animation');
+            const videoContainer = document.querySelector('#animation_video');
+            const video = videoContainer.querySelector('video');
+
+            if (lottery && !skipCheckbox.checked) {
+
+                // --- 動作開始 ---
+
+                // 1. 禁止 body 滾動
+                document.body.style.overflow = 'hidden';
+
+                // 2. 顯示遮罩
+                videoContainer.classList.add('active');
+
+                // 3. 0.6秒後播放影片
+                // setTimeout(() => {
+                    video.currentTime = 0; // 確保重頭播放
+                    video.play();
+                // }, 100);
+
+                // 4. 監聽影片播放結束
+                video.onended = function () {
+                    // 移除遮罩
+                    videoContainer.classList.remove('active');
+
+                    // 恢復 body 滾動 (清空 overflow 屬性)
+                    document.body.style.overflow = '';
+
+                    // 等待淡出動畫(0.6s)結束後再結帳
+                    // setTimeout(() => {
+                        checkout();
+                    // }, 600);
+                };
+
+            } else {
+                checkout();
+            }
+        }
+
+        function checkout() {
+            console.log('結帳完成');
+            alert('結帳完成');
+        }
     </script>
 </body>
 
