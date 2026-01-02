@@ -262,7 +262,7 @@
                                 </div>
                                 <div class="button_submit">
                                     <!-- type="submit" -->
-                                    <button onclick="checkout_an(true)" class="tf-btn animate-btn w-100">
+                                    <button onclick="window.location.href='./checkout-success.html';" class="tf-btn animate-btn w-100">
                                         進行付款
                                     </button>
                                 </div>
@@ -394,52 +394,6 @@
         };
 
         var AUTOHIDE = Boolean(0);
-    </script>
-    <script>
-        function checkout_an(lottery) {
-            const skipCheckbox = document.querySelector('#animation');
-            const videoContainer = document.querySelector('#animation_video');
-            const video = videoContainer.querySelector('video');
-
-            if (lottery && !skipCheckbox.checked) {
-
-                // --- 動作開始 ---
-
-                // 1. 禁止 body 滾動
-                document.body.style.overflow = 'hidden';
-
-                // 2. 顯示遮罩
-                videoContainer.classList.add('active');
-
-                // 3. 0.6秒後播放影片
-                // setTimeout(() => {
-                    video.currentTime = 0; // 確保重頭播放
-                    video.play();
-                // }, 100);
-
-                // 4. 監聽影片播放結束
-                video.onended = function () {
-                    // 移除遮罩
-                    videoContainer.classList.remove('active');
-
-                    // 恢復 body 滾動 (清空 overflow 屬性)
-                    document.body.style.overflow = '';
-
-                    // 等待淡出動畫(0.6s)結束後再結帳
-                    // setTimeout(() => {
-                        checkout();
-                    // }, 600);
-                };
-
-            } else {
-                checkout();
-            }
-        }
-
-        function checkout() {
-            console.log('結帳完成');
-            alert('結帳完成');
-        }
     </script>
 </body>
 

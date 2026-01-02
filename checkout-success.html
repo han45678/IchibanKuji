@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>一番賞</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description"
+        content="Themesflat Ochaka - A modern and elegant Multipurpose eCommerce HTML Template, perfect for online stores selling rings, necklaces, watches, and other accessories. SEO-optimized, fast-loading, and fully customizable.">
+
+    <!-- font -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="icon/icomoon/style.css">
+    <!-- css -->
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="images/logo/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="images/logo/favicon.svg">
+
+    <!-- 預載影片 -->
+    <link rel="preload" href="./assets/video/video.webm" as="video" type="video/webm">
+</head>
+
+<body>
+    
+    <!-- <div id="animation_video">
+        <video src="./assets/video/video.webm" />
+    </div> -->
+
+    <!-- Javascript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/lazysize.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/count-down.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/sibforms.js" defer></script>
+    <script>
+        window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+        window.LOCALE = 'en';
+        window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+        window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+
+        window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+        window.translation = {
+            common: {
+                selectedList: '{quantity} list selected',
+                selectedLists: '{quantity} lists selected'
+            }
+        };
+
+        var AUTOHIDE = Boolean(0);
+    </script>
+    <script>
+        function checkout_an(lottery) {
+            const skipCheckbox = document.querySelector('#animation');
+            const videoContainer = document.querySelector('#animation_video');
+            const video = videoContainer.querySelector('video');
+
+            if (lottery && !skipCheckbox.checked) {
+
+                // --- 動作開始 ---
+
+                // 1. 禁止 body 滾動
+                document.body.style.overflow = 'hidden';
+
+                // 2. 顯示遮罩
+                videoContainer.classList.add('active');
+
+                // 3. 0.6秒後播放影片
+                // setTimeout(() => {
+                    video.currentTime = 0; // 確保重頭播放
+                    video.play();
+                // }, 100);
+
+                // 4. 監聽影片播放結束
+                video.onended = function () {
+                    // 移除遮罩
+                    videoContainer.classList.remove('active');
+
+                    // 恢復 body 滾動 (清空 overflow 屬性)
+                    document.body.style.overflow = '';
+
+                    // 等待淡出動畫(0.6s)結束後再結帳
+                    // setTimeout(() => {
+                        checkout();
+                    // }, 600);
+                };
+
+            } else {
+                checkout();
+            }
+        }
+
+        function checkout() {
+            console.log('結帳完成');
+            alert('結帳完成');
+        }
+    </script>
+</body>
+
+</html>
