@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>一番賞</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description"
+        content="Themesflat Ochaka - A modern and elegant Multipurpose eCommerce HTML Template, perfect for online stores selling rings, necklaces, watches, and other accessories. SEO-optimized, fast-loading, and fully customizable.">
+
+    <!-- font -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="icon/icomoon/style.css">
+    <!-- css -->
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="images/logo/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="images/logo/favicon.svg">
+</head>
+
+<body>
+
+    <!-- Scroll Top -->
+    <button id="goTop">
+        <span class="border-progress"></span>
+        <span class="icon icon-caret-up"></span>
+    </button>
+
+    <div id="wrapper">
+
+        <!-- Header -->
+        <main-header></main-header>
+        <!-- Header -->
+        
+        <!-- Page Title -->
+        <section class="s-page-title">
+            <div class="container">
+                <div class="content">
+                    <h1 class="title-page">會員中心</h1>
+                    <ul class="breadcrumbs-page">
+                        <li><a href="index.html" class="h6 link">首頁</a></li>
+                        <li class="d-flex"><i class="icon icon-caret-right"></i></li>
+                        <li>
+                            <h6 class="current-page fw-normal">會員中心</h6>
+                        </li>
+                        <li class="d-flex"><i class="icon icon-caret-right"></i></li>
+                        <li>
+                            <h6 class="current-page fw-normal">會員資料修改</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- /Page Title -->
+        <!-- Account -->
+        <section class="flat-spacing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 d-none d-xl-block">
+                        <div class="sidebar-account sidebar-content-wrap sticky-top">
+                            <div class="account-author">
+                                <div class="author_avatar">
+                                    <div class="image">
+                                        <img id="imgDash" class="lazyload" src="http://placehold.jp/200x200.jpg" data-src="http://placehold.jp/200x200.jpg"
+                                            alt="Avatar">
+                                    </div>
+                                    <input type="file" id="fileInputDash" accept="image/*" style="display: none;">
+                                    <div class="btn-change_img box-icon" id="changeImgDash">
+                                        <i class="icon icon-camera"></i>
+                                    </div>
+                                </div>
+                                <h4 class="author_name">Themesflat</h4>
+                            </div>
+                            <ul class="my-account-nav">
+                                <li>
+                                    <a href="account-page.html" class="my-account-nav_item h5">
+                                        <i class="icon icon-circle-four"></i>
+                                        消費紀錄
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="account-addresses.html" class="my-account-nav_item h5">
+                                        <i class="icon icon-address-book"></i>
+                                        會員地址
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="account-setting.html" class="my-account-nav_item h5 active">
+                                        <i class="icon icon-setting"></i>
+                                        會員資料修改
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html" class="my-account-nav_item h5">
+                                        <i class="icon icon-sign-out"></i>
+                                        登出
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-9">
+                        <div class="my-account-content">
+                            <form class="form-change_pass">
+                                <div class="">
+                                    <h2 class="account-title type-semibold">會員資料修改</h2>
+                                    <div class="form_content">
+                                        <div class="cols tf-grid-layout sm-col-2">
+                                            <fieldset>
+                                                <input type="text" placeholder="暱稱 *" required>
+                                            </fieldset>
+                                            <fieldset>
+                                                <input type="text" placeholder="真實姓名 *" required>
+                                            </fieldset>
+                                        </div>
+                                        <fieldset>
+                                            <input type="email" placeholder="Email *" required>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <h2 class="account-title type-semibold">Change Password</h2>
+                                    <div class="form_content site-change">
+                                        <fieldset class="password-wrapper">
+                                            <input class="password-field" type="password" placeholder="舊密碼 *" required>
+                                            <span class="toggle-pass icon-show-password"></span>
+                                        </fieldset>
+                                        <fieldset class="password-wrapper">
+                                            <input class="password-field" type="password" placeholder="新密碼 *" required>
+                                            <span class="toggle-pass icon-show-password"></span>
+                                        </fieldset>
+                                        <fieldset class="password-wrapper">
+                                            <input class="password-field" type="password" placeholder="新密碼確認 *" required>
+                                            <span class="toggle-pass icon-show-password"></span>
+                                        </fieldset>
+                                    </div>
+                                    <button type="submit" class="btn-submit_form tf-btn animate-btn w-100 fw-bold">
+                                        Save change
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Account -->
+
+        <!-- Footer -->
+        <main-footer></main-footer>
+        <!-- /Footer -->
+
+    </div>
+
+        <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
+        <span class="icon-close-popup" data-bs-dismiss="offcanvas">
+            <i class="icon-close"></i>
+        </span>
+        <div class="canvas-header">
+            <a href="login.html" class="ml-auto tf-btn type-small style-2">
+                Login
+                <i class="icon icon-user"></i>
+            </a>
+            <span class="br-line"></span>
+        </div>
+        <div class="canvas-body">
+            <div class="mb-content-top">
+                <ul class="nav-ul-mb" id="wrapper-menu-navigation">
+                    <li>
+                        123
+                    </li>
+                    <li>
+                        456
+                    </li>
+                </ul>
+            </div>
+            <div class="flow-us-wrap">
+                <ul class="tf-social-icon">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" class="social-facebook">
+                            <span class="icon"><i class="icon-fb"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" class="social-instagram">
+                            <span class="icon"><i class="icon-instagram-logo"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/" target="_blank" class="social-x">
+                            <span class="icon"><i class="icon-x"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/" target="_blank" class="social-tiktok">
+                            <span class="icon"><i class="icon-tiktok"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+    
+    <!-- 購物車 -->
+    <main-shopping-cart></main-shopping-cart>
+    <!-- 購物車 -->
+
+    <!-- Javascript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/lazysize.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/count-down.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/sibforms.js" defer></script>
+    <script>
+        window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+        window.LOCALE = 'en';
+        window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+        window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+
+        window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+        window.translation = {
+            common: {
+                selectedList: '{quantity} list selected',
+                selectedLists: '{quantity} lists selected'
+            }
+        };
+
+        var AUTOHIDE = Boolean(0);
+    </script>
+</body>
+
+</html>
