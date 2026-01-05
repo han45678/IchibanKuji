@@ -248,7 +248,7 @@
             </div>
 
             <div class="modal-footer">
-                <p>您總共獲得 <span id="total-count">0</span> 項獎品</p>
+                <p>總共 <span id="total-count">0</span> 項</p>
                 <div id="prize-summary" class="prize-summary-text">
                 </div>
                 <button class="btn btn-primary" onclick="closeModal()">關閉</button>
@@ -285,18 +285,12 @@
         var AUTOHIDE = Boolean(0);
     </script>
     <script>
-        // 模擬後端回傳的獎品資料 (這次給 5 個)
-        // 如果有 100 個，陣列長度就會是 100
+        // 模擬後端回傳的獎品資料
         const mockPrizes = [
-            { name: "購物金 $50", img: "http://placehold.jp/200x200.jpg" },
-            { name: "神秘小禮物", img: "http://placehold.jp/200x200.jpg" },
-            { name: "免運券", img: "http://placehold.jp/200x200.jpg" },
-            { name: "iPhone 16 (模型)", img: "http://placehold.jp/200x200.jpg" },
-            { name: "銘謝惠顧", img: "http://placehold.jp/200x200.jpg" }
+            { name: "A賞", img: "http://placehold.jp/200x200.jpg" },
         ];
 
-        // 原本的 checkout_an 保持不變...
-        function checkout_an(lottery) {
+        function checkout_an() {
             const skipCheckbox = document.querySelector('#animation');
             const videoContainer = document.querySelector('#animation_video');
             const video = videoContainer.querySelector('video');
@@ -317,7 +311,6 @@
             }
         }
 
-        // 修改後的 checkout 函式
         function checkout() {
             console.log('結帳完成，準備開獎');
 
