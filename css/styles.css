@@ -19391,7 +19391,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   background-position: center;
 }
 
-.s-page-title::before{
+.s-page-title::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -23567,7 +23567,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto;
   gap: 12px;
-  grid-template-areas: "aa bb bb ee" "aa cc dd ee";
+  grid-template-areas: "aa bb bb ee""aa cc dd ee";
 }
 
 .watch-grid .aa {
@@ -23600,7 +23600,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 @media (max-width: 1199px) {
   .watch-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "aa ee" "aa ee" "bb bb" "cc dd";
+    grid-template-areas: "aa ee""aa ee""bb bb""cc dd";
   }
 
   .watch-grid .box-image_category img {
@@ -23611,7 +23611,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 @media (max-width: 575px) {
   .watch-grid {
     grid-template-columns: 1fr;
-    grid-template-areas: "aa" "bb" "cc" "dd" "ee";
+    grid-template-areas: "aa""bb""cc""dd""ee";
   }
 
   .watch-grid .box-image_category img {
@@ -24879,10 +24879,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 body {
-    scrollbar-gutter: stable;
+  scrollbar-gutter: stable;
 }
 
-#animation_video{
+#animation_video {
   background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   z-index: 999999;
@@ -24894,173 +24894,252 @@ body {
   opacity: 0;
   pointer-events: none;
 }
-#animation_video.active{
+
+#animation_video.active {
   opacity: 1;
   pointer-events: auto;
 }
-#animation_video video{
+
+#animation_video video {
   width: 100%;
   height: auto;
   /* aspect-ratio: 21/9; */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 
 
 /* 容器卡片 */
 #checkout-success.checkout-card {
-    background: var(--bg-card);
-    max-width: 480px;
-    margin: 2rem auto;
-    padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    color: var(--text-main);
+  background: var(--bg-card);
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
 }
 
 /* 成功圖示與標題 */
 #checkout-success .icon-circle {
-    width: 64px;
-    height: 64px;
-    background-color: #d1fae5;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
+  width: 64px;
+  height: 64px;
+  background-color: #d1fae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
 }
 
 #checkout-success .check-icon {
-    width: 32px;
-    height: 32px;
-    color: var(--success-color);
+  width: 32px;
+  height: 32px;
+  color: var(--success-color);
 }
 
 #checkout-success .title {
-    margin: 0;
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--text-main);
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-main);
 }
 
 #checkout-success .subtitle {
-    margin: 0.5rem 0 2rem;
-    color: var(--text-sub);
-    font-size: 0.95rem;
+  margin: 0.5rem 0 2rem;
+  color: var(--text-sub);
+  font-size: 0.95rem;
 }
 
 /* 按鈕共用樣式 */
 #checkout-success .btn {
-    width: 100%;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: none;
-    outline: none;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  outline: none;
 }
 
 #checkout-success .btn:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 #checkout-success .btn-secondary {
-    background-color: transparent;
-    color: var(--text-sub);
-    border: 1px solid #e5e7eb;
-    margin-bottom: 1.5rem;
+  background-color: transparent;
+  color: var(--text-sub);
+  border: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
 }
 
 #checkout-success .btn-secondary:hover {
-    border-color: #9ca3af;
-    color: var(--text-main);
+  border-color: #9ca3af;
+  color: var(--text-main);
 }
 
 
 /* --- 抽獎區塊 --- */
 #checkout-success .lottery-section {
-    margin-top: 1rem;
-    padding: 2px; /* 用於製作漸層邊框的效果(選用) */
-    background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
-    border-radius: 12px;
-    position: relative;
-    animation: fadeUp 0.5s ease-out;
+  margin-top: 1rem;
+  padding: 2px;
+  /* 用於製作漸層邊框的效果(選用) */
+  background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
+  border-radius: 12px;
+  position: relative;
+  animation: fadeUp 0.5s ease-out;
 }
 
 #checkout-success .lottery-content {
-    background: #ffffff;
-    border-radius: 10px; /* 比外層少一點 */
-    padding: 1.5rem;
-    position: relative;
-    overflow: hidden;
+  background: #ffffff;
+  border-radius: 10px;
+  /* 比外層少一點 */
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
 /* 裝飾標籤 */
 #checkout-success .lottery-tag {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #f59e0b;
-    color: white;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 4px 12px;
-    border-bottom-left-radius: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #f59e0b;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-bottom-left-radius: 8px;
 }
 
 #checkout-success .lottery-content h3 {
-    margin: 0.5rem 0 1.25rem;
-    color: #b45309;
-    font-size: 1.25rem;
+  margin: 0.5rem 0 1.25rem;
+  color: #b45309;
+  font-size: 1.25rem;
 }
 
 /* 自定義 Checkbox 樣式 */
 #checkout-success .checkbox-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    color: var(--text-sub);
-    cursor: pointer;
-    user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  cursor: pointer;
+  user-select: none;
 }
 
 #checkout-success .checkbox-wrapper input {
-    accent-color: var(--primary-color);
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+  accent-color: var(--primary-color);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
 
 /* 抽獎按鈕 */
 #checkout-success .btn-primary.btn-lottery {
-    background: linear-gradient(to right, #f59e0b, #d97706);
-    color: white;
-    box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.4);
+  background: linear-gradient(to right, #f59e0b, #d97706);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.4);
 }
 
 #checkout-success .btn-primary.btn-lottery:hover {
-    box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.5);
-    transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.5);
+  transform: translateY(-1px);
 }
 
 /* 簡單動畫 */
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#login-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: stretch;
+  gap: 15px;
+}
+
+#login-panel .heading {
+  margin: 0 0 10px 0;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: left;
+}
+
+#login-panel .text-sub {
+  margin: 0 0 25px 0;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+#login-panel .btn_log,
+#login-panel .btn-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  padding: 15px 0;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 100%;
+}
+
+#login-panel .btn_log {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  margin: 0;
+}
+
+#login-panel .btn_log:hover {
+  background-color: #333;
+  border-color: #333;
+}
+
+#login-panel .btn-line {
+  background-color: #06C755;
+  color: #fff;
+  border: 1px solid #06C755;
+}
+
+#login-panel .btn-line:hover {
+  background-color: #05b34c;
+  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
+}
+
+#login-panel .btn-google {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #dadce0;
+}
+
+#login-panel .btn-google:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
