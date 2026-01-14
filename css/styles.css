@@ -250,11 +250,11 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--primary);
 }
 
-@media (max-width: 1199px) {
+/* @media (max-width: 1199px) {
   body {
     padding-bottom: 81px;
   }
-}
+} */
 
 img {
   max-width: 100%;
