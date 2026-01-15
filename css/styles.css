@@ -25143,3 +25143,84 @@ body {
   background-color: #f8f9fa;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* 設定基本字體與排版 */
+#ichiban-kuji-container {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    background: #fff;
+}
+
+#ichiban-kuji-container .modal-content {
+    border: none;
+    border-radius: 4px;
+    overflow: hidden; /* 確保圓角不被背景色蓋住 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 通用欄位設定 (Flexbox) */
+#ichiban-kuji-container .kuji-header,
+#ichiban-kuji-container .kuji-row,
+#ichiban-kuji-container .kuji-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    font-size: 15px;
+}
+
+/* 左側獎項名稱欄位 */
+#ichiban-kuji-container .col-prize {
+    flex: 1;
+    text-align: left;
+    font-weight: 500;
+}
+
+/* 右側數量欄位 */
+#ichiban-kuji-container .col-count {
+    width: 120px; /* 固定寬度讓數字對齊 */
+    text-align: right;
+    font-weight: 500;
+}
+
+/* --- 頭部樣式 (紅色背景) --- */
+#ichiban-kuji-container .kuji-header {
+    background-color: #d30022; /* 一番賞紅 */
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/* --- 列表樣式 --- */
+#ichiban-kuji-container .kuji-row {
+    background-color: #ffffff;
+    color: #333;
+    border-bottom: 1px solid #eee; /* 選用：增加分隔線 */
+}
+
+/* 斑馬紋效果：偶數行給予淺灰色背景 */
+#ichiban-kuji-container .kuji-row:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+/* --- 售完樣式 (sold-out) --- */
+#ichiban-kuji-container .sold-out {
+    color: #ccc; /* 灰色文字 */
+    text-decoration: line-through; /* 刪除線 */
+}
+
+#ichiban-kuji-container .sold-out .col-prize,
+#ichiban-kuji-container .sold-out .col-count {
+    color: #bfbfbf;
+}
+
+/* --- 底部樣式 (粉色背景) --- */
+#ichiban-kuji-container .kuji-footer {
+    background-color: #fae6ea; /* 淺粉紅 */
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    border-top: 2px solid #eabec5;
+}
