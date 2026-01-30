@@ -27,6 +27,14 @@
     <link rel="shortcut icon" href="images/logo/favicon.svg">
     <link rel="apple-touch-icon-precomposed" href="images/logo/favicon.svg">
     <script src="./js/components.js"></script>
+    <style>
+        @media (max-width: 767px) {
+            #gridLayout {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -77,7 +85,7 @@
                             <span class="icon icon-filter"></span><span class="text">篩選條件</span>
                         </a>
                     </div>
-                    <ul class="tf-control-layout">
+                    <ul class="tf-control-layout d-none d-md-flex">
 
                         <li class="tf-view-layout-switch sw-layout-3 d-none d-md-flex" data-value-layout="tf-col-3">
                             <i class="icon-grid-3"></i>
@@ -524,6 +532,21 @@
     <script src="js/count-down.js"></script>
     <script src="js/main.js"></script>
     <script src="js/sibforms.js"></script>
+    <script>
+        $(".tf-view-layout-switch").on("click", function () {
+            var layout = $(this).data("value-layout");
+            $(".tf-view-layout-switch").removeClass("active");
+            $(this).addClass("active");
+            if (layout == "list") {
+                $("#gridLayout").hide();
+                $("#listLayout").show();
+            } else {
+                $("#listLayout").hide();
+                $("#gridLayout").show();
+                $("#gridLayout").removeClass("tf-col-2 tf-col-3 tf-col-4 tf-col-5").addClass(layout);
+            }
+        });
+    </script>
 </body>
 
 </html>
