@@ -4,7 +4,8 @@
 :root {
   --white: #ffffff;
   --black: #000000;
-  --primary: #C8102E;
+  /* --primary: #C8102E; */
+  --primary: #f37021;
   --secondary: #D7EB3A;
   --third: rgba(44, 129, 83, 1);
   --text: #5F615E;
@@ -23567,7 +23568,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto;
   gap: 12px;
-  grid-template-areas: "aa bb bb ee""aa cc dd ee";
+  grid-template-areas: "aa bb bb ee" "aa cc dd ee";
 }
 
 .watch-grid .aa {
@@ -23600,7 +23601,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 @media (max-width: 1199px) {
   .watch-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "aa ee""aa ee""bb bb""cc dd";
+    grid-template-areas: "aa ee" "aa ee" "bb bb" "cc dd";
   }
 
   .watch-grid .box-image_category img {
@@ -23611,7 +23612,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 @media (max-width: 575px) {
   .watch-grid {
     grid-template-columns: 1fr;
-    grid-template-areas: "aa""bb""cc""dd""ee";
+    grid-template-areas: "aa" "bb" "cc" "dd" "ee";
   }
 
   .watch-grid .box-image_category img {
@@ -25146,97 +25147,104 @@ body {
 
 /* 設定基本字體與排版 */
 #ichiban-kuji-container {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    width: 100%;
-    background: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  background: #fff;
 }
 
 #ichiban-kuji-container .modal-content {
-    border: none;
-    border-radius: 4px;
-    overflow: hidden; /* 確保圓角不被背景色蓋住 */
-    display: flex;
-    flex-direction: column;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  /* 確保圓角不被背景色蓋住 */
+  display: flex;
+  flex-direction: column;
 }
 
 /* 通用欄位設定 (Flexbox) */
 #ichiban-kuji-container .kuji-header,
 #ichiban-kuji-container .kuji-row,
 #ichiban-kuji-container .kuji-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 15px;
-    font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  font-size: 15px;
 }
 
 /* 左側獎項名稱欄位 */
 #ichiban-kuji-container .col-prize {
-    flex: 1;
-    text-align: left;
-    font-weight: 500;
+  flex: 1;
+  text-align: left;
+  font-weight: 500;
 }
 
 /* 右側數量欄位 */
 #ichiban-kuji-container .col-count {
-    width: 120px; /* 固定寬度讓數字對齊 */
-    text-align: right;
-    font-weight: 500;
+  width: 120px;
+  /* 固定寬度讓數字對齊 */
+  text-align: right;
+  font-weight: 500;
 }
 
 /* --- 頭部樣式 (紅色背景) --- */
 #ichiban-kuji-container .kuji-header {
-    background-color: #d30022; /* 一番賞紅 */
-    color: white;
-    font-weight: bold;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+  background-color: #d30022;
+  /* 一番賞紅 */
+  color: white;
+  font-weight: bold;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 /* --- 列表樣式 --- */
 #ichiban-kuji-container .kuji-row {
-    background-color: #ffffff;
-    color: #333;
-    border-bottom: 1px solid #eee; /* 選用：增加分隔線 */
+  background-color: #ffffff;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  /* 選用：增加分隔線 */
 }
 
 /* 斑馬紋效果：偶數行給予淺灰色背景 */
 #ichiban-kuji-container .kuji-row:nth-child(even) {
-    background-color: #f7f7f7;
+  background-color: #f7f7f7;
 }
 
 /* --- 售完樣式 (sold-out) --- */
 #ichiban-kuji-container .sold-out {
-    color: #ccc; /* 灰色文字 */
-    text-decoration: line-through; /* 刪除線 */
+  color: #ccc;
+  /* 灰色文字 */
+  text-decoration: line-through;
+  /* 刪除線 */
 }
 
 #ichiban-kuji-container .sold-out .col-prize,
 #ichiban-kuji-container .sold-out .col-count {
-    color: #bfbfbf;
+  color: #bfbfbf;
 }
 
 /* --- 底部樣式 (粉色背景) --- */
 #ichiban-kuji-container .kuji-footer {
-    background-color: #fae6ea; /* 淺粉紅 */
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-    border-top: 2px solid #eabec5;
+  background-color: #fae6ea;
+  /* 淺粉紅 */
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  border-top: 2px solid #eabec5;
 }
 
-.price-new.h6{
+.price-new.h6 {
   color: #e34f06;
 }
 
 @media (max-width: 1199px) {
-    .tf-header {
-        background-color: #fff;
-        top: 0;
-    }
+  .tf-header {
+    background-color: #fff;
+    top: 0;
+  }
 }
 
-#user{
+#user {
   position: relative;
 }
 
@@ -25257,3 +25265,20 @@ body {
   justify-content: center;
 }
 
+
+.bg-black {
+  background-color: #174f80 !important;
+}
+
+footer a,
+footer .h6 {
+  color: #fff !important;
+}
+
+
+
+@media (min-width: 1200px) {
+  .container.max-1280 {
+    max-width: 1280px;
+  }
+}
