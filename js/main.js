@@ -1527,24 +1527,45 @@
         -------------------------------------------------------------------------*/
   var rafflePicker = function () {
     if ($('#raffle ul li').length > 0) {
+      function updateSelection() {
+        var raffle_number = [];
+        $('#raffle ul li.active').each(function () {
+          var raffleText = $(this).text().trim();
+          var raffleNumber = parseInt(raffleText, 10);
+          raffle_number.push(raffleNumber);
+        });
+        console.log(raffle_number);
+      }
+
       $('#raffle ul li').on('click', function () {
         if (!$(this).hasClass('disabled')) {
           $(this).toggleClass('active');
-
-          var raffle_number = [];
-          $('#raffle ul li.active').each(function () {
-            var raffleText = $(this).text().trim();
-            var raffleNumber = parseInt(raffleText, 10);
-            raffle_number.push(raffleNumber);
-          });
-
-          console.log(raffle_number);
+          updateSelection();
         }
       });
-    }
-  };
 
-  var product_type_m = function () {
+        $('#raffle ul li').removeClass('active');
+
+        if (pick === 'all') {
+          $available.addClass('active');
+        } else {
+          var count = parseInt(pick, 10);
+          var indices = Array.from({ length: $available.length }, (_, i) => i);
+          for (var i = indices.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = indices[i];
+            indices[i] = indices[j];
+            indices[j] = temp;
+          }
+          var selectedIndices = indices.slice(0, count);
+          selectedIndices.forEach(function (idx) {
+            $available.eq(idx).addClass('active');
+          });
+        }
+        updateSelection();
+      });
+    }
+  };{
     if ($('.product_type_m li.drop-down').length > 0) {
       // 監聽 li.drop-down 裡面的 a 標籤
       $('.product_type_m li.drop-down a').on('click', function (e) {
@@ -1611,4 +1632,3 @@
     rafflePicker();
   });
 })(jQuery);
-

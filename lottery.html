@@ -321,15 +321,17 @@
                                                 <li class="disabled">100</li>
                                             </ul>
                                         </div>
+                                        <div class="d-flex gap-2 mb-3">
+                                            <button class="tf-btn btn-black flex-grow-1 btn-random-pick" data-pick="3">3抽</button>
+                                            <button class="tf-btn btn-black flex-grow-1 btn-random-pick" data-pick="5">5抽</button>
+                                            <button class="tf-btn btn-black flex-grow-1 btn-random-pick" data-pick="10">10抽</button>
+                                            <button class="tf-btn btn-black flex-grow-1 btn-random-pick" data-pick="all">剩餘全包</button>
+                                        </div>
                                         <a href="checkout.html" class="tf-btn btn-primary">立即開抽</a>
-                                        <a href="checkout.html" class="tf-btn btn-black">剩餘全包</a>
                                         <!-- ▲此須抽一番賞才有 直購隱藏▲ -->
                                     </div>
 
                                     <div class="tf-product-extra-link">
-                                        <a href="#compareColor" data-bs-toggle="modal" class="product-extra-icon link">
-                                            <i class="icon icon-swatches"></i>查看剩餘獎項
-                                        </a>
                                         <a href="#shipAndDelivery" data-bs-toggle="modal"
                                             class="product-extra-icon link">
                                             <i class="icon icon-truck"></i>寄送規則
@@ -377,88 +379,64 @@
             </div>
         </section>
         <section class="flat-spacing-3 pt-0">
-            <div class="container max-1280">
-                <h2 class="sect-title fw-normal">小皮球顧客中獎實拍</h2>
-                <div class="swiper myProductSwiper">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="wg-real-image">
-                                <div class="image">
-                                    <img class="lazyload" src="./assets/images/product/5.png"
-                                        data-src="./assets/images/product/5.png" alt="Photo">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="wg-real-image">
-                                <div class="image">
-                                    <img class="lazyload" src="./assets/images/product/6.png"
-                                        data-src="./assets/images/product/6.png" alt="Photo">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="wg-real-image">
-                                <div class="image">
-                                    <img class="lazyload" src="./assets/images/product/2.png"
-                                        data-src="./assets/images/product/2.png" alt="Photo">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="wg-real-image">
-                                <div class="image">
-                                    <img class="lazyload" src="./assets/images/product/3.png"
-                                        data-src="./assets/images/product/3.png" alt="Photo">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="wg-real-image">
-                                <div class="image">
-                                    <img class="lazyload" src="./assets/images/product/5.png"
-                                        data-src="./assets/images/product/5.png" alt="Photo">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="wg-real-image">
-                                <div class="image">
-                                    <img class="lazyload" src="./assets/images/product/6.png"
-                                        data-src="./assets/images/product/6.png" alt="Photo">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="wg-real-image">
-                                <div class="image">
-                                    <img class="lazyload" src="./assets/images/product/2.png"
-                                        data-src="./assets/images/product/2.png" alt="Photo">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="wg-real-image">
-                                <div class="image">
-                                    <img class="lazyload" src="./assets/images/product/3.png"
-                                        data-src="./assets/images/product/3.png" alt="Photo">
-                                </div>
-                            </div>
-                        </div>
-
+            <div class="container max-1280" id="ichiban-kuji-container">
+                <h2 class="sect-title fw-normal">查看剩餘獎項</h2>
+                <div class="kuji-header">
+                        <div class="col-prize">獎項</div>
+                        <div class="col-count">剩餘 / 總數</div>
                     </div>
 
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
+                    <div class="kuji-list">
+                        <div class="kuji-row sold-out">
+                            <div class="col-prize">最後賞 綠谷出久OVERLAY★</div>
+                            <div class="col-count">0 / 1</div>
+                        </div>
+
+                        <div class="kuji-row sold-out">
+                            <div class="col-prize">A賞 綠谷出久 MASTERLISE 約18cm★</div>
+                            <div class="col-count">0 / 1</div>
+                        </div>
+
+                        <div class="kuji-row">
+                            <div class="col-prize">B賞 爆豪勝己 MASTERLISE 約17cm★★</div>
+                            <div class="col-count">1 / 2</div>
+                        </div>
+
+                        <div class="kuji-row sold-out">
+                            <div class="col-prize">C賞 死柄木弔 MASTERLISE 約23cm★</div>
+                            <div class="col-count">0 / 1</div>
+                        </div>
+
+                        <div class="kuji-row">
+                            <div class="col-prize">D賞 All For One MASTERLISE約25cm★</div>
+                            <div class="col-count">1 / 1</div>
+                        </div>
+
+                        <div class="kuji-row sold-out">
+                            <div class="col-prize">E賞 幼少期 綠谷＆爆豪 MASTERLISE (兩體組) ★</div>
+                            <div class="col-count">0 / 2</div>
+                        </div>
+
+                        <div class="kuji-row sold-out">
+                            <div class="col-prize">F賞 八木俊典MASTERLISE 約8cm★</div>
+                            <div class="col-count">0 / 1</div>
+                        </div>
+
+                        <div class="kuji-row sold-out">
+                            <div class="col-prize">G賞 壞理 MASTERLISE 約12cm★</div>
+                            <div class="col-count">0 / 1</div>
+                        </div>
+
+                        <div class="kuji-row">
+                            <div class="col-prize">H賞 不限IP一番賞小賞(隨機一款)</div>
+                            <div class="col-count">26 / 71</div>
+                        </div>
+                    </div>
+
+                    <div class="kuji-footer">
+                        <div class="col-prize">合計</div>
+                        <div class="col-count">28 / 81</div>
+                    </div>
             </div>
         </section>
         <section class="themesFlat">
@@ -690,75 +668,6 @@
     <!-- 購物車 -->
     <main-shopping-cart></main-shopping-cart>
     <!-- 購物車 -->
-
-    <!-- 查看剩餘獎項 -->
-    <div class="modal modalCentered fade modal-compare_color" id="compareColor">
-        <div class="modal-dialog modal-dialog-centered">
-            <div id="ichiban-kuji-container">
-                <div class="modal-content">
-                    <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
-                    
-                    <div class="kuji-header">
-                        <div class="col-prize">獎項</div>
-                        <div class="col-count">剩餘 / 總數</div>
-                    </div>
-
-                    <div class="kuji-list">
-                        <div class="kuji-row sold-out">
-                            <div class="col-prize">最後賞 綠谷出久OVERLAY★</div>
-                            <div class="col-count">0 / 1</div>
-                        </div>
-
-                        <div class="kuji-row sold-out">
-                            <div class="col-prize">A賞 綠谷出久 MASTERLISE 約18cm★</div>
-                            <div class="col-count">0 / 1</div>
-                        </div>
-
-                        <div class="kuji-row">
-                            <div class="col-prize">B賞 爆豪勝己 MASTERLISE 約17cm★★</div>
-                            <div class="col-count">1 / 2</div>
-                        </div>
-
-                        <div class="kuji-row sold-out">
-                            <div class="col-prize">C賞 死柄木弔 MASTERLISE 約23cm★</div>
-                            <div class="col-count">0 / 1</div>
-                        </div>
-
-                        <div class="kuji-row">
-                            <div class="col-prize">D賞 All For One MASTERLISE約25cm★</div>
-                            <div class="col-count">1 / 1</div>
-                        </div>
-
-                        <div class="kuji-row sold-out">
-                            <div class="col-prize">E賞 幼少期 綠谷＆爆豪 MASTERLISE (兩體組) ★</div>
-                            <div class="col-count">0 / 2</div>
-                        </div>
-
-                        <div class="kuji-row sold-out">
-                            <div class="col-prize">F賞 八木俊典MASTERLISE 約8cm★</div>
-                            <div class="col-count">0 / 1</div>
-                        </div>
-
-                        <div class="kuji-row sold-out">
-                            <div class="col-prize">G賞 壞理 MASTERLISE 約12cm★</div>
-                            <div class="col-count">0 / 1</div>
-                        </div>
-
-                        <div class="kuji-row">
-                            <div class="col-prize">H賞 不限IP一番賞小賞(隨機一款)</div>
-                            <div class="col-count">26 / 71</div>
-                        </div>
-                    </div>
-
-                    <div class="kuji-footer">
-                        <div class="col-prize">合計</div>
-                        <div class="col-count">28 / 81</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 查看剩餘獎項 -->
 
     <!-- 寄送規則 -->
     <div class="modal modalCentered fade modal-ship_delivery" id="shipAndDelivery">
