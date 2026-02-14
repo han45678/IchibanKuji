@@ -1544,6 +1544,11 @@
         }
       });
 
+      $('.btn-random-pick').on('click', function (e) {
+        e.preventDefault();
+        var pick = $(this).data('pick');
+        var $available = $('#raffle ul li').not('.disabled');
+
         $('#raffle ul li').removeClass('active');
 
         if (pick === 'all') {
@@ -1565,7 +1570,9 @@
         updateSelection();
       });
     }
-  };{
+  };
+
+  var product_type_m = function () {
     if ($('.product_type_m li.drop-down').length > 0) {
       // 監聽 li.drop-down 裡面的 a 標籤
       $('.product_type_m li.drop-down a').on('click', function (e) {
