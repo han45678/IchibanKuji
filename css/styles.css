@@ -234,7 +234,7 @@ html {
 }
 
 body {
-  font-family: "Noto Sans TC", "Roboto", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -448,7 +448,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Serif TC", "Roboto", serif !important;
+  font-family:   "Dela Gothic One", serif !important;
   text-rendering: optimizeLegibility;
   font-weight: 500;
   margin-bottom: 0;
@@ -462,7 +462,7 @@ h6 {
 .h4,
 .h5,
 .h6 {
-  font-family: "Noto Serif TC", "Roboto", serif !important;
+  font-family:  "Dela Gothic One", serif !important;
   text-rendering: optimizeLegibility;
   font-weight: 400;
   margin-bottom: 0;
@@ -547,11 +547,11 @@ h6,
 }
 
 .font-main {
-  font-family: "Noto Sans TC", "Roboto", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 .font-2 {
-  font-family: "Ballet", cursive !important;
+  font-family: "Open Sans", sans-serif , cursive !important;
 }
 
 b,
@@ -566,7 +566,7 @@ video {
 }
 
 .font-sora {
-  font-family: "Sora", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 .fw-3 {
@@ -6398,7 +6398,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .sib-form {
   padding: 0;
-  font-family: "Noto Sans TC", "Roboto", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 #sib-container {
@@ -10770,7 +10770,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 400;
   border-radius: 8px;
   text-align: center;
-  font-family: "Noto Sans TC", "Roboto", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
   display: none;
 }
 
