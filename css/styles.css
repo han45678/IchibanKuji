@@ -448,7 +448,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family:   "Dela Gothic One", serif !important;
+  /* font-family:   "Dela Gothic One", serif !important; */
   text-rendering: optimizeLegibility;
   font-weight: 500;
   margin-bottom: 0;
@@ -462,7 +462,7 @@ h6 {
 .h4,
 .h5,
 .h6 {
-  font-family:  "Dela Gothic One", serif !important;
+  /* font-family:  "Dela Gothic One", serif !important; */
   text-rendering: optimizeLegibility;
   font-weight: 400;
   margin-bottom: 0;
@@ -471,6 +471,7 @@ h6 {
 
 h1,
 .h1 {
+  font-family:   "Dela Gothic One", serif !important;
   font-size: clamp(32px, 5.5vw, 56px);
   line-height: clamp(44px, 6.5vw, 67px);
 }
