@@ -4201,7 +4201,7 @@ header.header-sticky {
 }
 
 .sld_content.type-2 .content-sld_wrap {
-  background-color: var(--white);
+  background-color:rgba(255,255,255,0.6);
   padding: 24px 32px;
   max-width: 480px;
   width: 100%;
@@ -24397,7 +24397,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 #raffle ul li.active {
-  background-color: #C8102E;
+  background-color: var(--primary);
 }
 
 #raffle ul li.disabled {
@@ -24839,7 +24839,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 
   #raffle ul li {
-    font-size: 24;
+    font-size: 24px;
   }
 }
 
@@ -25190,7 +25190,7 @@ body {
 
 /* --- 頭部樣式 (紅色背景) --- */
 #ichiban-kuji-container .kuji-header {
-  background-color: #d30022;
+  background-color: var(--primary);
   /* 一番賞紅 */
   color: white;
   font-weight: bold;
@@ -25226,9 +25226,9 @@ body {
 
 /* --- 底部樣式 (粉色背景) --- */
 #ichiban-kuji-container .kuji-footer {
-  background-color: #fae6ea;
+  background-color: rgba(243, 112, 33,0.4);
   /* 淺粉紅 */
-  color: #333;
+  color: #fff;
   font-weight: bold;
   font-size: 16px;
   border-top: 2px solid #eabec5;
@@ -25250,20 +25250,34 @@ body {
 }
 
 #user .name {
-  width: 48px;
-  height: 14px;
+  max-width: 48px;
+  /* height: 14px; */
   display: block;
   background: var(--primary);
-  position: absolute;
+  /* position: absolute;
   bottom: -12px;
-  right: -12px;
+  right: -12px; */
   font-weight: 700;
-  font-size: 8px;
+  font-size: 14px;
   line-height: 16px;
   color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2.5px 5px;
+  border-radius: 5px;
+  margin-right: 2.5px;
+}
+
+#user{
+  /* background: var(--primary); */
+  display: flex;
+  align-items: center;
+  padding: 2.5px 5px;
+}
+
+#user .icon{
+  /* color: #fff; */
 }
 
 
