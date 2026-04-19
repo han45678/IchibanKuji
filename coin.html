@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>購買代幣</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description"
+        content="Themesflat Ochaka - A modern and elegant Multipurpose eCommerce HTML Template, perfect for online stores selling rings, necklaces, watches, and other accessories. SEO-optimized, fast-loading, and fully customizable.">
+
+    <!-- font -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="icon/icomoon/style.css">
+    <!-- css -->
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="images/logo/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="images/logo/favicon.svg">
+    <script src="./js/components.js"></script>
+
+    <style>
+        /* 覆寫部分設定，讓被點選的代幣卡片出現外框效果 */
+        .coin-card {
+            cursor: pointer;
+        }
+        .coin-card .card-product_wrapper {
+            border: 2px solid transparent;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .coin-card.active .card-product_wrapper {
+            border: 2px solid #000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Top -->
+    <button id="goTop">
+        <span class="border-progress"></span>
+        <span class="icon icon-caret-up"></span>
+    </button>
+
+    <div id="wrapper">
+        <!-- Header -->
+        <main-header></main-header>
+        <!-- Header -->
+        
+        <!-- Page Title -->
+        <section class="s-page-title">
+            <div class="container">
+                <div class="content">
+                    <h1 class="title-page">會員中心</h1>
+                    <ul class="breadcrumbs-page">
+                        <li><a href="index.html" class="h6 link">首頁</a></li>
+                        <li class="d-flex"><i class="icon icon-caret-right"></i></li>
+                        <li>
+                            <h6 class="current-page fw-normal">會員中心</h6>
+                        </li>
+                        <li class="d-flex"><i class="icon icon-caret-right"></i></li>
+                        <li>
+                            <h6 class="current-page fw-normal">購買代幣</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- /Page Title -->
+
+        <!-- Account -->
+        <section class="flat-spacing">
+            <input class="fileInputDash" type="file" accept="image/*" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 d-none d-xl-block">
+                        <div class="sidebar-account sidebar-content-wrap sticky-top">
+                            <div class="account-author">
+                                <div class="author_avatar">
+                                    <div class="image">
+                                        <img class="lazyload imgDash" src="http://placehold.jp/200x200.jpg" data-src="http://placehold.jp/200x200.jpg"
+                                            alt="Avatar">
+                                    </div>
+                                    <div class="btn-change_img box-icon changeImgDash">
+                                        <i class="icon icon-camera"></i>
+                                    </div>
+                                </div>
+                                <h4 class="author_name">Themesflat</h4>
+                            </div>
+                            <ul class="my-account-nav">
+                                <li>
+                                    <a href="account-page.html" class="my-account-nav_item h5">
+                                        <i class="icon icon-circle-four"></i>
+                                        消費紀錄
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="account-addresses.html" class="my-account-nav_item h5">
+                                        <i class="icon icon-address-book"></i>
+                                        會員地址
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="account-setting.html" class="my-account-nav_item h5">
+                                        <i class="icon icon-setting"></i>
+                                        會員資料修改
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="coin.html" class="my-account-nav_item h5 active">
+                                        <i class="icon icon-diamond"></i>
+                                        購買代幣
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html" class="my-account-nav_item h5">
+                                        <i class="icon icon-sign-out"></i>
+                                        登出
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-9">
+                        <div class="my-account-content">
+                            <h2 class="account-title type-semibold">購買代幣</h2>
+                            
+                            <!-- 步驟一 -->
+                            <h4 class="mb-3 mt-4">步驟一︰選擇代幣數量，並確認應付金額</h4>
+                            <p class="text-secondary mb-4">一元台幣可購買代幣一點</p>
+                            
+                            <div class="wrapper-shop tf-grid-layout tf-col-4 mb-4" id="coinOptions">
+                                <!-- 代幣選項會透過 JS 動態生成 -->
+                            </div>
+                            
+                            <div class="text-end mb-5">
+                                <h3 class="text-danger" id="totalAmountDisplay">金額總計︰NT$ 0</h3>
+                            </div>
+
+                            <!-- 步驟二 -->
+                            <h4 class="mb-4">步驟二︰請填寫發票資訊</h4>
+                            <div class="form_content site-change mb-5 p-4 border rounded-3 bg-light-subtle">
+                                <fieldset class="mb-4">
+                                    <label class="mb-2 fw-bold text-black">電子信箱 *</label>
+                                    <input type="email" placeholder="請輸入接收發票的電子信箱" required>
+                                </fieldset>
+                                
+                                <label class="mb-2 fw-bold text-black">發票類型 *</label>
+                                <div class="d-flex flex-wrap gap-3 mb-3">
+                                    <label for="inv-b2c" class="check-ship flex-grow-1 mb-0">
+                                        <input type="radio" name="invoiceType" class="tf-check-rounded style-2 line-black" id="inv-b2c" value="b2c" onchange="toggleInvoiceFields()" checked>
+                                        <span class="text h6 mb-0 text-center w-100">二聯式電子發票</span>
+                                    </label>
+                                    <label for="inv-b2b" class="check-ship flex-grow-1 mb-0">
+                                        <input type="radio" name="invoiceType" class="tf-check-rounded style-2 line-black" id="inv-b2b" value="b2b" onchange="toggleInvoiceFields()">
+                                        <span class="text h6 mb-0 text-center w-100">開立統編</span>
+                                    </label>
+                                    <label for="inv-donate" class="check-ship flex-grow-1 mb-0">
+                                        <input type="radio" name="invoiceType" class="tf-check-rounded style-2 line-black" id="inv-donate" value="donate" onchange="toggleInvoiceFields()">
+                                        <span class="text h6 mb-0 text-center w-100">捐贈發票</span>
+                                    </label>
+                                </div>
+
+                                <div id="donateField" style="display: none;" class="mt-4">
+                                    <fieldset>
+                                        <input type="text" placeholder="請輸入捐贈愛心碼 *">
+                                    </fieldset>
+                                </div>
+
+                                <div id="b2bFields" style="display: none;" class="mt-4">
+                                    <div class="cols tf-grid-layout sm-col-2 mb-3">
+                                        <fieldset>
+                                            <input type="text" placeholder="統一編號 *">
+                                        </fieldset>
+                                        <fieldset>
+                                            <input type="text" placeholder="發票抬頭 (真實姓名或公司名) *">
+                                        </fieldset>
+                                    </div>
+                                    <fieldset>
+                                        <input type="text" placeholder="公司地址 *">
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <!-- 步驟三 -->
+                            <h4 class="mb-4">步驟三︰選擇付款方式，完成付款</h4>
+                            <div class="form_content site-change mb-5 p-4 border rounded-3 bg-light-subtle">
+                                <label class="mb-3 fw-bold text-black">付款方式 *</label>
+                                <div class="d-flex flex-wrap gap-3 mb-4">
+                                    <label for="pay-credit" class="check-ship flex-grow-1 mb-0">
+                                        <input type="radio" name="paymentMethod" class="tf-check-rounded style-2 line-black" id="pay-credit" checked>
+                                        <span class="text h6 mb-0 text-center w-100">信用卡</span>
+                                    </label>
+                                    <label for="pay-line" class="check-ship flex-grow-1 mb-0">
+                                        <input type="radio" name="paymentMethod" class="tf-check-rounded style-2 line-black" id="pay-line">
+                                        <span class="text h6 mb-0 text-center w-100">LINE Pay</span>
+                                    </label>
+                                    <label for="pay-atm" class="check-ship flex-grow-1 mb-0">
+                                        <input type="radio" name="paymentMethod" class="tf-check-rounded style-2 line-black" id="pay-atm">
+                                        <span class="text h6 mb-0 text-center w-100">ATM 虛擬帳號</span>
+                                    </label>
+                                </div>
+
+                                <button class="tf-btn animate-btn w-100 fw-bold mt-3" style="font-size: 16px; padding: 15px 0;">
+                                    確認付款
+                                </button>
+                            </div>
+
+                            <!-- 注意事項 -->
+                            <div class="bg-light p-4 rounded-3 border-start border-4 border-warning">
+                                <h5 class="mb-3 text-black">注意事項</h5>
+                                <ul class="list-disc ms-4 text-secondary h6 lh-lg">
+                                    <li>本服務由第三方支付夥伴提供，點擊選項將導至第三方金流系統完成付款交易。</li>
+                                    <li>代幣僅供本網站會員購物之用。</li>
+                                    <li>購買時如有相關問題，請聯繫客服。</li>
+                                    <li>購買代幣所產生每筆服務費由消費者支付。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Account -->
+
+        <!-- Footer -->
+        <main-footer></main-footer>
+        <!-- /Footer -->
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
+        <span class="icon-close-popup" data-bs-dismiss="offcanvas">
+            <i class="icon-close"></i>
+        </span>
+        <div class="canvas-header">
+            <a href="login.html" class="ml-auto tf-btn type-small style-2">
+                Login
+                <i class="icon icon-user"></i>
+            </a>
+            <span class="br-line"></span>
+        </div>
+        <div class="canvas-body">
+            <div class="mb-content-top">
+                <ul class="nav-ul-mb" id="wrapper-menu-navigation">
+                    <li>
+                        123
+                    </li>
+                    <li>
+                        456
+                    </li>
+                </ul>
+            </div>
+            <div class="flow-us-wrap">
+                <ul class="tf-social-icon">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" class="social-facebook">
+                            <span class="icon"><i class="icon-fb"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" class="social-instagram">
+                            <span class="icon"><i class="icon-instagram-logo"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/" target="_blank" class="social-x">
+                            <span class="icon"><i class="icon-x"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/" target="_blank" class="social-tiktok">
+                            <span class="icon"><i class="icon-tiktok"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+    
+    <!-- 購物車 -->
+    <main-shopping-cart></main-shopping-cart>
+    <!-- 購物車 -->
+
+    <!-- Javascript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/lazysize.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/sibforms.js" defer></script>
+    <script>
+        window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+        window.LOCALE = 'en';
+        window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+        window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+
+        window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+
+        window.translation = {
+            common: {
+                selectedList: '{quantity} list selected',
+                selectedLists: '{quantity} lists selected'
+            }
+        };
+
+        var AUTOHIDE = Boolean(0);
+    </script>
+
+    <script>
+        // 初始化代幣選項清單
+        const coins = [100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000, 20000, 30000, 40000, 50000, 60000, 80000, 100000];
+        const coinGrid = document.getElementById('coinOptions');
+        
+        coins.forEach(amount => {
+            const div = document.createElement('div');
+            div.className = 'card-product grid coin-card';
+            div.onclick = function() {
+                document.querySelectorAll('.coin-card').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('totalAmountDisplay').innerText = `金額總計︰NT$ ${amount.toLocaleString()}`;
+            };
+            div.innerHTML = `
+                <div class="card-product_wrapper">
+                    <div class="product-img">
+                        <img class="lazyload img-product" src="http://placehold.jp/30/999999/ffffff/300x300.png?text=${amount}點" data-src="http://placehold.jp/30/999999/ffffff/300x300.png?text=${amount}點" alt="代幣 ${amount} 點">
+                    </div>
+                </div>
+                <div class="card-product_info text-center mt-3">
+                    <div class="name-product h5 text-black fw-bold">代幣 ${amount} 點</div>
+                    <div class="price-wrap justify-content-center mt-2">
+                        <span class="price-new h6">NT$ ${amount.toLocaleString()}</span>
+                    </div>
+                </div>
+            `;
+            coinGrid.appendChild(div);
+        });
+
+        // 切換發票輸入欄位
+        function toggleInvoiceFields() {
+            const invoiceType = document.querySelector('input[name="invoiceType"]:checked').value;
+            const donateField = document.getElementById('donateField');
+            const b2bFields = document.getElementById('b2bFields');
+            
+            // 重置顯示狀態
+            donateField.style.display = 'none';
+            b2bFields.style.display = 'none';
+            
+            if (invoiceType === 'donate') {
+                donateField.style.display = 'block';
+            } else if (invoiceType === 'b2b') {
+                b2bFields.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
