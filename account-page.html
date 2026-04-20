@@ -127,9 +127,12 @@
                             <th>中獎賞品</th>
                             <th>價格/數量</th>
                             <th>領取狀態</th>
+                            <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="order-accordion">
+                        
+                        <!-- 待申請寄送 -->
                         <tr class="tb-order-item">
                             <td class="tb-order_code">#DRW-20260105-01</td>
                             <td>
@@ -156,8 +159,29 @@
                                     待申請寄送
                                 </div>
                             </td>
+                            <td class="text-end align-middle">
+                                <div data-bs-toggle="collapse" data-bs-target="#order-detail-1" aria-expanded="false" class="text-primary d-inline-flex align-items-center" style="cursor: pointer; font-weight: 600;">
+                                     <i class="icon icon-caret-down ms-1"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="detail-row" style="display: none;">
+                            <td colspan="5" class="p-0 border-0" style="padding: 0 !important; border: none !important;">
+                                <div id="order-detail-1" class="collapse" data-bs-parent="#order-accordion">
+                                    <div class="p-4 bg-light rounded-3 mb-3 mx-2 mt-2 text-start">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="h6 mb-0 text-black">產品細節：A賞 孫悟飯公仔 (全高約25cm)</div>
+                                            <div class="text-danger fw-bold h6 mb-0">消耗代幣：680 點</div>
+                                        </div>
+                                        <div class="text-end">
+                                            <button class="tf-btn btn-sm style-line text-danger" style="border-color: #dc3545;">放棄商品</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
 
+                        <!-- 已取消 -->
                         <tr class="tb-order-item">
                             <td class="tb-order_code">#DRW-20260105-02</td>
                             <td>
@@ -184,8 +208,26 @@
                                     已取消
                                 </div>
                             </td>
+                            <td class="text-end align-middle">
+                                <div data-bs-toggle="collapse" data-bs-target="#order-detail-2" aria-expanded="false" class="text-primary d-inline-flex align-items-center" style="cursor: pointer; font-weight: 600;">
+                                     <i class="icon icon-caret-down ms-1"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="detail-row" style="display: none;">
+                            <td colspan="5" class="p-0 border-0" style="padding: 0 !important; border: none !important;">
+                                <div id="order-detail-2" class="collapse" data-bs-parent="#order-accordion">
+                                    <div class="p-4 bg-light rounded-3 mb-3 mx-2 mt-2 text-start">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="h6 mb-0 text-black">產品細節：直購 伊之助毛巾 (尺寸約 100x20cm) x 3</div>
+                                            <div class="text-danger fw-bold h6 mb-0 ">消耗代幣：840 點 (已退還)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
 
+                        <!-- 已出貨完成 -->
                         <tr class="tb-order-item">
                             <td class="tb-order_code">#DRW-20260104-88</td>
                             <td>
@@ -212,8 +254,29 @@
                                     已出貨完成
                                 </div>
                             </td>
+                            <td class="text-end align-middle">
+                                <div data-bs-toggle="collapse" data-bs-target="#order-detail-3" aria-expanded="false" class="text-primary d-inline-flex align-items-center" style="cursor: pointer; font-weight: 600;">
+                                     <i class="icon icon-caret-down ms-1"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="detail-row" style="display: none;">
+                            <td colspan="5" class="p-0 border-0" style="padding: 0 !important; border: none !important;">
+                                <div id="order-detail-3" class="collapse" data-bs-parent="#order-accordion">
+                                    <div class="p-4 bg-light rounded-3 mb-3 mx-2 mt-2 text-start">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="h6 mb-0 text-black">產品細節：Last One賞 利姆路公仔 (全高約20cm)</div>
+                                            <div class="text-danger fw-bold h6 mb-0">消耗代幣：390 點</div>
+                                        </div>
+                                        <div class="text-end">
+                                            <button class="tf-btn btn-sm style-line">我要回收</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
 
+                        <!-- 運送中 -->
                         <tr class="tb-order-item">
                             <td class="tb-order_code">#DRW-20260103-12</td>
                             <td>
@@ -238,6 +301,40 @@
                             <td>
                                 <div class="tb-order_status stt-delivery">
                                     運送中
+                                </div>
+                            </td>
+                            <td class="text-end align-middle">
+                                <div data-bs-toggle="collapse" data-bs-target="#order-detail-4" aria-expanded="false" class="text-primary d-inline-flex align-items-center" style="cursor: pointer; font-weight: 600;">
+                                     <i class="icon icon-caret-down ms-1"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="detail-row" style="display: none;">
+                            <td colspan="5" class="p-0 border-0" style="padding: 0 !important; border: none !important;">
+                                <div id="order-detail-4" class="collapse" data-bs-parent="#order-accordion">
+                                    <div class="p-4 bg-light rounded-3 mb-3 mx-2 mt-2 text-start">
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <div class="h6 mb-0 text-black">產品細節：C賞 伊布玩偶 (約30cm)</div>
+                                            <div class="text-danger fw-bold h6 mb-0">消耗代幣：650 點</div>
+                                        </div>
+                                        
+                                        <!-- 進度圖 -->
+                                        <div class="tracking-progress px-3 mb-2">
+                                            <div class="position-relative m-3">
+                                                <div class="progress" style="height: 3px;">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="position-absolute top-0 start-0 translate-middle bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 12px;">✓</div>
+                                                <div class="position-absolute top-0 start-50 translate-middle bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 12px;">✓</div>
+                                                <div class="position-absolute top-0 start-100 translate-middle bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 12px;">3</div>
+                                            </div>
+                                            <div class="d-flex justify-content-between text-muted text-small px-1 mt-3">
+                                                <span class="text-success fw-bold">已接單</span>
+                                                <span class="text-success fw-bold">運送中</span>
+                                                <span>已送達</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -349,6 +446,27 @@
         };
 
         var AUTOHIDE = Boolean(0);
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var collapseElements = document.querySelectorAll('#order-accordion .collapse');
+            collapseElements.forEach(function (collapseEl) {
+                // 在展開動畫開始前，顯示外層的 tr，讓內容有空間展開
+                collapseEl.addEventListener('show.bs.collapse', function () {
+                    var parentTr = this.closest('tr.detail-row');
+                    if (parentTr) {
+                        parentTr.style.display = 'table-row';
+                    }
+                });
+                // 在收起動畫完全結束後，徹底隱藏外層的 tr，清除表格預設的間距與空白
+                collapseEl.addEventListener('hidden.bs.collapse', function () {
+                    var parentTr = this.closest('tr.detail-row');
+                    if (parentTr) {
+                        parentTr.style.display = 'none';
+                    }
+                });
+            });
+        });
     </script>
 </body>
 

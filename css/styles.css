@@ -22620,12 +22620,15 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 .tb-order_status {
-  max-width: 116px;
+  /* max-width: 116px; */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px;
   font-weight: 600;
+      padding: 8px;
+    font-weight: 600;
+    font-size: 12px;
 }
 
 .tb-order_status.stt-complete {
