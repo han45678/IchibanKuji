@@ -153,7 +153,7 @@
                             <div class="form_content site-change mb-5 p-4 border rounded-3 bg-light-subtle">
                                 <fieldset class="mb-4">
                                     <label class="mb-2 fw-bold text-black">電子信箱 *</label>
-                                    <input type="email" placeholder="請輸入接收發票的電子信箱" required>
+                                    <input type="email" class="form-control p-3" placeholder="請輸入接收發票的電子信箱" required>
                                 </fieldset>
                                 
                                 <label class="mb-2 fw-bold text-black">發票類型 *</label>
@@ -174,48 +174,103 @@
 
                                 <div id="donateField" style="display: none;" class="mt-4">
                                     <fieldset>
-                                        <input type="text" placeholder="請輸入捐贈愛心碼 *">
+                                        <label class="mb-2 fw-bold text-black">捐贈愛心碼 *</label>
+                                        <input type="text" class="form-control p-3" placeholder="請輸入捐贈愛心碼">
                                     </fieldset>
                                 </div>
 
                                 <div id="b2bFields" style="display: none;" class="mt-4">
                                     <div class="cols tf-grid-layout sm-col-2 mb-3">
                                         <fieldset>
-                                            <input type="text" placeholder="統一編號 *">
+                                            <label class="mb-2 fw-bold text-black">統一編號 *</label>
+                                            <input type="text" class="form-control p-3" placeholder="請輸入統一編號">
                                         </fieldset>
                                         <fieldset>
-                                            <input type="text" placeholder="發票抬頭 (真實姓名或公司名) *">
+                                            <label class="mb-2 fw-bold text-black">發票抬頭 *</label>
+                                            <input type="text" class="form-control p-3" placeholder="真實姓名或公司名">
                                         </fieldset>
                                     </div>
                                     <fieldset>
-                                        <input type="text" placeholder="公司地址 *">
+                                        <label class="mb-2 fw-bold text-black">公司地址 *</label>
+                                        <input type="text" class="form-control p-3" placeholder="請輸入公司地址">
                                     </fieldset>
                                 </div>
                             </div>
 
                             <!-- 步驟三 -->
                             <h4 class="mb-4">步驟三︰選擇付款方式，完成付款</h4>
-                            <div class="form_content site-change mb-5 p-4 border rounded-3 bg-light-subtle">
-                                <label class="mb-3 fw-bold text-black">付款方式 *</label>
-                                <div class="d-flex flex-wrap gap-3 mb-4">
-                                    <label for="pay-credit" class="check-ship flex-grow-1 mb-0">
-                                        <input type="radio" name="paymentMethod" class="tf-check-rounded style-2 line-black" id="pay-credit" checked>
-                                        <span class="text h6 mb-0 text-center w-100">信用卡</span>
+                            <div class="payment-method-box" id="payment-method-box">
+                                <div class="payment_accordion">
+                                    <label for="pay-credit" class="payment_check checkbox-wrap"
+                                        data-bs-toggle="collapse" data-bs-target="#credit-card-payment"
+                                        aria-controls="credit-card-payment">
+                                        <input type="radio" name="paymentMethod"
+                                            class="tf-check-rounded style-2" id="pay-credit" checked>
+                                        <span class="pay-title">信用卡</span>
                                     </label>
-                                    <label for="pay-line" class="check-ship flex-grow-1 mb-0">
-                                        <input type="radio" name="paymentMethod" class="tf-check-rounded style-2 line-black" id="pay-line">
-                                        <span class="text h6 mb-0 text-center w-100">LINE Pay</span>
-                                    </label>
-                                    <label for="pay-atm" class="check-ship flex-grow-1 mb-0">
-                                        <input type="radio" name="paymentMethod" class="tf-check-rounded style-2 line-black" id="pay-atm">
-                                        <span class="text h6 mb-0 text-center w-100">ATM 虛擬帳號</span>
-                                    </label>
+                                    <div id="credit-card-payment" class="collapse show"
+                                        data-bs-parent="#payment-method-box">
+                                        <div class="payment_body form_content p-4 border rounded-3 mt-3">
+                                            <fieldset class="mb-3">
+                                                <label class="mb-2 fw-bold text-black">持卡人姓名</label>
+                                                <input type="text" class="form-control p-3" placeholder="請輸入持卡人姓名">
+                                            </fieldset>
+                                            <fieldset class="ip-card mb-3 position-relative">
+                                                <label class="mb-2 fw-bold text-black">信用卡號</label>
+                                                <div class="position-relative">
+                                                    <input type="text" class="form-control p-3" placeholder="0000 0000 0000 0000" maxlength="19">
+                                                    <div class="card-logo position-absolute top-50 translate-middle-y end-0 pe-3 d-flex gap-2">
+                                                        <img src="images/payment/visa-pay.svg" alt="" style="height: 20px;">
+                                                        <img src="images/payment/master-pay.svg" alt="" style="height: 20px;">
+                                                        <img src="images/payment/amex-pay.svg" alt="" style="height: 20px;">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="cols tf-grid-layout sm-col-2">
+                                                <fieldset>
+                                                    <label class="mb-2 fw-bold text-black">有效期限</label>
+                                                    <input type="text" class="form-control p-3" placeholder="MM / YY" maxlength="5">
+                                                </fieldset>
+                                                <fieldset>
+                                                    <label class="mb-2 fw-bold text-black">安全碼 (CVC)</label>
+                                                    <input type="text" class="form-control p-3" placeholder="CVC" maxlength="3">
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <button class="tf-btn animate-btn w-100 fw-bold mt-3" style="font-size: 16px; padding: 15px 0;">
-                                    確認付款
-                                </button>
+                                <div class="payment_accordion">
+                                    <label for="pay-atm" class="payment_check checkbox-wrap"
+                                        data-bs-toggle="collapse" data-bs-target="#virtual-atm-payment"
+                                        aria-controls="virtual-atm-payment">
+                                        <input type="radio" name="paymentMethod"
+                                            class="tf-check-rounded style-2" id="pay-atm">
+                                        <span class="pay-title">虛擬ATM</span>
+                                    </label>
+                                    <div id="virtual-atm-payment" class="collapse" data-bs-parent="#payment-method-box">
+                                        <div class="payment_body form_content">
+                                            <p>系統將產生一組專屬虛擬轉帳帳號，請於時限內完成轉帳。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment_accordion">
+                                    <label for="pay-store" class="payment_check checkbox-wrap"
+                                        data-bs-toggle="collapse" data-bs-target="#store-payment-payment"
+                                        aria-controls="store-payment-payment">
+                                        <input type="radio" name="paymentMethod"
+                                            class="tf-check-rounded style-2" id="pay-store">
+                                        <span class="pay-title">超商繳費</span>
+                                    </label>
+                                    <div id="store-payment-payment" class="collapse" data-bs-parent="#payment-method-box">
+                                        <div class="payment_body form_content">
+                                            <p>取得超商代碼後，請至超商多媒體機台列印繳費單並至櫃檯繳費。</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <button class="tf-btn animate-btn w-100 fw-bold mt-4 mb-5" style="font-size: 16px; padding: 15px 0;">
+                                確認付款
+                            </button>
 
                             <!-- 注意事項 -->
                             <div class="bg-light p-4 rounded-3 border-start border-4 border-warning">
@@ -369,6 +424,7 @@
                 b2bFields.style.display = 'block';
             }
         }
+
     </script>
 
 </body>

@@ -150,26 +150,32 @@
                                                     class="tf-check-rounded style-2" id="credit-card" checked>
                                                 <span class="pay-title">信用卡</span>
                                             </label>
-                                            <div id="credit-card-payment" class="collapse"
+                                            <div id="credit-card-payment" class="collapse show"
                                                 data-bs-parent="#payment-method-box">
-                                                <div class="payment_body form_content">
-                                                    <fieldset>
-                                                        <input type="text" placeholder="Name on card">
+                                                <div class="payment_body form_content p-4 border rounded-3 mt-3">
+                                                    <fieldset class="mb-3">
+                                                        <label class="mb-2 fw-bold text-black">持卡人姓名</label>
+                                                        <input type="text" placeholder="請輸入持卡人姓名">
                                                     </fieldset>
-                                                    <fieldset class="ip-card">
-                                                        <input type="number" placeholder="Card numbers">
-                                                        <div class="card-logo">
-                                                            <img src="images/payment/visa-pay.svg" alt="Payment Logo">
-                                                            <img src="images/payment/master-pay.svg" alt="Payment Logo">
-                                                            <img src="images/payment/amex-pay.svg" alt="Payment Logo">
+                                                    <fieldset class="ip-card mb-3 position-relative">
+                                                        <label class="mb-2 fw-bold text-black">信用卡號</label>
+                                                        <div class="position-relative">
+                                                            <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
+                                                            <div class="card-logo position-absolute top-50 translate-middle-y end-0 pe-3 d-flex gap-2">
+                                                                <img src="images/payment/visa-pay.svg" alt="" style="height: 20px;">
+                                                                <img src="images/payment/master-pay.svg" alt="" style="height: 20px;">
+                                                                <img src="images/payment/amex-pay.svg" alt="" style="height: 20px;">
+                                                            </div>
                                                         </div>
                                                     </fieldset>
                                                     <div class="cols tf-grid-layout sm-col-2">
                                                         <fieldset>
-                                                            <input type="text" placeholder="MM / YY">
+                                                            <label class="mb-2 fw-bold text-black">有效期限</label>
+                                                            <input type="text" placeholder="MM / YY" maxlength="5">
                                                         </fieldset>
                                                         <fieldset>
-                                                            <input type="number" placeholder="Postal code">
+                                                            <label class="mb-2 fw-bold text-black">安全碼 (CVC)</label>
+                                                            <input type="text" placeholder="CVC" maxlength="3">
                                                         </fieldset>
                                                     </div>
                                                 </div>
@@ -177,49 +183,33 @@
                                         </div>
 
                                         <div class="payment_accordion">
-                                            <label for="google-pay" class="payment_check checkbox-wrap"
-                                                data-bs-toggle="collapse" data-bs-target="#google-pay-payment"
-                                                aria-controls="google-pay-payment">
+                                            <label for="virtual-atm" class="payment_check checkbox-wrap"
+                                                data-bs-toggle="collapse" data-bs-target="#virtual-atm-payment"
+                                                aria-controls="virtual-atm-payment">
                                                 <input type="radio" name="payment-method"
-                                                    class="tf-check-rounded style-2" id="google-pay">
-                                                <span class="pay-title">Google Pay</span>
+                                                    class="tf-check-rounded style-2" id="virtual-atm">
+                                                <span class="pay-title">虛擬ATM</span>
                                             </label>
-                                            <div id="google-pay-payment" class="collapse"
+                                            <div id="virtual-atm-payment" class="collapse"
                                                 data-bs-parent="#payment-method-box">
                                                 <div class="payment_body form_content">
-                                                    <p>您將被引導至 Google Pay 進行付款。</p>
+                                                    <p>系統將產生一組專屬虛擬轉帳帳號，請於時限內完成轉帳。</p>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="payment_accordion">
-                                            <label for="apple-pay" class="payment_check checkbox-wrap"
-                                                data-bs-toggle="collapse" data-bs-target="#apple-pay-payment"
-                                                aria-controls="apple-pay-payment">
+                                            <label for="store-payment" class="payment_check checkbox-wrap"
+                                                data-bs-toggle="collapse" data-bs-target="#store-payment-payment"
+                                                aria-controls="store-payment-payment">
                                                 <input type="radio" name="payment-method"
-                                                    class="tf-check-rounded style-2" id="apple-pay">
-                                                <span class="pay-title">Apple Pay</span>
+                                                    class="tf-check-rounded style-2" id="store-payment">
+                                                <span class="pay-title">超商繳費</span>
                                             </label>
-                                            <div id="apple-pay-payment" class="collapse"
+                                            <div id="store-payment-payment" class="collapse"
                                                 data-bs-parent="#payment-method-box">
                                                 <div class="payment_body form_content">
-                                                    <p>請使用 Apple Pay 驗證付款。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="payment_accordion">
-                                            <label for="line-pay" class="payment_check checkbox-wrap"
-                                                data-bs-toggle="collapse" data-bs-target="#line-pay-payment"
-                                                aria-controls="line-pay-payment">
-                                                <input type="radio" name="payment-method"
-                                                    class="tf-check-rounded style-2" id="line-pay">
-                                                <span class="pay-title">Line Pay</span>
-                                            </label>
-                                            <div id="line-pay-payment" class="collapse"
-                                                data-bs-parent="#payment-method-box">
-                                                <div class="payment_body form_content">
-                                                    <p>掃描 QR Code 或登入 Line Pay 付款。</p>
+                                                    <p>取得超商代碼後，請至超商多媒體機台列印繳費單並至櫃檯繳費。</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -228,7 +218,7 @@
                                 </div>
                                 <div class="box-ip-shipping">
                                     <h2 class="title type-semibold">運送方式</h2>
-                                    <label for="freeship" class="check-ship mb-12" data-bs-target="#line-pay-payment">
+                                    <label for="freeship" class="check-ship mb-12">
                                         <input type="radio" id="freeship" class="tf-check-rounded style-2 line-black"
                                             name="checkshipping" checked>
                                         <span class="text h6">
